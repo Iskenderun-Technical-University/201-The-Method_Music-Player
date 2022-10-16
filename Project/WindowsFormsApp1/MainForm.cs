@@ -10,11 +10,55 @@ namespace WindowsFormsApp1
 {
     public partial class MainForm : Form
     {
+        // BottomPanelPic Function
+        public void BottomPanelPic()
+        {
+            var file = TagLib.File.Create(files[dataGridView1.SelectedRows[0].Index]);
+            var mStream = new MemoryStream();
+            var firstPicture = file.Tag.Pictures.FirstOrDefault();
+            if (firstPicture != null)
+            {
+                byte[] pData = firstPicture.Data.Data;
+                mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
+                var bm = new Bitmap(mStream, false);
+                mStream.Dispose();
+                coverPictureBox.Image = bm;
+            }
+            else
+            {
+                coverPictureBox.Image = Image.FromFile(@"..\..\Resources\Default.png");
+            }
+        }
+
+        // BottomPanel Song Name and Artist Function
+        public void BottomPanelSongArtist ()
+        {
+            var file = TagLib.File.Create(files[dataGridView1.SelectedRows[0].Index]);
+            if (file.Tag.Title == null)
+            {
+                SongName.Text = "Unknown";
+            }
+            else
+            {
+                SongName.Text = file.Tag.Title;
+            }
+            if (file.Tag.Title == null)
+            {
+                ArtistName.Text = "Unknown";
+            }
+            else
+            {
+                ArtistName.Text = file.Tag.FirstPerformer;
+            }
+        }
+
+        // Resources
+        Icon PlayIcon = new Icon(@"..\..\Resources\Playbutton_White.ico");
+        Icon PauseIcon = new Icon(@"..\..\Resources\Pausebutton_WhiteBlack1.ico");
+        
         public MainForm()
         {
             InitializeComponent();
-            // For saving index after changing selection in dvg
-            
 
             //Import Custom Font
             PrivateFontCollection BadSignal = new PrivateFontCollection();
@@ -36,10 +80,7 @@ namespace WindowsFormsApp1
         }
 
         // Import Songs
-
         string[] path, files;
-        Icon PlayIcon = new Icon(@"..\..\Resources\Playbutton_White.ico");
-        Icon PauseIcon = new Icon(@"..\..\Resources\Pausebutton_WhiteBlack1.ico");
         private void ImportSongsButton_Click(object sender, EventArgs e)
         {
             // Add songs to playlist
@@ -64,41 +105,11 @@ namespace WindowsFormsApp1
                 Player.URL = path[0];
                 Player.Ctlcontrols.stop();
 
-                // Add Song and Artist Names of the first Song After Import
-                TagLib.File file1 = TagLib.File.Create(files[0]);
-                if(file1.Tag.Title == null)
-                {
-                    SongName.Text = "Unknown";
-                }
-                else
-                {
-                    SongName.Text = file1.Tag.Title;
-                }
+                // BottomPanel Song Name And Artist Function Call
+                BottomPanelSongArtist();
 
-                if (file1.Tag.Title == null)
-                {
-                    ArtistName.Text = "Unknown";
-                }
-                else
-                {
-                    ArtistName.Text = file1.Tag.FirstPerformer;
-                }
-                
-                // Add Song Picture
-                var mStream = new MemoryStream();
-                var firstPicture = file1.Tag.Pictures.FirstOrDefault();
-                if (firstPicture != null)
-                {
-                    byte[] pData = firstPicture.Data.Data;
-                    mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
-                    var bm = new Bitmap(mStream, false);
-                    mStream.Dispose();
-                    coverPictureBox.Image = bm;
-                }
-                else
-                {
-                    coverPictureBox.Image = Image.FromFile(@"..\..\Resources\Default.png");
-                }
+                // BottomPanelPic Function Call
+                BottomPanelPic();
             }
         }
 
@@ -181,9 +192,6 @@ namespace WindowsFormsApp1
         }
 
         int current;
-        
-
-
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             // One Click Song Plays, Second Click Song Stops
@@ -206,40 +214,11 @@ namespace WindowsFormsApp1
                 PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
             }
 
-            // Bottom Panel Song Name And Artist
-            var file = TagLib.File.Create(files[dataGridView1.SelectedRows[0].Index]);
-            if (file.Tag.Title == null)
-            {
-                SongName.Text = "Unknown";
-            }
-            else
-            {
-                SongName.Text = file.Tag.Title;
-            }
-            if (file.Tag.Title == null)
-            {
-                ArtistName.Text = "Unknown";
-            }
-            else
-            {
-                ArtistName.Text = file.Tag.FirstPerformer;
-            }
+            // BottomPanel Song Name And Artist Function Call
+            BottomPanelSongArtist();
 
-            // Bottom Panel Picture
-            var mStream = new MemoryStream();
-            var firstPicture = file.Tag.Pictures.FirstOrDefault();
-            if (firstPicture != null)
-            {
-                byte[] pData = firstPicture.Data.Data;
-                mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
-                var bm = new Bitmap(mStream, false);
-                mStream.Dispose();
-                coverPictureBox.Image = bm;
-            }
-            else
-            {
-                coverPictureBox.Image = Image.FromFile(@"..\..\Resources\Default.png");
-            }
+            // BottomPanelPic Function Call
+            BottomPanelPic();
         }
 
         private void dataGridView1_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
@@ -340,40 +319,11 @@ namespace WindowsFormsApp1
             }
             PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
 
-            // Bottom Panel Song Name And Artist
-            var file = TagLib.File.Create(files[dataGridView1.SelectedRows[0].Index]);
-            if (file.Tag.Title == null)
-            {
-                SongName.Text = "Unknown";
-            }
-            else
-            {
-                SongName.Text = file.Tag.Title;
-            }
-            if (file.Tag.Title == null)
-            {
-                ArtistName.Text = "Unknown";
-            }
-            else
-            {
-                ArtistName.Text = file.Tag.FirstPerformer;
-            }
+            // BottomPanel Song Name And Artist Function Call
+            BottomPanelSongArtist();
 
-            // Bottom Panel Picture
-            var mStream = new MemoryStream();
-            var firstPicture = file.Tag.Pictures.FirstOrDefault();
-            if (firstPicture != null)
-            {
-                byte[] pData = firstPicture.Data.Data;
-                mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
-                var bm = new Bitmap(mStream, false);
-                mStream.Dispose();
-                coverPictureBox.Image = bm;
-            }
-            else
-            {
-                coverPictureBox.Image = Image.FromFile(@"..\..\Resources\Default.png");
-            }
+            // BottomPanelPic Function Call
+            BottomPanelPic();
         }
 
         private void NextSongPic_Click(object sender, EventArgs e)
@@ -394,42 +344,14 @@ namespace WindowsFormsApp1
                 Player.URL = path[x];
                 Player.Ctlcontrols.play();
             }
+
             PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
 
-            // Bottom Panel Song Name And Artist
-            var file = TagLib.File.Create(files[dataGridView1.SelectedRows[0].Index]);
-            if (file.Tag.Title == null)
-            {
-                SongName.Text = "Unknown";
-            }
-            else
-            {
-                SongName.Text = file.Tag.Title;
-            }
-            if (file.Tag.Title == null)
-            {
-                ArtistName.Text = "Unknown";
-            }
-            else
-            {
-                ArtistName.Text = file.Tag.FirstPerformer;
-            }
+            // BottomPanel Song Name And Artist Function Call
+            BottomPanelSongArtist();
 
-            // Bottom Panel Picture
-            var mStream = new MemoryStream();
-            var firstPicture = file.Tag.Pictures.FirstOrDefault();
-            if (firstPicture != null)
-            {
-                byte[] pData = firstPicture.Data.Data;
-                mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
-                var bm = new Bitmap(mStream, false);
-                mStream.Dispose();
-                coverPictureBox.Image = bm;
-            }
-            else
-            {
-                coverPictureBox.Image = Image.FromFile(@"..\..\Resources\Default.png");
-            }
+            // BottomPanelPic Function Call
+            BottomPanelPic();
         }
 
         private void dataGridView1_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
