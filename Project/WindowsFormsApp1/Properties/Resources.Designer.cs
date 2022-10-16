@@ -93,16 +93,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Backwardbutton_WhiteBlack {
-            get {
-                object obj = ResourceManager.GetObject("Backwardbutton_WhiteBlack", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Backwardbutton_WhiteBlack1 {
             get {
                 object obj = ResourceManager.GetObject("Backwardbutton_WhiteBlack1", resourceCulture);
@@ -123,16 +113,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Forwardbutton_WhiteBlack {
-            get {
-                object obj = ResourceManager.GetObject("Forwardbutton_WhiteBlack", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Forwardbutton_WhiteBlack1 {
             get {
                 object obj = ResourceManager.GetObject("Forwardbutton_WhiteBlack1", resourceCulture);
@@ -143,9 +123,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Pausebutton_WhiteBlack {
+        internal static System.Drawing.Bitmap next_song {
             get {
-                object obj = ResourceManager.GetObject("Pausebutton_WhiteBlack", resourceCulture);
+                object obj = ResourceManager.GetObject("next-song", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +153,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap speaker_32 {
+        internal static System.Drawing.Bitmap previous_song {
             get {
-                object obj = ResourceManager.GetObject("speaker-32", resourceCulture);
+                object obj = ResourceManager.GetObject("previous-song", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +163,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Stopbutton_WhiteBlack {
+        internal static System.Drawing.Bitmap speaker_32 {
             get {
-                object obj = ResourceManager.GetObject("Stopbutton_WhiteBlack", resourceCulture);
+                object obj = ResourceManager.GetObject("speaker-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
