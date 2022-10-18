@@ -29,18 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.DragControl_LeftPanel = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.LeftPanel = new Bunifu.UI.WinForms.BunifuPanel();
@@ -73,6 +77,9 @@
             this.PlayPic = new System.Windows.Forms.PictureBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SongListPanel = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.Fav = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ScrollBar = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.NoSongs = new System.Windows.Forms.Label();
             this.Player = new AxWMPLib.AxWindowsMediaPlayer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -97,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.StopPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayPic)).BeginInit();
             this.SongListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Fav)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).BeginInit();
@@ -156,11 +164,11 @@
             this.btn4_Favourites.ColorContrastOnClick = 45;
             this.btn4_Favourites.ColorContrastOnHover = 45;
             this.btn4_Favourites.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.btn4_Favourites.CustomizableEdges = borderEdges8;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btn4_Favourites.CustomizableEdges = borderEdges2;
             this.btn4_Favourites.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn4_Favourites.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn4_Favourites.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -225,7 +233,6 @@
             this.btn4_Favourites.TextMarginLeft = 0;
             this.btn4_Favourites.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn4_Favourites.UseDefaultRadiusAndThickness = true;
-            this.btn4_Favourites.Click += new System.EventHandler(this.btn4_Favourites_Click);
             // 
             // btn3_Playlists
             // 
@@ -246,11 +253,11 @@
             this.btn3_Playlists.ColorContrastOnClick = 45;
             this.btn3_Playlists.ColorContrastOnHover = 45;
             this.btn3_Playlists.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btn3_Playlists.CustomizableEdges = borderEdges9;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btn3_Playlists.CustomizableEdges = borderEdges3;
             this.btn3_Playlists.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn3_Playlists.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn3_Playlists.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -315,7 +322,6 @@
             this.btn3_Playlists.TextMarginLeft = 0;
             this.btn3_Playlists.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn3_Playlists.UseDefaultRadiusAndThickness = true;
-            this.btn3_Playlists.Click += new System.EventHandler(this.btn3_Playlists_Click);
             // 
             // btn2_Songs
             // 
@@ -336,11 +342,11 @@
             this.btn2_Songs.ColorContrastOnClick = 45;
             this.btn2_Songs.ColorContrastOnHover = 45;
             this.btn2_Songs.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.btn2_Songs.CustomizableEdges = borderEdges10;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btn2_Songs.CustomizableEdges = borderEdges4;
             this.btn2_Songs.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn2_Songs.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn2_Songs.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -405,7 +411,6 @@
             this.btn2_Songs.TextMarginLeft = 0;
             this.btn2_Songs.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn2_Songs.UseDefaultRadiusAndThickness = true;
-            this.btn2_Songs.Click += new System.EventHandler(this.btn2_Songs_Click);
             // 
             // BottomLeftPanel
             // 
@@ -443,11 +448,11 @@
             this.btn1_Settings.ColorContrastOnClick = 45;
             this.btn1_Settings.ColorContrastOnHover = 45;
             this.btn1_Settings.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges11.BottomLeft = true;
-            borderEdges11.BottomRight = true;
-            borderEdges11.TopLeft = true;
-            borderEdges11.TopRight = true;
-            this.btn1_Settings.CustomizableEdges = borderEdges11;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btn1_Settings.CustomizableEdges = borderEdges5;
             this.btn1_Settings.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn1_Settings.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn1_Settings.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -533,11 +538,11 @@
             this.btn2_About.ColorContrastOnClick = 45;
             this.btn2_About.ColorContrastOnHover = 45;
             this.btn2_About.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges12.BottomLeft = true;
-            borderEdges12.BottomRight = true;
-            borderEdges12.TopLeft = true;
-            borderEdges12.TopRight = true;
-            this.btn2_About.CustomizableEdges = borderEdges12;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btn2_About.CustomizableEdges = borderEdges6;
             this.btn2_About.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn2_About.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn2_About.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -623,11 +628,11 @@
             this.btn1_NowPlaying.ColorContrastOnClick = 45;
             this.btn1_NowPlaying.ColorContrastOnHover = 45;
             this.btn1_NowPlaying.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges13.BottomLeft = true;
-            borderEdges13.BottomRight = true;
-            borderEdges13.TopLeft = true;
-            borderEdges13.TopRight = true;
-            this.btn1_NowPlaying.CustomizableEdges = borderEdges13;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btn1_NowPlaying.CustomizableEdges = borderEdges7;
             this.btn1_NowPlaying.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn1_NowPlaying.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn1_NowPlaying.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -692,7 +697,6 @@
             this.btn1_NowPlaying.TextMarginLeft = 0;
             this.btn1_NowPlaying.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn1_NowPlaying.UseDefaultRadiusAndThickness = true;
-            this.btn1_NowPlaying.Click += new System.EventHandler(this.btn1_NowPlaying_Click);
             // 
             // title3_Library
             // 
@@ -921,7 +925,6 @@
             this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.coverPictureBox.TabIndex = 4;
             this.coverPictureBox.TabStop = false;
-            this.coverPictureBox.Click += new System.EventHandler(this.coverPictureBox_Click);
             // 
             // SpeakerPic
             // 
@@ -932,9 +935,6 @@
             this.SpeakerPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SpeakerPic.TabIndex = 7;
             this.SpeakerPic.TabStop = false;
-            this.SpeakerPic.Click += new System.EventHandler(this.pictureBox5_Click);
-            this.SpeakerPic.MouseEnter += new System.EventHandler(this.SpeakerPic_MouseEnter);
-            this.SpeakerPic.MouseLeave += new System.EventHandler(this.SpeakerPic_MouseLeave);
             // 
             // SongSlider
             // 
@@ -984,7 +984,6 @@
             this.SongSlider.ThumbSize = Bunifu.UI.WinForms.BunifuHSlider.ThumbSizes.Medium;
             this.SongSlider.ThumbStyle = Bunifu.UI.WinForms.BunifuHSlider.ThumbStyles.Outline;
             this.SongSlider.Value = 0;
-            this.SongSlider.Scroll += new System.EventHandler<Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs>(this.SongSlider_Scroll);
             // 
             // StopPic
             // 
@@ -1022,6 +1021,8 @@
             this.SongListPanel.BorderColor = System.Drawing.Color.Black;
             this.SongListPanel.BorderRadius = 30;
             this.SongListPanel.BorderThickness = 1;
+            this.SongListPanel.Controls.Add(this.Fav);
+            this.SongListPanel.Controls.Add(this.ScrollBar);
             this.SongListPanel.Controls.Add(this.NoSongs);
             this.SongListPanel.Controls.Add(this.Player);
             this.SongListPanel.Controls.Add(this.dataGridView1);
@@ -1040,14 +1041,126 @@
             this.SongListPanel.Size = new System.Drawing.Size(980, 503);
             this.SongListPanel.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.SongListPanel.TabIndex = 3;
-            this.SongListPanel.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.SongListPanel_ControlAdded);
+            // 
+            // Fav
+            // 
+            this.Fav.AllowUserToAddRows = false;
+            this.Fav.AllowUserToDeleteRows = false;
+            this.Fav.AllowUserToResizeColumns = false;
+            this.Fav.AllowUserToResizeRows = false;
+            this.Fav.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Fav.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Fav.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.Fav.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Fav.ColumnHeadersHeight = 30;
+            this.Fav.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Fav.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Delete});
+            this.Fav.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.NullValue = "Unknown";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Fav.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Fav.EnableHeadersVisualStyles = false;
+            this.Fav.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Fav.Location = new System.Drawing.Point(14, 68);
+            this.Fav.MultiSelect = false;
+            this.Fav.Name = "Fav";
+            this.Fav.ReadOnly = true;
+            this.Fav.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Fav.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Fav.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Fav.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.Fav.RowTemplate.Height = 35;
+            this.Fav.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Fav.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.Fav.Size = new System.Drawing.Size(57, 410);
+            this.Fav.TabIndex = 4;
+            this.Fav.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavAndDelButtons_CellContentClick);
+            this.Fav.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavAndDelButtons_CellMouseEnter);
+            this.Fav.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavAndDelButtons_CellMouseLeave);
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Delete.Width = 35;
+            // 
+            // ScrollBar
+            // 
+            this.ScrollBar.AllowCursorChanges = true;
+            this.ScrollBar.AllowHomeEndKeysDetection = false;
+            this.ScrollBar.AllowIncrementalClickMoves = true;
+            this.ScrollBar.AllowMouseDownEffects = true;
+            this.ScrollBar.AllowMouseHoverEffects = true;
+            this.ScrollBar.AllowScrollingAnimations = true;
+            this.ScrollBar.AllowScrollKeysDetection = true;
+            this.ScrollBar.AllowScrollOptionsMenu = true;
+            this.ScrollBar.AllowShrinkingOnFocusLost = false;
+            this.ScrollBar.AutoScroll = true;
+            this.ScrollBar.BackgroundColor = System.Drawing.Color.White;
+            this.ScrollBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ScrollBar.BackgroundImage")));
+            this.ScrollBar.BindingContainer = null;
+            this.ScrollBar.BorderColor = System.Drawing.Color.White;
+            this.ScrollBar.BorderRadius = 0;
+            this.ScrollBar.BorderThickness = 1;
+            this.ScrollBar.DurationBeforeShrink = 2000;
+            this.ScrollBar.LargeChange = 10;
+            this.ScrollBar.Location = new System.Drawing.Point(895, 106);
+            this.ScrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ScrollBar.Maximum = 100;
+            this.ScrollBar.Minimum = 0;
+            this.ScrollBar.MinimumThumbLength = 18;
+            this.ScrollBar.Name = "ScrollBar";
+            this.ScrollBar.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.ScrollBar.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
+            this.ScrollBar.OnDisable.ThumbColor = System.Drawing.Color.Silver;
+            this.ScrollBar.ScrollBarBorderColor = System.Drawing.Color.White;
+            this.ScrollBar.ScrollBarColor = System.Drawing.Color.White;
+            this.ScrollBar.ShrinkSizeLimit = 3;
+            this.ScrollBar.Size = new System.Drawing.Size(17, 365);
+            this.ScrollBar.SmallChange = 1;
+            this.ScrollBar.TabIndex = 3;
+            this.ScrollBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.ScrollBar.ThumbLength = 35;
+            this.ScrollBar.ThumbMargin = 1;
+            this.ScrollBar.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
+            this.ScrollBar.Value = 0;
+            this.ScrollBar.Visible = false;
+            this.ScrollBar.Scroll += new System.EventHandler<Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs>(this.ScrollBar_Scroll);
             // 
             // NoSongs
             // 
             this.NoSongs.AutoSize = true;
             this.NoSongs.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoSongs.ForeColor = System.Drawing.Color.White;
-            this.NoSongs.Location = new System.Drawing.Point(65, 106);
+            this.NoSongs.Location = new System.Drawing.Point(140, 106);
             this.NoSongs.Name = "NoSongs";
             this.NoSongs.Size = new System.Drawing.Size(161, 22);
             this.NoSongs.TabIndex = 2;
@@ -1098,7 +1211,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 68);
+            this.dataGridView1.Location = new System.Drawing.Point(73, 68);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -1122,17 +1235,18 @@
             this.dataGridView1.RowTemplate.Height = 35;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(898, 410);
+            this.dataGridView1.Size = new System.Drawing.Size(806, 410);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
             this.dataGridView1.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseLeave);
-            this.dataGridView1.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseMove);
+            this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
             // 
             // Icon
             // 
             this.Icon.FillWeight = 101.5228F;
             this.Icon.HeaderText = "";
+            this.Icon.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Icon.Name = "Icon";
             this.Icon.ReadOnly = true;
             this.Icon.Width = 35;
@@ -1190,11 +1304,11 @@
             this.ImportSongsButton.ColorContrastOnClick = 45;
             this.ImportSongsButton.ColorContrastOnHover = 45;
             this.ImportSongsButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges14.BottomLeft = true;
-            borderEdges14.BottomRight = true;
-            borderEdges14.TopLeft = true;
-            borderEdges14.TopRight = true;
-            this.ImportSongsButton.CustomizableEdges = borderEdges14;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.ImportSongsButton.CustomizableEdges = borderEdges1;
             this.ImportSongsButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ImportSongsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ImportSongsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1321,6 +1435,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PlayPic)).EndInit();
             this.SongListPanel.ResumeLayout(false);
             this.SongListPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Fav)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).EndInit();
@@ -1361,11 +1476,6 @@
         private Bunifu.UI.WinForms.BunifuShadowPanel SongListPanel;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ImportSongsButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewImageColumn Icon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Song;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Artist;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Genre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
         private AxWMPLib.AxWindowsMediaPlayer Player;
         private System.Windows.Forms.Label ArtistName;
         private System.Windows.Forms.Label SongName;
@@ -1375,6 +1485,14 @@
         private System.Windows.Forms.Label NoSongs;
         private System.Windows.Forms.Label Songs;
         private System.Windows.Forms.Timer timer;
+        private Bunifu.UI.WinForms.BunifuVScrollBar ScrollBar;
+        private System.Windows.Forms.DataGridViewImageColumn Icon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Song;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Artist;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
+        private System.Windows.Forms.DataGridView Fav;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }
 
