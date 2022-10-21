@@ -10,12 +10,12 @@ namespace WindowsFormsApp1
 {
     public partial class MainForm : Form
     {
+        readonly PrivateFontCollection BadSignal = new PrivateFontCollection();
         public MainForm()
         {
             InitializeComponent();
   
             //Import Custom Font
-            PrivateFontCollection BadSignal = new PrivateFontCollection();
             BadSignal.AddFontFile(@"..\..\Fonts\BadSignal.otf");
             foreach (Control A in this.Controls)
             {
@@ -30,13 +30,13 @@ namespace WindowsFormsApp1
         private void MainForm_Load(object sender, EventArgs e)
         {
             //Hide Scroll Bar At Start 
-            ScrollBar.Visible = false;
+            ScrollBarSongs.Visible = false;
         }
 
         // Add Song Picture Function
-        public void AddSongPic()
+        public void AddSongPic(int x)
         {
-            var file = TagLib.File.Create(files[dataGridView1.SelectedRows[0].Index]);
+            var file = TagLib.File.Create(files[x]);
             var mStream = new MemoryStream();
             var firstPicture = file.Tag.Pictures.FirstOrDefault();
             if (firstPicture != null)
@@ -54,9 +54,9 @@ namespace WindowsFormsApp1
         }
 
         // Add Song and Artist Names Function
-        public void BottomPanelSongArtist()
+        public void BottomPanelSongArtist(int x)
         {
-            var file = TagLib.File.Create(files[dataGridView1.SelectedRows[0].Index]);
+            var file = TagLib.File.Create(files[x]);
             if (file.Tag.Title == null)
             {
                 SongName.Text = "Unknown";
@@ -93,11 +93,96 @@ namespace WindowsFormsApp1
             btn1_NowPlaying.Focus();
         }
 
+        // <-------------------   LeftPanel Page Navigation Buttons   ------------------->
+
+        // Songs Button
+        private void btn2_Songs_Click(object sender, EventArgs e)
+        {
+            ImportSongsButton.Visible = true;
+            SongsGrid.Visible = true;
+            FavGrid1.Visible = true;
+
+            FavouritesGrid.Visible = false;
+            FavGrid2.Visible = false;
+            ScrollBarFavourites.Visible = false;
+
+            //No Songs Label Visibilty
+            if (SongsGrid.RowCount > 0 && SongsGrid.Visible == true)
+            {
+                NoSongs.Visible = false;
+            }
+            else
+            {
+                NoSongs.Visible = true;
+            }
+
+            //Scroll Bar Visibility
+            if (SongsGrid.RowCount >= 9)
+            {
+                ScrollBarSongs.Visible = true;
+            }
+            else
+            {
+                ScrollBarSongs.Visible = false;
+            }
+        }
+
+        // Favourites Button
+        private void btn4_Favourites_Click(object sender, EventArgs e)
+        {
+            
+            if(FavouritesGrid.RowCount>0 && Player.playState == WMPLib.WMPPlayState.wmppsStopped)
+            {
+                //Link WindowMediaPlayer To first song In Favourites
+                Player.URL = path[(int)FavouritesGrid.Rows[FavouritesGrid.SelectedRows[0].Index].Cells[0].Value];
+                Player.Ctlcontrols.stop();
+            }
+
+            //Clear Selection on FavGrid2 Grid
+            FavGrid2.ClearSelection();
+
+            FavouritesGrid.Visible = true;
+            FavGrid2.Visible = true;
+
+            ImportSongsButton.Visible = false;
+            SongsGrid.Visible = false;
+            FavGrid1.Visible = false;
+            ScrollBarSongs.Visible = false;
+
+            //No Songs Label Visibility
+            if (FavouritesGrid.RowCount > 0 && FavouritesGrid.Visible==true)
+            {
+                NoSongs.Visible = false;
+            }
+            else
+            {
+                NoSongs.Visible = true;
+            }
+            
+            //Scroll Bar Visibility
+            if (FavouritesGrid.RowCount >= 9)
+            {
+                ScrollBarFavourites.Visible = true;
+            }
+            else
+            {
+                ScrollBarFavourites.Visible = false;
+            }
+
+            //Scroll Bar Settings
+            if(FavouritesGrid.RowCount > 0)
+            {
+                ScrollBarFavourites.Maximum = FavouritesGrid.RowCount;
+                ScrollBarFavourites.LargeChange = FavouritesGrid.DisplayedRowCount(true);
+                ScrollBarFavourites.SmallChange = 1;
+            }
+        }
+
         // <-------------------   Songs Page   ------------------->
 
         // Arrays to import songs
         string[] path, files;
-        
+
         // Resources
         Icon PlayIcon = new Icon(@"..\..\Resources\Playbutton_White.ico");
         Icon PauseIcon = new Icon(@"..\..\Resources\Pausebutton_WhiteBlack1.ico");
@@ -123,100 +208,149 @@ namespace WindowsFormsApp1
                     double secs = file.Properties.Duration.TotalSeconds;
                     TimeSpan conv = TimeSpan.FromSeconds(secs);
                     string duration = string.Format("{0:D2}:{1:D2}", conv.Minutes, conv.Seconds);
-                    dataGridView1.Rows.Add(PlayIcon,title, artist, genre, duration);
-                    Fav.Rows.Add(FavStar);
+                    SongsGrid.Rows.Add(x, PlayIcon, title, artist, genre, duration);
+                    FavGrid1.Rows.Add(FavStar);
                 }
 
-                //Clear Selection on First Grid
-                Fav.ClearSelection();
+                //Clear Selection on FavGrid1 Grid
+                FavGrid1.ClearSelection();
 
-                //Show Show ScrollBar
-                if (dataGridView1.RowCount >= 9)
+                //Show ScrollBar
+                if (SongsGrid.RowCount >= 9)
                 {
-                    ScrollBar.Visible = true;
+                    ScrollBarSongs.Visible = true;
                 }
 
                 //Scroll Bar Settings
-                ScrollBar.Maximum = dataGridView1.RowCount;
-                ScrollBar.LargeChange = dataGridView1.DisplayedRowCount(true);
-                ScrollBar.SmallChange = 1;
+                ScrollBarSongs.Maximum = SongsGrid.RowCount;
+                ScrollBarSongs.LargeChange = SongsGrid.DisplayedRowCount(true);
+                ScrollBarSongs.SmallChange = 1;
 
                 //Link WindowMediaPlayer To first song
                 Player.URL = path[0];
                 Player.Ctlcontrols.stop();
 
                 //BottomPanel Song Name And Artist Function Call
-                BottomPanelSongArtist();
+                BottomPanelSongArtist(SongsGrid.SelectedRows[0].Index);
 
                 //BottomPanelPic Function Call
-                AddSongPic();
+                AddSongPic(SongsGrid.SelectedRows[0].Index);
             }
         }
 
-        //Syncing Scroll Bar with DataViewGrid
+        //Syncing Scroll Bar with Songs DataViewGrid
         private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
         {
             if (e.ScrollOrientation == ScrollOrientation.VerticalScroll)
             {
-                ScrollBar.Value = e.NewValue;
+                ScrollBarSongs.Value = e.NewValue;
             }
         }
         private void ScrollBar_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
         {
-            if (e.Value < dataGridView1.RowCount)
+            if (e.Value < SongsGrid.RowCount)
             {
-                dataGridView1.FirstDisplayedScrollingRowIndex = e.Value;
-                Fav.FirstDisplayedScrollingRowIndex = e.Value;
+                SongsGrid.FirstDisplayedScrollingRowIndex = e.Value;
+                FavGrid1.FirstDisplayedScrollingRowIndex = e.Value;
             }
         }
 
         //Songs DataGridView Functionality
-        int current;
+        int current1, current2;
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             // One Click On Row Song Plays, Second Click Song Stops
-            if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying && current == dataGridView1.SelectedRows[0].Index)
+            if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying && current1 == SongsGrid.SelectedRows[0].Index)
             {
                 Player.Ctlcontrols.stop();
-                dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value = PlayIcon;
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhite1.png");
+                // Syncing Icons to the current player status
+                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
+                for (int x = 0; x < FavouritesGrid.RowCount; x++)
+                {
+                    if (FavouritesGrid.Rows[x].Cells[0].Value == SongsGrid.Rows[e.RowIndex].Cells[0].Value)
+                    {
+                        FavouritesGrid[1, x].Value = PlayIcon;
+                    }
+                }
+                PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhite1.png"); // Turn BottomPanel PlayButton To Red Play
             }
             else
             {
-                Player.URL = path[dataGridView1.SelectedRows[0].Index];
-                Player.Ctlcontrols.play(); 
-                current = dataGridView1.SelectedRows[0].Index;
-                //Reset first row pictures to PlayIcon
-                for (int x = 0; x < files.Length; x++)
+                Player.URL = path[SongsGrid.SelectedRows[0].Index];
+                Player.Ctlcontrols.play();
+                current1 = SongsGrid.SelectedRows[0].Index;
+                for (int x = 0; x < files.Length; x++) //Reset icons on the left of the songs to PlayIcon
                 {
-                    dataGridView1[0, x].Value = PlayIcon;
+                    SongsGrid[1, x].Value = PlayIcon;
                 }
-                dataGridView1[0, current].Value = PauseIcon;
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
+                SongsGrid[1, e.RowIndex].Value = PauseIcon;
+                for (int x = 0; x < FavouritesGrid.RowCount; x++)
+                {
+                    if (FavouritesGrid.Rows[x].Cells[0].Value == SongsGrid.Rows[e.RowIndex].Cells[0].Value)
+                    {
+                        for(int y=0; y < FavouritesGrid.RowCount; y++)
+                        {
+                            FavouritesGrid[1, y].Value =PlayIcon; // Reset All to PlayIcon
+                        }
+                        FavouritesGrid[1, x].Value = PauseIcon;
+                        FavouritesGrid[1, x].Selected = true;
+                    }
+                    else
+                    {
+                        FavouritesGrid[1, x].Value = PlayIcon;
+                    }
+                }
+                PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png"); // Turn BottomPanel PlayButton To Pause White
             }
 
             // BottomPanel Song Name And Artist Function Call
-            BottomPanelSongArtist();
+            BottomPanelSongArtist(SongsGrid.SelectedRows[0].Index);
 
             // BottomPanelPic Function Call
-            AddSongPic();
+            AddSongPic(SongsGrid.SelectedRows[0].Index);
         }
 
-        //Fav DataGridView Functionality
+        //FavGrid1 DataGridView Functionality
         private void FavAndDelButtons_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Toggle Fav Button On and Off
-            if (Fav.Rows[e.RowIndex].Cells[0].Value == FavStar)
+            if (FavGrid1.Rows[e.RowIndex].Cells[0].Value == FavStar)
             {
-                Fav.Rows[e.RowIndex].Cells[0].Value = FavStarFilled;
+                FavGrid1.Rows[e.RowIndex].Cells[0].Value = FavStarFilled;
             }
             else
             {
-                Fav.Rows[e.RowIndex].Cells[0].Value = FavStar;
+                FavGrid1.Rows[e.RowIndex].Cells[0].Value = FavStar;
             }
-            Fav.ClearSelection();
+            
             //Add Song Path to Favourites Variable
-            string favourite = path[e.RowIndex];
+            string favourite = path[FavGrid1.SelectedRows[0].Index];
+
+            //Add Song to Favourites DataViewGrid
+            if (FavGrid1.Rows[e.RowIndex].Cells[0].Value == FavStarFilled)
+            {
+                var file = TagLib.File.Create(favourite);
+                string title = file.Tag.Title;
+                string artist = file.Tag.FirstPerformer;
+                string genre = file.Tag.FirstGenre;
+                double secs = file.Properties.Duration.TotalSeconds;
+                TimeSpan conv = TimeSpan.FromSeconds(secs);
+                string duration = string.Format("{0:D2}:{1:D2}", conv.Minutes, conv.Seconds);
+                FavouritesGrid.Rows.Add(SongsGrid.Rows[e.RowIndex].Cells[0].Value, PlayIcon, title, artist, genre, duration);
+                FavGrid2.Rows.Add(FavStarFilled);
+            }
+            else //Delete Song From Favourites DataViewGrid
+            {
+                for (int x = 0; x < FavouritesGrid.RowCount; x++)
+                {
+                    if (FavouritesGrid.Rows[x].Cells[0].Value == SongsGrid.Rows[e.RowIndex].Cells[0].Value)
+                    {
+                        FavouritesGrid.Rows.RemoveAt(x);
+                        FavGrid2.Rows.RemoveAt(x);
+                    }
+                }
+            }
+            FavGrid1.ClearSelection();
         }
 
         //Songs DataGridView Row Hover Effect
@@ -226,7 +360,7 @@ namespace WindowsFormsApp1
             style1.BackColor = Color.FromArgb(240, 84, 84);
             if (e.RowIndex > -1)
             {
-                dataGridView1.Rows[e.RowIndex].DefaultCellStyle = style1;
+                SongsGrid.Rows[e.RowIndex].DefaultCellStyle = style1;
             }
         }
         private void dataGridView1_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
@@ -235,29 +369,28 @@ namespace WindowsFormsApp1
             style2.BackColor = Color.Black;
             if (e.RowIndex > -1)
             {
-                dataGridView1.Rows[e.RowIndex].DefaultCellStyle = style2;
+                SongsGrid.Rows[e.RowIndex].DefaultCellStyle = style2;
                 
             }
         }
 
-        //FavAndDel DataGridView Row Hover Effect
+        //FavGrid1 DataGridView Row Hover Effect
         private void FavAndDelButtons_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewCellStyle style1 = new DataGridViewCellStyle();
             style1.BackColor = Color.FromArgb(240, 84, 84);
             if (e.RowIndex > -1)
             {
-                Fav.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style1;
+                FavGrid1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style1;
             }
         }
-
         private void FavAndDelButtons_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewCellStyle style2 = new DataGridViewCellStyle();
             style2.BackColor = Color.Black;
             if (e.RowIndex > -1)
             {
-                Fav.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style2;
+                FavGrid1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style2;
             }
         }
 
@@ -319,7 +452,11 @@ namespace WindowsFormsApp1
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Player.Ctlcontrols.stop();
-            dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value = PlayIcon;
+            SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
+            if(FavouritesGrid.RowCount > 0)
+            {
+                FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
+            }
             // Connect it with BottomPanel PlayButton
             if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
@@ -337,13 +474,21 @@ namespace WindowsFormsApp1
             if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
                 Player.Ctlcontrols.pause();
-                dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value = PlayIcon;
+                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
+                if (FavouritesGrid.RowCount > 0)
+                {
+                    FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
+                }
                 PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhite1.png");
             }
             else
             {
                 Player.Ctlcontrols.play();
-                dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value = PauseIcon;
+                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PauseIcon;
+                if (FavouritesGrid.RowCount > 0)
+                {
+                    FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PauseIcon;
+                }
                 PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
             }
         }
@@ -351,7 +496,7 @@ namespace WindowsFormsApp1
         //BottomPanel PrevButton Functionality
         private void PrevSongPic_Click(object sender, EventArgs e)
         {
-            int x = dataGridView1.SelectedRows[0].Index;
+            int x = SongsGrid.SelectedRows[0].Index;
             if (x==0)
             {
                 Player.URL = path[x];
@@ -359,27 +504,27 @@ namespace WindowsFormsApp1
             }
             else
             {
-                dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value = PlayIcon;
+                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
                 --x;
-                dataGridView1.Rows[x].Selected = true;
-                dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value = PauseIcon;
+                SongsGrid.Rows[x].Selected = true;
+                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PauseIcon;
                 Player.URL = path[x];
                 Player.Ctlcontrols.play();
             }
             PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
 
             // BottomPanel Song Name And Artist Function Call
-            BottomPanelSongArtist();
+            BottomPanelSongArtist(SongsGrid.SelectedRows[0].Index);
 
             // BottomPanelPic Function Call
-            AddSongPic();
+            AddSongPic(SongsGrid.SelectedRows[0].Index);
         }
 
         //BottomPanel NextButton Functionality
         private void NextSongPic_Click(object sender, EventArgs e)
         {
             string [] FileNum = openFileDialog.FileNames;
-            int x = dataGridView1.SelectedRows[0].Index;
+            int x = SongsGrid.SelectedRows[0].Index;
             if (x == FileNum.Length-1)
             {
                 Player.URL = path[x];
@@ -387,10 +532,10 @@ namespace WindowsFormsApp1
             }
             else
             {
-                dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value = PlayIcon; 
+                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon; 
                 ++x;
-                dataGridView1.Rows[x].Selected = true;
-                dataGridView1[0, dataGridView1.SelectedRows[0].Index].Value = PauseIcon;
+                SongsGrid.Rows[x].Selected = true;
+                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PauseIcon;
                 Player.URL = path[x];
                 Player.Ctlcontrols.play();
             }
@@ -398,10 +543,10 @@ namespace WindowsFormsApp1
             PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
 
             // BottomPanel Song Name And Artist Function Call
-            BottomPanelSongArtist();
+            BottomPanelSongArtist(SongsGrid.SelectedRows[0].Index);
 
             // BottomPanelPic Function Call
-            AddSongPic();
+            AddSongPic(SongsGrid.SelectedRows[0].Index);
         }
 
         //BottomPanel Song Timer Label
@@ -419,6 +564,122 @@ namespace WindowsFormsApp1
         private void SoundSlider_Scroll(object sender, Utilities.BunifuSlider.BunifuVScrollBar.ScrollEventArgs e)
         {
             Player.settings.volume = SoundSlider.Value;
+        }
+
+
+        // <-------------------   Favourites Page   ------------------->
+
+
+        // Favourites DataGridView Functionality
+        private void FavouritesGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int FavSongId = (int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value;
+            SongsGrid.Rows[FavSongId].Selected = true;
+            // One Click On Row Song Plays, Second Click Song Stops
+            if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying && current2 == FavouritesGrid.SelectedRows[0].Index)
+            {
+                Player.Ctlcontrols.stop();
+                FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
+                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
+                PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhite1.png");
+            }
+            else
+            {
+                Player.URL = path[(int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value];
+                Player.Ctlcontrols.play();
+                current1 = SongsGrid.SelectedRows[0].Index; 
+                current2 = FavouritesGrid.SelectedRows[0].Index;
+                //Reset first column pictures to PlayIcon
+                for (int x = 0; x < FavouritesGrid.RowCount; x++)
+                {
+                    FavouritesGrid[1, x].Value = PlayIcon;
+                }
+                for (int x = 0; x < SongsGrid.RowCount; x++)
+                {
+                    SongsGrid[1, x].Value = PlayIcon;
+                }
+
+                FavouritesGrid[1, current2].Value = PauseIcon;
+                SongsGrid[1, current1].Value = PauseIcon;
+                PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
+            }
+
+            // BottomPanel Song Name And Artist Function Call
+            BottomPanelSongArtist((int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value);
+
+            // BottomPanelPic Function Call
+            AddSongPic((int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value);
+        }
+
+        //Favourite Buttons Delete Function
+        private void FavGrid2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FavGrid1.Rows[(int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value].Cells[0].Value = FavStar;
+            FavouritesGrid.Rows.RemoveAt(FavGrid2.SelectedRows[0].Index);
+            FavGrid2.Rows.RemoveAt(FavGrid2.SelectedRows[0].Index);
+            FavGrid2.ClearSelection();
+            if (FavouritesGrid.RowCount == 0)
+            {
+                NoSongs.Visible = true;
+            }
+        }
+
+        // Favourites DataGridView Row Hover Effect
+        private void FavouritesGrid_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCellStyle style1 = new DataGridViewCellStyle();
+            style1.BackColor = Color.FromArgb(240, 84, 84);
+            if (e.RowIndex > -1)
+            {
+                FavouritesGrid.Rows[e.RowIndex].DefaultCellStyle = style1;
+            }
+        }
+        private void FavouritesGrid_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCellStyle style2 = new DataGridViewCellStyle();
+            style2.BackColor = Color.Black;
+            if (e.RowIndex > -1)
+            {
+                FavouritesGrid.Rows[e.RowIndex].DefaultCellStyle = style2;
+
+            }
+        }
+
+        // FavGrid2 DataGridView Row Hover Effect
+        private void FavGrid2_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCellStyle style1 = new DataGridViewCellStyle();
+            style1.BackColor = Color.FromArgb(240, 84, 84);
+            if (e.RowIndex > -1)
+            {
+                FavGrid2.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style1;
+            }
+        }
+        private void FavGrid2_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCellStyle style2 = new DataGridViewCellStyle();
+            style2.BackColor = Color.Black;
+            if (e.RowIndex > -1)
+            {
+                FavGrid2.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style2;
+            }
+        }
+
+        //Syncing Scroll Bar with Favourites DataViewGrid
+        private void FavouritesGrid_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.ScrollOrientation == ScrollOrientation.VerticalScroll)
+            {
+                ScrollBarFavourites.Value = e.NewValue;
+            }
+        }
+        private void ScrollBarFavourites_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
+        {
+            if (e.Value < FavouritesGrid.RowCount)
+            {
+                FavouritesGrid.FirstDisplayedScrollingRowIndex = e.Value;
+                FavGrid2.FirstDisplayedScrollingRowIndex = e.Value;
+            }
         }
     }
 }
