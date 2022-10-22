@@ -74,11 +74,11 @@
             this.SongTimer = new System.Windows.Forms.Label();
             this.NextSongPic = new System.Windows.Forms.PictureBox();
             this.PrevSongPic = new System.Windows.Forms.PictureBox();
-            this.ArtistName = new System.Windows.Forms.Label();
+            this.Artist2 = new System.Windows.Forms.Label();
             this.SoundSlider = new Bunifu.UI.WinForms.BunifuVSlider();
             this.SongArtistPanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.SongName = new System.Windows.Forms.Label();
-            this.coverPictureBox = new System.Windows.Forms.PictureBox();
+            this.SongTitle2 = new System.Windows.Forms.Label();
+            this.BottomPanelPicBox = new System.Windows.Forms.PictureBox();
             this.SpeakerPic = new System.Windows.Forms.PictureBox();
             this.SongSlider = new Bunifu.UI.WinForms.BunifuHSlider();
             this.StopPic = new System.Windows.Forms.PictureBox();
@@ -91,14 +91,14 @@
             this.FavGrid1 = new System.Windows.Forms.DataGridView();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.ScrollBarSongs = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.NoSongs = new System.Windows.Forms.Label();
+            this.NoSongs2 = new System.Windows.Forms.Label();
             this.Player = new AxWMPLib.AxWindowsMediaPlayer();
             this.SongsGrid = new System.Windows.Forms.DataGridView();
             this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.Song = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Artist = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genre2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImportSongsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.FavouritesGrid = new System.Windows.Forms.DataGridView();
@@ -108,9 +108,18 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExitPicture = new System.Windows.Forms.PictureBox();
-            this.Songs = new System.Windows.Forms.Label();
+            this.Title = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.SongCoverPicBox = new System.Windows.Forms.PictureBox();
+            this.ExitPicture = new System.Windows.Forms.PictureBox();
+            this.NowPlayingPanel = new System.Windows.Forms.Panel();
+            this.Genre1_2 = new System.Windows.Forms.Label();
+            this.Artist1_2 = new System.Windows.Forms.Label();
+            this.SongTitle1_2 = new System.Windows.Forms.Label();
+            this.Genre1_1 = new System.Windows.Forms.Label();
+            this.Artist1_1 = new System.Windows.Forms.Label();
+            this.SongTitle1_1 = new System.Windows.Forms.Label();
+            this.NoSongs1_1 = new System.Windows.Forms.Label();
             this.LeftPanel.SuspendLayout();
             this.BottomLeftPanel.SuspendLayout();
             this.BottomRightPanel.SuspendLayout();
@@ -118,7 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NextSongPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrevSongPic)).BeginInit();
             this.SongArtistPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BottomPanelPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpeakerPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StopPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayPic)).BeginInit();
@@ -128,7 +137,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SongsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FavouritesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SongCoverPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).BeginInit();
+            this.NowPlayingPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -720,6 +731,7 @@
             this.btn1_NowPlaying.TextMarginLeft = 0;
             this.btn1_NowPlaying.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn1_NowPlaying.UseDefaultRadiusAndThickness = true;
+            this.btn1_NowPlaying.Click += new System.EventHandler(this.btn1_NowPlaying_Click);
             // 
             // title3_Library
             // 
@@ -792,10 +804,10 @@
             this.BottomShadowPanel.Controls.Add(this.SongTimer);
             this.BottomShadowPanel.Controls.Add(this.NextSongPic);
             this.BottomShadowPanel.Controls.Add(this.PrevSongPic);
-            this.BottomShadowPanel.Controls.Add(this.ArtistName);
+            this.BottomShadowPanel.Controls.Add(this.Artist2);
             this.BottomShadowPanel.Controls.Add(this.SoundSlider);
             this.BottomShadowPanel.Controls.Add(this.SongArtistPanel);
-            this.BottomShadowPanel.Controls.Add(this.coverPictureBox);
+            this.BottomShadowPanel.Controls.Add(this.BottomPanelPicBox);
             this.BottomShadowPanel.Controls.Add(this.SpeakerPic);
             this.BottomShadowPanel.Controls.Add(this.SongSlider);
             this.BottomShadowPanel.Controls.Add(this.StopPic);
@@ -852,15 +864,15 @@
             this.PrevSongPic.MouseEnter += new System.EventHandler(this.PrevSongPic_MouseEnter);
             this.PrevSongPic.MouseLeave += new System.EventHandler(this.PrevSongPic_MouseLeave);
             // 
-            // ArtistName
+            // Artist2
             // 
-            this.ArtistName.AutoSize = true;
-            this.ArtistName.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ArtistName.Location = new System.Drawing.Point(29, 59);
-            this.ArtistName.Name = "ArtistName";
-            this.ArtistName.Size = new System.Drawing.Size(116, 22);
-            this.ArtistName.TabIndex = 1;
-            this.ArtistName.Text = "Artist Name";
+            this.Artist2.AutoSize = true;
+            this.Artist2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Artist2.Location = new System.Drawing.Point(29, 59);
+            this.Artist2.Name = "Artist2";
+            this.Artist2.Size = new System.Drawing.Size(59, 22);
+            this.Artist2.TabIndex = 1;
+            this.Artist2.Text = "Artist";
             // 
             // SoundSlider
             // 
@@ -923,31 +935,31 @@
             this.SongArtistPanel.BorderColor = System.Drawing.Color.Transparent;
             this.SongArtistPanel.BorderRadius = 3;
             this.SongArtistPanel.BorderThickness = 1;
-            this.SongArtistPanel.Controls.Add(this.SongName);
+            this.SongArtistPanel.Controls.Add(this.SongTitle2);
             this.SongArtistPanel.Location = new System.Drawing.Point(25, 18);
             this.SongArtistPanel.Name = "SongArtistPanel";
             this.SongArtistPanel.ShowBorders = true;
             this.SongArtistPanel.Size = new System.Drawing.Size(294, 36);
             this.SongArtistPanel.TabIndex = 4;
             // 
-            // SongName
+            // SongTitle2
             // 
-            this.SongName.AutoSize = true;
-            this.SongName.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SongName.Location = new System.Drawing.Point(3, 3);
-            this.SongName.Name = "SongName";
-            this.SongName.Size = new System.Drawing.Size(131, 26);
-            this.SongName.TabIndex = 0;
-            this.SongName.Text = "Song Name";
+            this.SongTitle2.AutoSize = true;
+            this.SongTitle2.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SongTitle2.Location = new System.Drawing.Point(3, 3);
+            this.SongTitle2.Name = "SongTitle2";
+            this.SongTitle2.Size = new System.Drawing.Size(116, 26);
+            this.SongTitle2.TabIndex = 0;
+            this.SongTitle2.Text = "Song Title";
             // 
-            // coverPictureBox
+            // BottomPanelPicBox
             // 
-            this.coverPictureBox.Location = new System.Drawing.Point(198, 59);
-            this.coverPictureBox.Name = "coverPictureBox";
-            this.coverPictureBox.Size = new System.Drawing.Size(75, 75);
-            this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.coverPictureBox.TabIndex = 4;
-            this.coverPictureBox.TabStop = false;
+            this.BottomPanelPicBox.Location = new System.Drawing.Point(198, 59);
+            this.BottomPanelPicBox.Name = "BottomPanelPicBox";
+            this.BottomPanelPicBox.Size = new System.Drawing.Size(75, 75);
+            this.BottomPanelPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BottomPanelPicBox.TabIndex = 4;
+            this.BottomPanelPicBox.TabStop = false;
             // 
             // SpeakerPic
             // 
@@ -1048,7 +1060,7 @@
             this.SongListPanel.Controls.Add(this.FavGrid2);
             this.SongListPanel.Controls.Add(this.FavGrid1);
             this.SongListPanel.Controls.Add(this.ScrollBarSongs);
-            this.SongListPanel.Controls.Add(this.NoSongs);
+            this.SongListPanel.Controls.Add(this.NoSongs2);
             this.SongListPanel.Controls.Add(this.Player);
             this.SongListPanel.Controls.Add(this.SongsGrid);
             this.SongListPanel.Controls.Add(this.ImportSongsButton);
@@ -1067,6 +1079,7 @@
             this.SongListPanel.Size = new System.Drawing.Size(980, 503);
             this.SongListPanel.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.SongListPanel.TabIndex = 3;
+            this.SongListPanel.Visible = false;
             // 
             // ScrollBarFavourites
             // 
@@ -1169,6 +1182,7 @@
             this.FavGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FavGrid2.Size = new System.Drawing.Size(57, 410);
             this.FavGrid2.TabIndex = 6;
+            this.FavGrid2.Visible = false;
             this.FavGrid2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavGrid2_CellContentClick);
             this.FavGrid2.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavGrid2_CellMouseEnter);
             this.FavGrid2.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavGrid2_CellMouseLeave);
@@ -1239,6 +1253,7 @@
             this.FavGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FavGrid1.Size = new System.Drawing.Size(57, 410);
             this.FavGrid1.TabIndex = 4;
+            this.FavGrid1.Visible = false;
             this.FavGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavAndDelButtons_CellContentClick);
             this.FavGrid1.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavAndDelButtons_CellMouseEnter);
             this.FavGrid1.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavAndDelButtons_CellMouseLeave);
@@ -1294,16 +1309,17 @@
             this.ScrollBarSongs.Visible = false;
             this.ScrollBarSongs.Scroll += new System.EventHandler<Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs>(this.ScrollBar_Scroll);
             // 
-            // NoSongs
+            // NoSongs2
             // 
-            this.NoSongs.AutoSize = true;
-            this.NoSongs.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoSongs.ForeColor = System.Drawing.Color.White;
-            this.NoSongs.Location = new System.Drawing.Point(116, 106);
-            this.NoSongs.Name = "NoSongs";
-            this.NoSongs.Size = new System.Drawing.Size(161, 22);
-            this.NoSongs.TabIndex = 2;
-            this.NoSongs.Text = "No songs added";
+            this.NoSongs2.AutoSize = true;
+            this.NoSongs2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoSongs2.ForeColor = System.Drawing.Color.White;
+            this.NoSongs2.Location = new System.Drawing.Point(116, 106);
+            this.NoSongs2.Name = "NoSongs2";
+            this.NoSongs2.Size = new System.Drawing.Size(161, 22);
+            this.NoSongs2.TabIndex = 2;
+            this.NoSongs2.Text = "No songs added";
+            this.NoSongs2.Visible = false;
             // 
             // Player
             // 
@@ -1313,6 +1329,7 @@
             this.Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Player.OcxState")));
             this.Player.Size = new System.Drawing.Size(75, 23);
             this.Player.TabIndex = 0;
+            this.Player.Visible = false;
             // 
             // SongsGrid
             // 
@@ -1337,7 +1354,7 @@
             this.Icon,
             this.Song,
             this.Artist,
-            this.Genre,
+            this.Genre2,
             this.Duration});
             this.SongsGrid.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1377,6 +1394,7 @@
             this.SongsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SongsGrid.Size = new System.Drawing.Size(806, 410);
             this.SongsGrid.TabIndex = 1;
+            this.SongsGrid.Visible = false;
             this.SongsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.SongsGrid.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
             this.SongsGrid.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseLeave);
@@ -1415,13 +1433,13 @@
             this.Artist.ReadOnly = true;
             this.Artist.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Genre
+            // Genre2
             // 
-            this.Genre.FillWeight = 99.61929F;
-            this.Genre.HeaderText = "Genre";
-            this.Genre.Name = "Genre";
-            this.Genre.ReadOnly = true;
-            this.Genre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Genre2.FillWeight = 99.61929F;
+            this.Genre2.HeaderText = "Genre";
+            this.Genre2.Name = "Genre2";
+            this.Genre2.ReadOnly = true;
+            this.Genre2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Duration
             // 
@@ -1520,6 +1538,7 @@
             this.ImportSongsButton.TextMarginLeft = 0;
             this.ImportSongsButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.ImportSongsButton.UseDefaultRadiusAndThickness = true;
+            this.ImportSongsButton.Visible = false;
             this.ImportSongsButton.Click += new System.EventHandler(this.ImportSongsButton_Click);
             // 
             // FavouritesGrid
@@ -1585,6 +1604,7 @@
             this.FavouritesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FavouritesGrid.Size = new System.Drawing.Size(806, 410);
             this.FavouritesGrid.TabIndex = 5;
+            this.FavouritesGrid.Visible = false;
             this.FavouritesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavouritesGrid_CellContentClick);
             this.FavouritesGrid.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavouritesGrid_CellMouseEnter);
             this.FavouritesGrid.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.FavouritesGrid_CellMouseLeave);
@@ -1640,6 +1660,32 @@
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn4.Width = 90;
             // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(470, 35);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(210, 38);
+            this.Title.TabIndex = 4;
+            this.Title.Text = "Now Playing";
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // SongCoverPicBox
+            // 
+            this.SongCoverPicBox.Image = global::WindowsFormsApp1.Properties.Resources.Robot;
+            this.SongCoverPicBox.Location = new System.Drawing.Point(3, 54);
+            this.SongCoverPicBox.Name = "SongCoverPicBox";
+            this.SongCoverPicBox.Size = new System.Drawing.Size(400, 400);
+            this.SongCoverPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SongCoverPicBox.TabIndex = 8;
+            this.SongCoverPicBox.TabStop = false;
+            // 
             // ExitPicture
             // 
             this.ExitPicture.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1652,21 +1698,93 @@
             this.ExitPicture.TabStop = false;
             this.ExitPicture.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Songs
+            // NowPlayingPanel
             // 
-            this.Songs.AutoSize = true;
-            this.Songs.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Songs.Location = new System.Drawing.Point(470, 35);
-            this.Songs.Name = "Songs";
-            this.Songs.Size = new System.Drawing.Size(117, 38);
-            this.Songs.TabIndex = 4;
-            this.Songs.Text = "Songs";
+            this.NowPlayingPanel.Controls.Add(this.Genre1_2);
+            this.NowPlayingPanel.Controls.Add(this.Artist1_2);
+            this.NowPlayingPanel.Controls.Add(this.SongTitle1_2);
+            this.NowPlayingPanel.Controls.Add(this.Genre1_1);
+            this.NowPlayingPanel.Controls.Add(this.Artist1_1);
+            this.NowPlayingPanel.Controls.Add(this.SongTitle1_1);
+            this.NowPlayingPanel.Controls.Add(this.NoSongs1_1);
+            this.NowPlayingPanel.Controls.Add(this.SongCoverPicBox);
+            this.NowPlayingPanel.Location = new System.Drawing.Point(474, 107);
+            this.NowPlayingPanel.Name = "NowPlayingPanel";
+            this.NowPlayingPanel.Size = new System.Drawing.Size(926, 505);
+            this.NowPlayingPanel.TabIndex = 5;
             // 
-            // timer
+            // Genre1_2
             // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            this.Genre1_2.AutoSize = true;
+            this.Genre1_2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Genre1_2.ForeColor = System.Drawing.Color.Gray;
+            this.Genre1_2.Location = new System.Drawing.Point(426, 314);
+            this.Genre1_2.Name = "Genre1_2";
+            this.Genre1_2.Size = new System.Drawing.Size(68, 24);
+            this.Genre1_2.TabIndex = 16;
+            this.Genre1_2.Text = "Genre";
+            // 
+            // Artist1_2
+            // 
+            this.Artist1_2.AutoSize = true;
+            this.Artist1_2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Artist1_2.ForeColor = System.Drawing.Color.Gray;
+            this.Artist1_2.Location = new System.Drawing.Point(426, 216);
+            this.Artist1_2.Name = "Artist1_2";
+            this.Artist1_2.Size = new System.Drawing.Size(61, 24);
+            this.Artist1_2.TabIndex = 15;
+            this.Artist1_2.Text = "Artist";
+            // 
+            // SongTitle1_2
+            // 
+            this.SongTitle1_2.AutoSize = true;
+            this.SongTitle1_2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SongTitle1_2.ForeColor = System.Drawing.Color.Gray;
+            this.SongTitle1_2.Location = new System.Drawing.Point(426, 105);
+            this.SongTitle1_2.Name = "SongTitle1_2";
+            this.SongTitle1_2.Size = new System.Drawing.Size(106, 24);
+            this.SongTitle1_2.TabIndex = 14;
+            this.SongTitle1_2.Text = "Song Title";
+            // 
+            // Genre1_1
+            // 
+            this.Genre1_1.AutoSize = true;
+            this.Genre1_1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Genre1_1.Location = new System.Drawing.Point(423, 274);
+            this.Genre1_1.Name = "Genre1_1";
+            this.Genre1_1.Size = new System.Drawing.Size(97, 33);
+            this.Genre1_1.TabIndex = 13;
+            this.Genre1_1.Text = "Genre";
+            // 
+            // Artist1_1
+            // 
+            this.Artist1_1.AutoSize = true;
+            this.Artist1_1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Artist1_1.Location = new System.Drawing.Point(423, 176);
+            this.Artist1_1.Name = "Artist1_1";
+            this.Artist1_1.Size = new System.Drawing.Size(86, 33);
+            this.Artist1_1.TabIndex = 12;
+            this.Artist1_1.Text = "Artist";
+            // 
+            // SongTitle1_1
+            // 
+            this.SongTitle1_1.AutoSize = true;
+            this.SongTitle1_1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SongTitle1_1.Location = new System.Drawing.Point(423, 65);
+            this.SongTitle1_1.Name = "SongTitle1_1";
+            this.SongTitle1_1.Size = new System.Drawing.Size(151, 33);
+            this.SongTitle1_1.TabIndex = 11;
+            this.SongTitle1_1.Text = "Song Title";
+            // 
+            // NoSongs1_1
+            // 
+            this.NoSongs1_1.AutoSize = true;
+            this.NoSongs1_1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoSongs1_1.Location = new System.Drawing.Point(-3, 14);
+            this.NoSongs1_1.Name = "NoSongs1_1";
+            this.NoSongs1_1.Size = new System.Drawing.Size(208, 29);
+            this.NoSongs1_1.TabIndex = 9;
+            this.NoSongs1_1.Text = "No songs added!";
             // 
             // MainForm
             // 
@@ -1674,7 +1792,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 800);
-            this.Controls.Add(this.Songs);
+            this.Controls.Add(this.NowPlayingPanel);
+            this.Controls.Add(this.Title);
             this.Controls.Add(this.SongListPanel);
             this.Controls.Add(this.ExitPicture);
             this.Controls.Add(this.BottomRightPanel);
@@ -1694,7 +1813,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PrevSongPic)).EndInit();
             this.SongArtistPanel.ResumeLayout(false);
             this.SongArtistPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BottomPanelPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpeakerPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StopPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayPic)).EndInit();
@@ -1705,7 +1824,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SongsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FavouritesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SongCoverPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).EndInit();
+            this.NowPlayingPanel.ResumeLayout(false);
+            this.NowPlayingPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1737,20 +1859,20 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn4_Favourites;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn3_Playlists;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn2_Songs;
-        private System.Windows.Forms.PictureBox coverPictureBox;
+        private System.Windows.Forms.PictureBox BottomPanelPicBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private Bunifu.UI.WinForms.BunifuVSlider SoundSlider;
         private Bunifu.UI.WinForms.BunifuShadowPanel SongListPanel;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ImportSongsButton;
         private System.Windows.Forms.DataGridView SongsGrid;
         private AxWMPLib.AxWindowsMediaPlayer Player;
-        private System.Windows.Forms.Label ArtistName;
-        private System.Windows.Forms.Label SongName;
+        private System.Windows.Forms.Label Artist2;
+        private System.Windows.Forms.Label SongTitle2;
         private Bunifu.UI.WinForms.BunifuPanel SongArtistPanel;
         private System.Windows.Forms.PictureBox NextSongPic;
         private System.Windows.Forms.PictureBox PrevSongPic;
-        private System.Windows.Forms.Label NoSongs;
-        private System.Windows.Forms.Label Songs;
+        private System.Windows.Forms.Label NoSongs2;
+        private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Timer timer;
         private Bunifu.UI.WinForms.BunifuVScrollBar ScrollBarSongs;
         private System.Windows.Forms.DataGridView FavGrid1;
@@ -1763,7 +1885,7 @@
         private System.Windows.Forms.DataGridViewImageColumn Icon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Song;
         private System.Windows.Forms.DataGridViewTextBoxColumn Artist;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Genre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genre2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
@@ -1771,6 +1893,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.PictureBox SongCoverPicBox;
+        private System.Windows.Forms.Panel NowPlayingPanel;
+        private System.Windows.Forms.Label SongTitle1_1;
+        private System.Windows.Forms.Label Genre1_1;
+        private System.Windows.Forms.Label Artist1_1;
+        private System.Windows.Forms.Label SongTitle1_2;
+        private System.Windows.Forms.Label Artist1_2;
+        private System.Windows.Forms.Label Genre1_2;
+        private System.Windows.Forms.Label NoSongs1_1;
     }
 }
 

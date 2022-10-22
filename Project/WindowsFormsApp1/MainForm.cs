@@ -22,21 +22,20 @@ namespace WindowsFormsApp1
                 title1_TheMethod.Font = new Font(BadSignal.Families[0], 48, FontStyle.Regular);
             }
 
-            //Import Only .mp3 and Allow Multiple Files
+            //Import Only .mp3 and Allow Multiple Select
             openFileDialog.DefaultExt = "mp3";
             openFileDialog.Filter = "MP3 Files (*.mp3)|*.mp3";
             openFileDialog.Multiselect = true;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //Hide Scroll Bar At Start 
-            ScrollBarSongs.Visible = false;
+            
         }
 
         // Add Song Picture Function
-        public void AddSongPic(int x)
+        public void AddSongPic(PictureBox x, int y)
         {
-            var file = TagLib.File.Create(files[x]);
+            var file = TagLib.File.Create(files[y]);
             var mStream = new MemoryStream();
             var firstPicture = file.Tag.Pictures.FirstOrDefault();
             if (firstPicture != null)
@@ -45,36 +44,66 @@ namespace WindowsFormsApp1
                 mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
                 var bm = new Bitmap(mStream, false);
                 mStream.Dispose();
-                coverPictureBox.Image = bm;
+                x.Image = bm;
             }
             else
             {
-                coverPictureBox.Image = Image.FromFile(@"..\..\Resources\Default.png");
+                x.Image = Image.FromFile(@"..\..\Resources\Default.png");
             }
         }
 
         // Add Song and Artist Names Function
-        public void BottomPanelSongArtist(int x)
+        public void SongAndArtist(Label SongTitle, Label Artist, int x)
         {
             var file = TagLib.File.Create(files[x]);
             if (file.Tag.Title == null)
             {
-                SongName.Text = "Unknown";
+                SongTitle.Text = "Unknown";
             }
             else
             {
-                SongName.Text = file.Tag.Title;
+                SongTitle.Text = file.Tag.Title;
             }
-            if (file.Tag.Title == null)
+            if (file.Tag.FirstPerformer == null)
             {
-                ArtistName.Text = "Unknown";
+                Artist.Text = "Unknown";
             }
             else
             {
-                ArtistName.Text = file.Tag.FirstPerformer;
+                Artist.Text = file.Tag.FirstPerformer;
             }
         }
-       
+
+        // Add Song, Artist and Genre Names Function
+        public void SongArtistAndGenre(Label SongTitle, Label Artist, Label Genre, int x)
+        {
+            var file = TagLib.File.Create(files[x]);
+            if (file.Tag.Title == null)
+            {
+                SongTitle.Text = "Unknown";
+            }
+            else
+            {
+                SongTitle.Text = file.Tag.Title;
+            }
+            if (file.Tag.FirstPerformer == null)
+            {
+                Artist.Text = "Unknown";
+            }
+            else
+            {
+                Artist.Text = file.Tag.FirstPerformer;
+            }
+            if (file.Tag.FirstGenre == null)
+            {
+                Genre.Text = "Unknown";
+            }
+            else
+            {
+                Genre.Text = file.Tag.FirstGenre;
+            }
+        }
+
         //Close Form Button
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -93,90 +122,7 @@ namespace WindowsFormsApp1
             btn1_NowPlaying.Focus();
         }
 
-        // <-------------------   LeftPanel Page Navigation Buttons   ------------------->
-
-        // Songs Button
-        private void btn2_Songs_Click(object sender, EventArgs e)
-        {
-            ImportSongsButton.Visible = true;
-            SongsGrid.Visible = true;
-            FavGrid1.Visible = true;
-
-            FavouritesGrid.Visible = false;
-            FavGrid2.Visible = false;
-            ScrollBarFavourites.Visible = false;
-
-            //No Songs Label Visibilty
-            if (SongsGrid.RowCount > 0 && SongsGrid.Visible == true)
-            {
-                NoSongs.Visible = false;
-            }
-            else
-            {
-                NoSongs.Visible = true;
-            }
-
-            //Scroll Bar Visibility
-            if (SongsGrid.RowCount >= 9)
-            {
-                ScrollBarSongs.Visible = true;
-            }
-            else
-            {
-                ScrollBarSongs.Visible = false;
-            }
-        }
-
-        // Favourites Button
-        private void btn4_Favourites_Click(object sender, EventArgs e)
-        {
-            
-            if(FavouritesGrid.RowCount>0 && Player.playState == WMPLib.WMPPlayState.wmppsStopped)
-            {
-                //Link WindowMediaPlayer To first song In Favourites
-                Player.URL = path[(int)FavouritesGrid.Rows[FavouritesGrid.SelectedRows[0].Index].Cells[0].Value];
-                Player.Ctlcontrols.stop();
-            }
-
-            //Clear Selection on FavGrid2 Grid
-            FavGrid2.ClearSelection();
-
-            FavouritesGrid.Visible = true;
-            FavGrid2.Visible = true;
-
-            ImportSongsButton.Visible = false;
-            SongsGrid.Visible = false;
-            FavGrid1.Visible = false;
-            ScrollBarSongs.Visible = false;
-
-            //No Songs Label Visibility
-            if (FavouritesGrid.RowCount > 0 && FavouritesGrid.Visible==true)
-            {
-                NoSongs.Visible = false;
-            }
-            else
-            {
-                NoSongs.Visible = true;
-            }
-            
-            //Scroll Bar Visibility
-            if (FavouritesGrid.RowCount >= 9)
-            {
-                ScrollBarFavourites.Visible = true;
-            }
-            else
-            {
-                ScrollBarFavourites.Visible = false;
-            }
-
-            //Scroll Bar Settings
-            if(FavouritesGrid.RowCount > 0)
-            {
-                ScrollBarFavourites.Maximum = FavouritesGrid.RowCount;
-                ScrollBarFavourites.LargeChange = FavouritesGrid.DisplayedRowCount(true);
-                ScrollBarFavourites.SmallChange = 1;
-            }
-        }
+        
 
         // <-------------------   Songs Page   ------------------->
 
@@ -196,7 +142,7 @@ namespace WindowsFormsApp1
             //Import Songs
             if (openFileDialog.ShowDialog()==System.Windows.Forms.DialogResult.OK)
             {
-                NoSongs.Visible = false;
+                NoSongs2.Visible = false;
                 files = openFileDialog.FileNames;
                 path = openFileDialog.FileNames;
                 for (int x = 0; x < files.Length; x++)
@@ -211,6 +157,9 @@ namespace WindowsFormsApp1
                     SongsGrid.Rows.Add(x, PlayIcon, title, artist, genre, duration);
                     FavGrid1.Rows.Add(FavStar);
                 }
+
+                //Hide No Songs Label
+                NoSongs1_1.Visible = false;
 
                 //Clear Selection on FavGrid1 Grid
                 FavGrid1.ClearSelection();
@@ -230,11 +179,17 @@ namespace WindowsFormsApp1
                 Player.URL = path[0];
                 Player.Ctlcontrols.stop();
 
-                //BottomPanel Song Name And Artist Function Call
-                BottomPanelSongArtist(SongsGrid.SelectedRows[0].Index);
+                //Add Song and Artist to Bottom Panel
+                SongAndArtist(SongTitle2, Artist2 ,SongsGrid.SelectedRows[0].Index);
 
-                //BottomPanelPic Function Call
-                AddSongPic(SongsGrid.SelectedRows[0].Index);
+                //Add Song Cover to Bottom Panel
+                AddSongPic(BottomPanelPicBox ,SongsGrid.SelectedRows[0].Index);
+
+                // Add Song, Artist and Genre Names to Now Playing
+                SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
+
+                //Add Song Cover to Now Playing
+                AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
             }
         }
 
@@ -303,11 +258,17 @@ namespace WindowsFormsApp1
                 PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png"); // Turn BottomPanel PlayButton To Pause White
             }
 
-            // BottomPanel Song Name And Artist Function Call
-            BottomPanelSongArtist(SongsGrid.SelectedRows[0].Index);
+            //Add Song and Artist to Bottom Panel
+            SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
 
-            // BottomPanelPic Function Call
-            AddSongPic(SongsGrid.SelectedRows[0].Index);
+            // Add Song Cover to Bottom Panel
+            AddSongPic(BottomPanelPicBox, SongsGrid.SelectedRows[0].Index);
+
+            // Add Song, Artist and Genre Names to Now Playing
+            SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
+
+            //Add Song Cover to Now Playing
+            AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
         }
 
         //FavGrid1 DataGridView Functionality
@@ -513,11 +474,17 @@ namespace WindowsFormsApp1
             }
             PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
 
-            // BottomPanel Song Name And Artist Function Call
-            BottomPanelSongArtist(SongsGrid.SelectedRows[0].Index);
+            //Add Song and Artist to Bottom Panel
+            SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
 
-            // BottomPanelPic Function Call
-            AddSongPic(SongsGrid.SelectedRows[0].Index);
+            // Add Song Cover to Bottom Panel
+            AddSongPic(BottomPanelPicBox, SongsGrid.SelectedRows[0].Index);
+
+            // Add Song, Artist and Genre Names to Now Playing
+            SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
+
+            // Add Song Cover to Now Playing
+            AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
         }
 
         //BottomPanel NextButton Functionality
@@ -542,11 +509,17 @@ namespace WindowsFormsApp1
 
             PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
 
-            // BottomPanel Song Name And Artist Function Call
-            BottomPanelSongArtist(SongsGrid.SelectedRows[0].Index);
+            // Add Song and Artist to Bottom Panel
+            SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
 
-            // BottomPanelPic Function Call
-            AddSongPic(SongsGrid.SelectedRows[0].Index);
+            // Add Song Cover to Bottom Panel
+            AddSongPic(BottomPanelPicBox, SongsGrid.SelectedRows[0].Index);
+
+            // Add Song, Artist and Genre Names to Now Playing
+            SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
+             
+            // Add Song Cover to Now Playing
+            AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
         }
 
         //BottomPanel Song Timer Label
@@ -604,11 +577,17 @@ namespace WindowsFormsApp1
                 PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
             }
 
-            // BottomPanel Song Name And Artist Function Call
-            BottomPanelSongArtist((int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value);
+            // Add Song and Artist to Bottom Panel
+            SongAndArtist(SongTitle2, Artist2, (int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value);
 
-            // BottomPanelPic Function Call
-            AddSongPic((int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value);
+            // Add Song Cover to Bottom Panel
+            AddSongPic(BottomPanelPicBox, (int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value);
+
+            // Add Song, Artist and Genre Names to Now Playing
+            SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
+
+            // Add Song Cover to Now Playing
+            AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
         }
 
         //Favourite Buttons Delete Function
@@ -620,7 +599,7 @@ namespace WindowsFormsApp1
             FavGrid2.ClearSelection();
             if (FavouritesGrid.RowCount == 0)
             {
-                NoSongs.Visible = true;
+                NoSongs2.Visible = true;
             }
         }
 
@@ -681,5 +660,114 @@ namespace WindowsFormsApp1
                 FavGrid2.FirstDisplayedScrollingRowIndex = e.Value;
             }
         }
+
+        // <-------------------   LeftPanel Page Navigation Buttons   ------------------->
+
+        //Now Playing Button
+        private void btn1_NowPlaying_Click(object sender, EventArgs e)
+        {
+            //Title
+            Title.Text = "Now Playing";
+
+            //Visibility Control
+            NowPlayingPanel.Visible = true;
+            SongListPanel.Visible = false;
+        }
+
+        // Songs Button
+        private void btn2_Songs_Click(object sender, EventArgs e)
+        {
+            //Title
+            Title.Text = "Songs";
+
+            //Visibiliy Control
+            SongListPanel.Visible = true;
+            ImportSongsButton.Visible = true;
+            SongsGrid.Visible = true;
+            FavGrid1.Visible = true;
+
+            NowPlayingPanel.Visible = false;
+            FavouritesGrid.Visible = false;
+            FavGrid2.Visible = false;
+            ScrollBarFavourites.Visible = false;
+
+            //No Songs Label Visibilty
+            if (SongsGrid.RowCount > 0 && SongsGrid.Visible == true)
+            {
+                NoSongs2.Visible = false;
+            }
+            else
+            {
+                NoSongs2.Visible = true;
+            }
+
+            //Scroll Bar Visibility
+            if (SongsGrid.RowCount >= 9)
+            {
+                ScrollBarSongs.Visible = true;
+            }
+            else
+            {
+                ScrollBarSongs.Visible = false;
+            }
+        }
+
+        // Favourites Button
+        private void btn4_Favourites_Click(object sender, EventArgs e)
+        {
+            //Title
+            Title.Text = "Favourites";
+
+            //Visibility Control 
+            FavouritesGrid.Visible = true;
+            FavGrid2.Visible = true;
+            SongListPanel.Visible = true;
+
+            NowPlayingPanel.Visible = false;
+            ImportSongsButton.Visible = false;
+            SongsGrid.Visible = false;
+            FavGrid1.Visible = false;
+            ScrollBarSongs.Visible = false;
+
+            //No Songs Label Visibility
+            if (FavouritesGrid.RowCount > 0 && FavouritesGrid.Visible == true)
+            {
+                NoSongs2.Visible = false;
+            }
+            else
+            {
+                NoSongs2.Visible = true;
+            }
+
+            //Scroll Bar Visibility
+            if (FavouritesGrid.RowCount >= 9)
+            {
+                ScrollBarFavourites.Visible = true;
+            }
+            else
+            {
+                ScrollBarFavourites.Visible = false;
+            }
+
+            //Link WindowMediaPlayer To first song In Favourites
+            if (FavouritesGrid.RowCount>0 && Player.playState == WMPLib.WMPPlayState.wmppsStopped)
+            {
+                Player.URL = path[(int)FavouritesGrid.Rows[FavouritesGrid.SelectedRows[0].Index].Cells[0].Value];
+                Player.Ctlcontrols.stop();
+            }
+
+            //Clear Selection on FavGrid2 Grid
+            FavGrid2.ClearSelection();
+
+            //Scroll Bar Settings
+            if(FavouritesGrid.RowCount > 0)
+            {
+                ScrollBarFavourites.Maximum = FavouritesGrid.RowCount;
+                ScrollBarFavourites.LargeChange = FavouritesGrid.DisplayedRowCount(true);
+                ScrollBarFavourites.SmallChange = 1;
+            }
+        }
     }
 }
+
+
