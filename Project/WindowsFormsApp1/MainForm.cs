@@ -10,11 +10,29 @@ namespace WindowsFormsApp1
 {
     public partial class MainForm : Form
     {
+        // Resources
+        Icon PlayIcon = new Icon(@"..\..\Resources\Playbutton_White.ico");
+        Icon PauseIcon = new Icon(@"..\..\Resources\Pausebutton_WhiteBlack1.ico");
+        Icon FavStar = new Icon(@"..\..\Resources\FavStar1.ico");
+        Icon FavStarFilled = new Icon(@"..\..\Resources\FavStarFilled1.ico");
+        string Default = (@"..\..\Resources\Default.png");
+        string RedPlay = (@"..\..\Resources\Playbutton_RedWhite1.png");
+        string RedPlayHover = (@"..\..\Resources\Playbutton_RedWhiteHover.png");
+        string WhitePause = (@"..\..\Resources\Pausebutton_WhiteBlack1.png");
+        string WhitePauseHover = (@"..\..\Resources\Pausebutton_WhiteBlackHover.png");
+        string PrevSong = (@"..\..\Resources\previous-song.png");
+        string PrevSongHover = (@"..\..\Resources\previous-song-hover.png");
+        string NextSong = (@"..\..\Resources\next-song.png");
+        string NextSongHover = (@"..\..\Resources\next-song-hover.png");
         readonly PrivateFontCollection BadSignal = new PrivateFontCollection();
+
         public MainForm()
         {
             InitializeComponent();
-  
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
             //Import Custom Font
             BadSignal.AddFontFile(@"..\..\Fonts\BadSignal.otf");
             foreach (Control A in this.Controls)
@@ -23,13 +41,9 @@ namespace WindowsFormsApp1
             }
 
             //Import Only .mp3 and Allow Multiple Select
-            openFileDialog.DefaultExt = "mp3";
-            openFileDialog.Filter = "MP3 Files (*.mp3)|*.mp3";
-            openFileDialog.Multiselect = true;
-        }
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            
+            Songs_openFileDialog.DefaultExt = "mp3";
+            Songs_openFileDialog.Filter = "MP3 Files (*.mp3)|*.mp3";
+            Songs_openFileDialog.Multiselect = true;
         }
 
         // Add Song Picture Function
@@ -48,7 +62,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                x.Image = Image.FromFile(@"..\..\Resources\Default.png");
+                x.Image = Image.FromFile(Default);
             }
         }
 
@@ -110,41 +124,20 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        //Clicking Settings and About Returns to Now Playing Page
-        private void bunifuButton2_Click(object sender, EventArgs e)
-        {
-            btn1_NowPlaying.PerformClick();
-            btn1_NowPlaying.Focus();
-        }
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            btn1_NowPlaying.PerformClick();
-            btn1_NowPlaying.Focus();
-        }
-
-        
-
         // <-------------------   Songs Page   ------------------->
 
         // Arrays to import songs
         string[] path, files;
 
-        // Resources
-        Icon PlayIcon = new Icon(@"..\..\Resources\Playbutton_White.ico");
-        Icon PauseIcon = new Icon(@"..\..\Resources\Pausebutton_WhiteBlack1.ico");
-        Icon FavStar = new Icon(@"..\..\Resources\FavStar1.ico");
-        Icon FavStarFilled = new Icon(@"..\..\Resources\FavStarFilled1.ico");
-        Icon TrashCan = new Icon(@"..\..\Resources\Del1.ico");
-
         //Import Songs Button
         private void ImportSongsButton_Click(object sender, EventArgs e)
         {
             //Import Songs
-            if (openFileDialog.ShowDialog()==System.Windows.Forms.DialogResult.OK)
+            if (Songs_openFileDialog.ShowDialog()==System.Windows.Forms.DialogResult.OK)
             {
                 NoSongs2.Visible = false;
-                files = openFileDialog.FileNames;
-                path = openFileDialog.FileNames;
+                files = Songs_openFileDialog.FileNames;
+                path = Songs_openFileDialog.FileNames;
                 for (int x = 0; x < files.Length; x++)
                 {
                     var file = TagLib.File.Create(files[x]);
@@ -227,7 +220,7 @@ namespace WindowsFormsApp1
                         FavouritesGrid[1, x].Value = PlayIcon;
                     }
                 }
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhite1.png"); // Turn BottomPanel PlayButton To Red Play
+                PlayPic.Image = Image.FromFile(RedPlay); // Turn BottomPanel PlayButton To Red Play
             }
             else
             {
@@ -255,7 +248,7 @@ namespace WindowsFormsApp1
                         FavouritesGrid[1, x].Value = PlayIcon;
                     }
                 }
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png"); // Turn BottomPanel PlayButton To Pause White
+                PlayPic.Image = Image.FromFile(WhitePause); // Turn BottomPanel PlayButton To Pause White
             }
 
             //Add Song and Artist to Bottom Panel
@@ -360,53 +353,53 @@ namespace WindowsFormsApp1
         {
             if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlackHover.png");
+                PlayPic.Image = Image.FromFile(WhitePauseHover);
             }
             else
             {
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhiteHover.png");
+                PlayPic.Image = Image.FromFile(RedPlayHover);
             }
         }
         private void PlayPic_MouseLeave(object sender, EventArgs e)
         {
             if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
+                PlayPic.Image = Image.FromFile(WhitePause);
             }
             else
             {
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhite1.png");
+                PlayPic.Image = Image.FromFile(RedPlay);
             }
         }
 
         //Hover Effect on BottomPanel StopButton
         private void StopPic_MouseEnter(object sender, EventArgs e)
         {
-            StopPic.Image = Image.FromFile(@"..\..\Resources\Stopbutton_WhiteBlackHover.png"); 
+            StopPic.Image = Image.FromFile(WhitePauseHover); 
         }
         private void StopPic_MouseLeave(object sender, EventArgs e)
         {
-            StopPic.Image = Image.FromFile(@"..\..\Resources\Stopbutton_WhiteBlack1.png");
+            StopPic.Image = Image.FromFile(WhitePause);
         }
 
         //Hover Effect on BottomPanel PrevButton
         private void PrevSongPic_MouseEnter(object sender, EventArgs e)
         {
-            PrevSongPic.Image = Image.FromFile(@"..\..\Resources\previous-song-hover.png");
+            PrevSongPic.Image = Image.FromFile(PrevSongHover);
         }
         private void PrevSongPic_MouseLeave(object sender, EventArgs e)
         {
-            PrevSongPic.Image = Image.FromFile(@"..\..\Resources\previous-song.png");
+            PrevSongPic.Image = Image.FromFile(PrevSong);
         }
 
         //Hover Effect on BottomPanel NextButton
         private void NextSongPic_MouseEnter(object sender, EventArgs e)
         {
-            NextSongPic.Image = Image.FromFile(@"..\..\Resources\next-song-hover.png");
+            NextSongPic.Image = Image.FromFile(NextSongHover);
         }
         private void NextSongPic_MouseLeave(object sender, EventArgs e)
         {
-            NextSongPic.Image = Image.FromFile(@"..\..\Resources\next-song.png");
+            NextSongPic.Image = Image.FromFile(NextSong);
         }
 
         //BottomPanel StopButton Functionality
@@ -421,11 +414,11 @@ namespace WindowsFormsApp1
             // Connect it with BottomPanel PlayButton
             if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
+                PlayPic.Image = Image.FromFile(WhitePause);
             }
             else
             {
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhite1.png");
+                PlayPic.Image = Image.FromFile(RedPlay);
             }
         }
 
@@ -440,7 +433,7 @@ namespace WindowsFormsApp1
                 {
                     FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
                 }
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhite1.png");
+                PlayPic.Image = Image.FromFile(RedPlay);
             }
             else
             {
@@ -450,7 +443,7 @@ namespace WindowsFormsApp1
                 {
                     FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PauseIcon;
                 }
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
+                PlayPic.Image = Image.FromFile(WhitePause);
             }
         }
 
@@ -472,7 +465,7 @@ namespace WindowsFormsApp1
                 Player.URL = path[x];
                 Player.Ctlcontrols.play();
             }
-            PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
+            PlayPic.Image = Image.FromFile(WhitePause);
 
             //Add Song and Artist to Bottom Panel
             SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
@@ -490,7 +483,7 @@ namespace WindowsFormsApp1
         //BottomPanel NextButton Functionality
         private void NextSongPic_Click(object sender, EventArgs e)
         {
-            string [] FileNum = openFileDialog.FileNames;
+            string [] FileNum = Songs_openFileDialog.FileNames;
             int x = SongsGrid.SelectedRows[0].Index;
             if (x == FileNum.Length-1)
             {
@@ -507,7 +500,7 @@ namespace WindowsFormsApp1
                 Player.Ctlcontrols.play();
             }
 
-            PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
+            PlayPic.Image = Image.FromFile(WhitePause);
 
             // Add Song and Artist to Bottom Panel
             SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
@@ -554,8 +547,8 @@ namespace WindowsFormsApp1
                 Player.Ctlcontrols.stop();
                 FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
                 SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Playbutton_RedWhite1.png");
-            }
+                PlayPic.Image = Image.FromFile(RedPlay);
+            }  
             else
             {
                 Player.URL = path[(int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value];
@@ -574,7 +567,7 @@ namespace WindowsFormsApp1
 
                 FavouritesGrid[1, current2].Value = PauseIcon;
                 SongsGrid[1, current1].Value = PauseIcon;
-                PlayPic.Image = Image.FromFile(@"..\..\Resources\Pausebutton_WhiteBlack1.png");
+                PlayPic.Image = Image.FromFile(WhitePause);
             }
 
             // Add Song and Artist to Bottom Panel
@@ -584,10 +577,10 @@ namespace WindowsFormsApp1
             AddSongPic(BottomPanelPicBox, (int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value);
 
             // Add Song, Artist and Genre Names to Now Playing
-            SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
+            SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, (int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value);
 
             // Add Song Cover to Now Playing
-            AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
+            AddSongPic(SongCoverPicBox, (int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value);
         }
 
         //Favourite Buttons Delete Function
@@ -617,7 +610,7 @@ namespace WindowsFormsApp1
         {
             DataGridViewCellStyle style2 = new DataGridViewCellStyle();
             style2.BackColor = Color.Black;
-            if (e.RowIndex > -1)
+            if (e.RowIndex > -1) 
             {
                 FavouritesGrid.Rows[e.RowIndex].DefaultCellStyle = style2;
 
@@ -712,6 +705,17 @@ namespace WindowsFormsApp1
             }
         }
 
+        //Playlists Button
+        private void btn3_Playlists_Click(object sender, EventArgs e)
+        {
+            //Title
+            Title.Text = "Albums";
+
+            //Visibility Control
+            SongListPanel.Visible = false;
+            NowPlayingPanel.Visible = false;
+        }
+
         // Favourites Button
         private void btn4_Favourites_Click(object sender, EventArgs e)
         {
@@ -766,6 +770,20 @@ namespace WindowsFormsApp1
                 ScrollBarFavourites.LargeChange = FavouritesGrid.DisplayedRowCount(true);
                 ScrollBarFavourites.SmallChange = 1;
             }
+        }
+
+        // Settings and About Buttons
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            btn1_NowPlaying.PerformClick();
+            btn1_NowPlaying.Focus();
+        }
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            btn1_NowPlaying.PerformClick();
+            btn1_NowPlaying.Focus();
+            About about = new About();
+            about.ShowDialog();
         }
     }
 }

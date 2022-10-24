@@ -322,29 +322,6 @@
         yGed2qB8uZd0jHGMxnXZOFY3aMYp02Iezh2amfkCyl4bf5JzzM0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn3_Playlists.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAARwAAAA5CAYAAADk4pTRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAP/SURBVHhe7d0tbFRZGIfxyspKJLISiRxZWbMJhgRDQkgQ
-        JCuKq2A1CQKHqEKMQjRBNcHQEETFClw3CAyzXShQPnNbnveet3yEMp3p3DNb2ueXvJk59/OY+8+5H3Nn
-        poa9vb1ZqkctUcu7u7sr1EYUbUnHxP5xSfVpLmfFsTuXh/PxFB2kLtHxVeo99ZL6zDRJv5E8dj9Qa9QV
-        Jp3Jw/z/R4fOZ8eig29KlyWdBBzTO1kxClrIw3766Ms8HYigeVm6Jukki2M9g+d8xkB97PcMO+xT26Ub
-        kk6TDJ41vs5nLNQRyUb9W3Yr6TQjC7b4+CPjoVts/Co1KLuSpBI61F8ZE91gg3djw7kPSfqqaZpX5MMD
-        vs6WxJgAG1pjg+/KpiXpZ2TEJ7LiEV+PHjoxsjFsJI0iQ+dhxsd4WPE6G/CWt6SRkRuvqTsZI6NhvR5h
-        4wViSWMjcP6jLmacDMfyZ1n4RVlVksZHhgyowx8QZKF4oEeSJkKWbGasHIxlzlGv2qUlaTKRJYsZLz9z
-        dCOpS78c5TCvx0zvSknqUjwUeDlj5hsm+nIsSZ0jWwYZMwXT4hfgO2W2JHUnzpyob3esaFwxcCTV0DTN
-        Z/LlVsZNGzjrOU+SOkfGPG/Dhu9zNN6WyZLUPTImXtg3H6ObC9mQpCrImPhDhaUY4SxlQ5KqIWdWYoRz
-        J9uSVA1ZsxaBs5ptSaqGrHkageMDf5KqI2sGETi+90bSVMRFY0maihjheEtc0lRE4DzN75JUTQxuInB8
-        B46k6siazQiclWxLUjVkzXpcNF4uTUmqh8DpR+Bc4subMkmSqlmOwIm/hTFwJFVDxsTri3vtKypoeKdK
-        UjVkzHYbNoHGTcpfjEuqgnzpZ9y0L+GajwQqsySpO2RLvNN4IeOmYMLznC9JnSFbXvMxm1FTMPFazpCk
-        TjRN855cuZ0x8yNmbOZykjQxMmWLjx9HN/uYsUj53+KSJkbYvKX+zHg5mKMcSV0YOrrZxwL+x7ikSR38
-        n+IHYcEblLfJJY2taZp35MfdjJPRsMK9WDG3IUmHIjc+Uo8zRkbHurOs+KRsRpIOR2bENeC5jJHxxIps
-        4Fm7JUkagqz4h4+zGR9HwwYidP7m9Gqn3aokfYd8iNOoGNlMFjb72FCcXt2nvJAs6au8QPyYr0c7jRqG
-        DcfdK2+ZSwpx63u8u1HjYgcL1IDyd1fSKcSoJp4g3qJGe86mC+wsfuy5FTvPfkg6wTjW44eYcYYT70Ef
-        /gRxDbHT2DmdiOd1/A2WdAJxfG9T7a++aXZ/reYo6MgiHepn57zOI/3e4vpMXBBepS7Qnv6IZlR0rkfF
-        yGed2qB8uZd0jHGMxnXZOFY3aMYp02Iezh2amfkCyl4bf5JzzM0AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btn2_Songs.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARwAAAA5CAYAAADk4pTRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -448,10 +425,13 @@
   <metadata name="DragControl_Library.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>812, 17</value>
   </metadata>
-  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="Songs_openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>982, 18</value>
   </metadata>
   <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1141, 18</value>
+  </metadata>
+  <metadata name="mainFormBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 61</value>
   </metadata>
 </root>
