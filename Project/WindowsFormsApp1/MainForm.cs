@@ -28,15 +28,6 @@ namespace WindowsFormsApp1
         string NextSongHover = (@"..\..\Resources\next-song-hover.png");
         readonly PrivateFontCollection BadSignal = new PrivateFontCollection();
 
-        /*public class formList
-        {
-            private static Form1 _form1 = new Form1();
-            public static Form1 form1
-            {
-                get { return _form1; }
-            }
-        }*/
-
         public MainForm()
         {
             InitializeComponent();
@@ -44,8 +35,6 @@ namespace WindowsFormsApp1
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Settings settings = new Settings(this);
-
             //Import Custom Font
             BadSignal.AddFontFile(@"..\..\Fonts\BadSignal.otf");
             foreach (Control A in this.Controls)
@@ -800,15 +789,13 @@ namespace WindowsFormsApp1
         {
             btn1_NowPlaying.PerformClick();
             btn1_NowPlaying.Focus();
-            Settings settings = new Settings(this);
-            settings.ShowDialog();
+            Program.settings.ShowDialog();
         }
         public void bunifuButton2_Click(object sender, EventArgs e)
         {
             btn1_NowPlaying.PerformClick();
             btn1_NowPlaying.Focus();
-            About about = new About();
-            about.ShowDialog();
+            Program.about.ShowDialog();
         }
     }
 }

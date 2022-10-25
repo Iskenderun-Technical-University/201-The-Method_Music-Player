@@ -159,11 +159,11 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox ExitPicture;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.Label lbl_Copyrights;
-        private System.Windows.Forms.Label lbl_Version;
         private System.Windows.Forms.Label lbl_BETA;
-        private System.Windows.Forms.Label lbl_MusicPlayer;
         private System.Windows.Forms.Label lbl_TheMethod;
-        private System.Windows.Forms.Label Title;
+        public System.Windows.Forms.Label Title;
+        public System.Windows.Forms.Label lbl_MusicPlayer;
+        public System.Windows.Forms.Label lbl_Version;
+        public System.Windows.Forms.Label lbl_Copyrights;
     }
 }

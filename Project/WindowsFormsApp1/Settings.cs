@@ -12,17 +12,15 @@ namespace WindowsFormsApp1
 {
     public partial class Settings : Form
     {
-        private readonly MainForm mainform;
         public static bool isEnglish = true;
-        public Settings(MainForm form1)
+        public Settings()
         {
-            mainform = form1;
             InitializeComponent();
         }
 
         private void ExitPicture_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         // English Button
@@ -32,54 +30,62 @@ namespace WindowsFormsApp1
 
             // <----- Edit Labels ----->
 
-            // Settings Popup
+            // <---- Settings ---->
             Title.Text = "Settings";
             lbl_Language.Text = "Language";
             lbl_Theme.Text = "Theme";
 
+            // <---- About ---->
+            Program.about.Title.Text = "About";
+            Program.about.lbl_MusicPlayer.Text = "Music Player";
+            Program.about.lbl_Version.Text = "Version 1.0";
+            Program.about.lbl_Copyrights.Text = "© The Method. All rights reserved.";
+
+            // <---- Main Form ---->
+
             // Left Panel
-            mainform.title2_MusicPlayer.Text = "Music Player";
-            mainform.title3_Library.Text = "Library";
-            mainform.btn1_NowPlaying.Text = "  Now Playing";
-            mainform.btn2_Songs.Text = "  Songs";
-            mainform.btn3_Favourites.Text = "  Favourites";
-            mainform.btn1_Settings.Text = "Settings";
-            mainform.btn2_About.Text = "About";
+            Program.mainform.title2_MusicPlayer.Text = "Music Player";
+            Program.mainform.title3_Library.Text = "Library";
+            Program.mainform.btn1_NowPlaying.Text = "  Now Playing";
+            Program.mainform.btn2_Songs.Text = "  Songs";
+            Program.mainform.btn3_Favourites.Text = "  Favourites";
+            Program.mainform.btn1_Settings.Text = "Settings";
+            Program.mainform.btn2_About.Text = "About";
 
             // Bottom Panel
-            mainform.SongTitle2.Text = "Song Title";
-            mainform.Artist2.Text = "Artist";
+            Program.mainform.SongTitle2.Text = "Song Title";
+            Program.mainform.Artist2.Text = "Artist";
 
             // Now Playing Page
-            mainform.Title.Text = "Now Playing";
-            mainform.NoSongs1_1.Text = "No songs added!";
-            mainform.SongTitle1_1.Text = "Song Title";
-            mainform.Artist1_1.Text = "Artist";
-            mainform.Genre1_1.Text = "Genre";
+            Program.mainform.Title.Text = "Now Playing";
+            Program.mainform.NoSongs1_1.Text = "No songs added!";
+            Program.mainform.SongTitle1_1.Text = "Song Title";
+            Program.mainform.Artist1_1.Text = "Artist";
+            Program.mainform.Genre1_1.Text = "Genre";
 
             // Now Playing Page Grey Labels
-            if (mainform.SongsGrid == null || mainform.SongsGrid.Rows.Count == 0)
+            if (Program.mainform.SongsGrid == null || Program.mainform.SongsGrid.Rows.Count == 0)
             {
-                mainform.SongTitle1_2.Text = "Song Name";
-                mainform.Artist1_2.Text = "Artist";
-                mainform.Genre1_2.Text = "Genre";
+                Program.mainform.SongTitle1_2.Text = "Song Name";
+                Program.mainform.Artist1_2.Text = "Artist";
+                Program.mainform.Genre1_2.Text = "Genre";
             }
 
             // Songs Page
-            mainform.ImportSongsButton.Text = "Import Songs";
+            Program.mainform.ImportSongsButton.Text = "Import Songs";
 
-            mainform.NoSongs2.Text = "No songs added"; // One Time
+            Program.mainform.NoSongs2.Text = "No songs added"; // One Time
 
-            mainform.SongsGrid.Columns[2].HeaderText = "Song";
-            mainform.SongsGrid.Columns[3].HeaderText = "Artist";
-            mainform.SongsGrid.Columns[4].HeaderText = "Genre";
-            mainform.SongsGrid.Columns[5].HeaderText = "Duration";
+            Program.mainform.SongsGrid.Columns[2].HeaderText = "Song";
+            Program.mainform.SongsGrid.Columns[3].HeaderText = "Artist";
+            Program.mainform.SongsGrid.Columns[4].HeaderText = "Genre";
+            Program.mainform.SongsGrid.Columns[5].HeaderText = "Duration";
 
             // Favourites Songs
-            mainform.FavouritesGrid.Columns[2].HeaderText = "Song";
-            mainform.FavouritesGrid.Columns[3].HeaderText = "Artist";
-            mainform.FavouritesGrid.Columns[4].HeaderText = "Genre";
-            mainform.FavouritesGrid.Columns[5].HeaderText = "Duration";
+            Program.mainform.FavouritesGrid.Columns[2].HeaderText = "Song";
+            Program.mainform.FavouritesGrid.Columns[3].HeaderText = "Artist";
+            Program.mainform.FavouritesGrid.Columns[4].HeaderText = "Genre";
+            Program.mainform.FavouritesGrid.Columns[5].HeaderText = "Duration";
         }
 
         // Turkish Button
@@ -89,54 +95,62 @@ namespace WindowsFormsApp1
 
             // <----- Edit Labels ----->
 
-            // Settings Popup
+            // <---- Settings ---->
             Title.Text = "Ayarlar";
             lbl_Language.Text = "Dil";
             lbl_Theme.Text = "Tema";
 
+            // <---- About ---->
+            Program.about.Title.Text = "Hakkında";
+            Program.about.lbl_MusicPlayer.Text = "Müzik Çalar";
+            Program.about.lbl_Version.Text = "Versiyon 1.0";
+            Program.about.lbl_Copyrights.Text = "© The Method. Tüm hakları Saklıdır.";
+
+            // <---- Main Form ---->
+
             // Left Panel
-            mainform.title2_MusicPlayer.Text = "Müzik Çalar";
-            mainform.title3_Library.Text = "Kütüphane";
-            mainform.btn1_NowPlaying.Text = "  Şimdi Oynuyor";
-            mainform.btn2_Songs.Text = "  Şarkılar";
-            mainform.btn3_Favourites.Text = "  Favoriler";
-            mainform.btn1_Settings.Text = "Ayarlar";
-            mainform.btn2_About.Text = "Hakkında";
+            Program.mainform.title2_MusicPlayer.Text = "Müzik Çalar";
+            Program.mainform.title3_Library.Text = "Kütüphane";
+            Program.mainform.btn1_NowPlaying.Text = "  Şimdi Oynuyor";
+            Program.mainform.btn2_Songs.Text = "  Şarkılar";
+            Program.mainform.btn3_Favourites.Text = "  Favoriler";
+            Program.mainform.btn1_Settings.Text = "Ayarlar";
+            Program.mainform.btn2_About.Text = "Hakkında";
 
             // Bottom Panel
-            mainform.SongTitle2.Text = "Şarkı Adı";
-            mainform.Artist2.Text = "Sanatçı";
+            Program.mainform.SongTitle2.Text = "Şarkı Adı";
+            Program.mainform.Artist2.Text = "Sanatçı";
 
             // Now Playing Page
-            mainform.Title.Text = "Şimdi Oynuyor";
-            mainform.NoSongs1_1.Text = "Eklenen şarkı yok!";
-            mainform.SongTitle1_1.Text = "Şarkı Adı";
-            mainform.Artist1_1.Text = "Sanatçı";
-            mainform.Genre1_1.Text = "Tür";
+            Program.mainform.Title.Text = "Şimdi Oynuyor";
+            Program.mainform.NoSongs1_1.Text = "Eklenen şarkı yok!";
+            Program.mainform.SongTitle1_1.Text = "Şarkı Adı";
+            Program.mainform.Artist1_1.Text = "Sanatçı";
+            Program.mainform.Genre1_1.Text = "Tür";
 
             // Now Playing Page Grey Labels
-            if (mainform.SongsGrid == null || mainform.SongsGrid.Rows.Count == 0)
+            if (Program.mainform.SongsGrid == null || Program.mainform.SongsGrid.Rows.Count == 0)
             {
-                mainform.SongTitle1_2.Text = "Şarkı Adı";
-                mainform.Artist1_2.Text = "Sanatçı";
-                mainform.Genre1_2.Text = "Tür";
+                Program.mainform.SongTitle1_2.Text = "Şarkı Adı";
+                Program.mainform.Artist1_2.Text = "Sanatçı";
+                Program.mainform.Genre1_2.Text = "Tür";
             }
 
             // Songs Page
-            mainform.ImportSongsButton.Text = "Şarkı Ekle";
+            Program.mainform.ImportSongsButton.Text = "Şarkı Ekle";
 
-            mainform.NoSongs2.Text = "Eklenen şarkı yok"; // One Time
+            Program.mainform.NoSongs2.Text = "Eklenen şarkı yok"; // One Time
 
-            mainform.SongsGrid.Columns[2].HeaderText = "Şarkı";
-            mainform.SongsGrid.Columns[3].HeaderText = "Sanatçı";
-            mainform.SongsGrid.Columns[4].HeaderText = "Tür";
-            mainform.SongsGrid.Columns[5].HeaderText = "Süre";
+            Program.mainform.SongsGrid.Columns[2].HeaderText = "Şarkı";
+            Program.mainform.SongsGrid.Columns[3].HeaderText = "Sanatçı";
+            Program.mainform.SongsGrid.Columns[4].HeaderText = "Tür";
+            Program.mainform.SongsGrid.Columns[5].HeaderText = "Süre";
 
             // Favourites Songs
-            mainform.FavouritesGrid.Columns[2].HeaderText = "Şarkı";
-            mainform.FavouritesGrid.Columns[3].HeaderText = "Sanatçı";
-            mainform.FavouritesGrid.Columns[4].HeaderText = "Tür";
-            mainform.FavouritesGrid.Columns[5].HeaderText = "Süre";
+            Program.mainform.FavouritesGrid.Columns[2].HeaderText = "Şarkı";
+            Program.mainform.FavouritesGrid.Columns[3].HeaderText = "Sanatçı";
+            Program.mainform.FavouritesGrid.Columns[4].HeaderText = "Tür";
+            Program.mainform.FavouritesGrid.Columns[5].HeaderText = "Süre";
         }
     }
 }

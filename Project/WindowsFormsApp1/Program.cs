@@ -8,6 +8,9 @@ namespace WindowsFormsApp1
 {
     static class Program
     {
+        public static MainForm mainform;
+        public static Settings settings;
+        public static About about;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +19,10 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            mainform = new MainForm();
+            settings = new Settings();
+            about = new About();
+            Application.Run(mainform);
         }
     }
 }
