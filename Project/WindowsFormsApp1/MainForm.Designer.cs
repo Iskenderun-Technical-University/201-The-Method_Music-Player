@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,11 +43,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -56,7 +56,7 @@
             this.DragControl_LeftPanel = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.LeftPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbl_BETA = new System.Windows.Forms.Label();
-            this.btn4_Favourites = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn3_Favourites = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn2_Songs = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.BottomLeftPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.btn1_Settings = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -92,13 +92,6 @@
             this.ScrollBarSongs = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.NoSongs2 = new System.Windows.Forms.Label();
             this.Player = new AxWMPLib.AxWindowsMediaPlayer();
-            this.SongsGrid = new System.Windows.Forms.DataGridView();
-            this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Icon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Song = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Artist = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genre2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImportSongsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.FavouritesGrid = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,6 +100,13 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SongsGrid = new System.Windows.Forms.DataGridView();
+            this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Icon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Song = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Artist = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genre2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.NowPlayingPanel = new System.Windows.Forms.Panel();
             this.Genre1_2 = new System.Windows.Forms.Label();
@@ -117,8 +117,8 @@
             this.SongTitle1_1 = new System.Windows.Forms.Label();
             this.NoSongs1_1 = new System.Windows.Forms.Label();
             this.SongCoverPicBox = new System.Windows.Forms.PictureBox();
-            this.ExitPicture = new System.Windows.Forms.PictureBox();
             this.Title = new System.Windows.Forms.Label();
+            this.ExitPicture = new System.Windows.Forms.PictureBox();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LeftPanel.SuspendLayout();
             this.BottomLeftPanel.SuspendLayout();
@@ -135,8 +135,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.FavGrid2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FavGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SongsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FavouritesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SongsGrid)).BeginInit();
             this.NowPlayingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SongCoverPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).BeginInit();
@@ -164,7 +164,7 @@
             this.LeftPanel.BorderRadius = 3;
             this.LeftPanel.BorderThickness = 1;
             this.LeftPanel.Controls.Add(this.lbl_BETA);
-            this.LeftPanel.Controls.Add(this.btn4_Favourites);
+            this.LeftPanel.Controls.Add(this.btn3_Favourites);
             this.LeftPanel.Controls.Add(this.btn2_Songs);
             this.LeftPanel.Controls.Add(this.BottomLeftPanel);
             this.LeftPanel.Controls.Add(this.btn1_NowPlaying);
@@ -189,95 +189,95 @@
             this.lbl_BETA.TabIndex = 9;
             this.lbl_BETA.Text = "BETA";
             // 
-            // btn4_Favourites
+            // btn3_Favourites
             // 
-            this.btn4_Favourites.AllowAnimations = true;
-            this.btn4_Favourites.AllowMouseEffects = true;
-            this.btn4_Favourites.AllowToggling = true;
-            this.btn4_Favourites.AnimationSpeed = 200;
-            this.btn4_Favourites.AutoGenerateColors = false;
-            this.btn4_Favourites.AutoRoundBorders = true;
-            this.btn4_Favourites.AutoSizeLeftIcon = true;
-            this.btn4_Favourites.AutoSizeRightIcon = true;
-            this.btn4_Favourites.BackColor = System.Drawing.Color.Transparent;
-            this.btn4_Favourites.BackColor1 = System.Drawing.Color.White;
-            this.btn4_Favourites.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn4_Favourites.BackgroundImage")));
-            this.btn4_Favourites.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn4_Favourites.ButtonText = "  Favourites";
-            this.btn4_Favourites.ButtonTextMarginLeft = 0;
-            this.btn4_Favourites.ColorContrastOnClick = 45;
-            this.btn4_Favourites.ColorContrastOnHover = 45;
-            this.btn4_Favourites.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btn4_Favourites.CustomizableEdges = borderEdges2;
-            this.btn4_Favourites.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn4_Favourites.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn4_Favourites.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn4_Favourites.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn4_Favourites.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn4_Favourites.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4_Favourites.ForeColor = System.Drawing.Color.Black;
-            this.btn4_Favourites.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn4_Favourites.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btn4_Favourites.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btn4_Favourites.IconMarginLeft = 11;
-            this.btn4_Favourites.IconPadding = 10;
-            this.btn4_Favourites.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn4_Favourites.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btn4_Favourites.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btn4_Favourites.IconSize = 25;
-            this.btn4_Favourites.IdleBorderColor = System.Drawing.Color.White;
-            this.btn4_Favourites.IdleBorderRadius = 55;
-            this.btn4_Favourites.IdleBorderThickness = 1;
-            this.btn4_Favourites.IdleFillColor = System.Drawing.Color.White;
-            this.btn4_Favourites.IdleIconLeftImage = null;
-            this.btn4_Favourites.IdleIconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
-            this.btn4_Favourites.IndicateFocus = true;
-            this.btn4_Favourites.Location = new System.Drawing.Point(32, 416);
-            this.btn4_Favourites.Name = "btn4_Favourites";
-            this.btn4_Favourites.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn4_Favourites.OnDisabledState.BorderRadius = 1;
-            this.btn4_Favourites.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn4_Favourites.OnDisabledState.BorderThickness = 1;
-            this.btn4_Favourites.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn4_Favourites.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn4_Favourites.OnDisabledState.IconLeftImage = null;
-            this.btn4_Favourites.OnDisabledState.IconRightImage = null;
-            this.btn4_Favourites.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.btn4_Favourites.onHoverState.BorderRadius = 1;
-            this.btn4_Favourites.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn4_Favourites.onHoverState.BorderThickness = 1;
-            this.btn4_Favourites.onHoverState.FillColor = System.Drawing.Color.White;
-            this.btn4_Favourites.onHoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn4_Favourites.onHoverState.IconLeftImage = null;
-            this.btn4_Favourites.onHoverState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation_red1;
-            this.btn4_Favourites.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btn4_Favourites.OnIdleState.BorderRadius = 1;
-            this.btn4_Favourites.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn4_Favourites.OnIdleState.BorderThickness = 1;
-            this.btn4_Favourites.OnIdleState.FillColor = System.Drawing.Color.White;
-            this.btn4_Favourites.OnIdleState.ForeColor = System.Drawing.Color.Black;
-            this.btn4_Favourites.OnIdleState.IconLeftImage = null;
-            this.btn4_Favourites.OnIdleState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
-            this.btn4_Favourites.OnPressedState.BorderColor = System.Drawing.Color.Black;
-            this.btn4_Favourites.OnPressedState.BorderRadius = 1;
-            this.btn4_Favourites.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn4_Favourites.OnPressedState.BorderThickness = 1;
-            this.btn4_Favourites.OnPressedState.FillColor = System.Drawing.Color.Black;
-            this.btn4_Favourites.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btn4_Favourites.OnPressedState.IconLeftImage = null;
-            this.btn4_Favourites.OnPressedState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
-            this.btn4_Favourites.Size = new System.Drawing.Size(284, 57);
-            this.btn4_Favourites.TabIndex = 7;
-            this.btn4_Favourites.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn4_Favourites.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn4_Favourites.TextMarginLeft = 0;
-            this.btn4_Favourites.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btn4_Favourites.UseDefaultRadiusAndThickness = true;
-            this.btn4_Favourites.Click += new System.EventHandler(this.btn4_Favourites_Click);
+            this.btn3_Favourites.AllowAnimations = true;
+            this.btn3_Favourites.AllowMouseEffects = true;
+            this.btn3_Favourites.AllowToggling = true;
+            this.btn3_Favourites.AnimationSpeed = 200;
+            this.btn3_Favourites.AutoGenerateColors = false;
+            this.btn3_Favourites.AutoRoundBorders = true;
+            this.btn3_Favourites.AutoSizeLeftIcon = true;
+            this.btn3_Favourites.AutoSizeRightIcon = true;
+            this.btn3_Favourites.BackColor = System.Drawing.Color.Transparent;
+            this.btn3_Favourites.BackColor1 = System.Drawing.Color.White;
+            this.btn3_Favourites.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn3_Favourites.BackgroundImage")));
+            this.btn3_Favourites.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn3_Favourites.ButtonText = "  Favourites";
+            this.btn3_Favourites.ButtonTextMarginLeft = 0;
+            this.btn3_Favourites.ColorContrastOnClick = 45;
+            this.btn3_Favourites.ColorContrastOnHover = 45;
+            this.btn3_Favourites.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btn3_Favourites.CustomizableEdges = borderEdges1;
+            this.btn3_Favourites.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn3_Favourites.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btn3_Favourites.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn3_Favourites.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn3_Favourites.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btn3_Favourites.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3_Favourites.ForeColor = System.Drawing.Color.Black;
+            this.btn3_Favourites.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn3_Favourites.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btn3_Favourites.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btn3_Favourites.IconMarginLeft = 11;
+            this.btn3_Favourites.IconPadding = 10;
+            this.btn3_Favourites.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn3_Favourites.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btn3_Favourites.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btn3_Favourites.IconSize = 25;
+            this.btn3_Favourites.IdleBorderColor = System.Drawing.Color.White;
+            this.btn3_Favourites.IdleBorderRadius = 55;
+            this.btn3_Favourites.IdleBorderThickness = 1;
+            this.btn3_Favourites.IdleFillColor = System.Drawing.Color.White;
+            this.btn3_Favourites.IdleIconLeftImage = null;
+            this.btn3_Favourites.IdleIconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn3_Favourites.IndicateFocus = true;
+            this.btn3_Favourites.Location = new System.Drawing.Point(32, 416);
+            this.btn3_Favourites.Name = "btn3_Favourites";
+            this.btn3_Favourites.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btn3_Favourites.OnDisabledState.BorderRadius = 1;
+            this.btn3_Favourites.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn3_Favourites.OnDisabledState.BorderThickness = 1;
+            this.btn3_Favourites.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn3_Favourites.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn3_Favourites.OnDisabledState.IconLeftImage = null;
+            this.btn3_Favourites.OnDisabledState.IconRightImage = null;
+            this.btn3_Favourites.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.btn3_Favourites.onHoverState.BorderRadius = 1;
+            this.btn3_Favourites.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn3_Favourites.onHoverState.BorderThickness = 1;
+            this.btn3_Favourites.onHoverState.FillColor = System.Drawing.Color.White;
+            this.btn3_Favourites.onHoverState.ForeColor = System.Drawing.Color.Black;
+            this.btn3_Favourites.onHoverState.IconLeftImage = null;
+            this.btn3_Favourites.onHoverState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation_red1;
+            this.btn3_Favourites.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btn3_Favourites.OnIdleState.BorderRadius = 1;
+            this.btn3_Favourites.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn3_Favourites.OnIdleState.BorderThickness = 1;
+            this.btn3_Favourites.OnIdleState.FillColor = System.Drawing.Color.White;
+            this.btn3_Favourites.OnIdleState.ForeColor = System.Drawing.Color.Black;
+            this.btn3_Favourites.OnIdleState.IconLeftImage = null;
+            this.btn3_Favourites.OnIdleState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn3_Favourites.OnPressedState.BorderColor = System.Drawing.Color.Black;
+            this.btn3_Favourites.OnPressedState.BorderRadius = 1;
+            this.btn3_Favourites.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn3_Favourites.OnPressedState.BorderThickness = 1;
+            this.btn3_Favourites.OnPressedState.FillColor = System.Drawing.Color.Black;
+            this.btn3_Favourites.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btn3_Favourites.OnPressedState.IconLeftImage = null;
+            this.btn3_Favourites.OnPressedState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn3_Favourites.Size = new System.Drawing.Size(284, 57);
+            this.btn3_Favourites.TabIndex = 7;
+            this.btn3_Favourites.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn3_Favourites.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn3_Favourites.TextMarginLeft = 0;
+            this.btn3_Favourites.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btn3_Favourites.UseDefaultRadiusAndThickness = true;
+            this.btn3_Favourites.Click += new System.EventHandler(this.btn4_Favourites_Click);
             // 
             // btn2_Songs
             // 
@@ -298,11 +298,11 @@
             this.btn2_Songs.ColorContrastOnClick = 45;
             this.btn2_Songs.ColorContrastOnHover = 45;
             this.btn2_Songs.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btn2_Songs.CustomizableEdges = borderEdges3;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btn2_Songs.CustomizableEdges = borderEdges2;
             this.btn2_Songs.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn2_Songs.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn2_Songs.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -405,11 +405,11 @@
             this.btn1_Settings.ColorContrastOnClick = 45;
             this.btn1_Settings.ColorContrastOnHover = 45;
             this.btn1_Settings.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btn1_Settings.CustomizableEdges = borderEdges4;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btn1_Settings.CustomizableEdges = borderEdges3;
             this.btn1_Settings.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn1_Settings.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn1_Settings.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -433,7 +433,7 @@
             this.btn1_Settings.IdleIconLeftImage = null;
             this.btn1_Settings.IdleIconRightImage = null;
             this.btn1_Settings.IndicateFocus = false;
-            this.btn1_Settings.Location = new System.Drawing.Point(37, 97);
+            this.btn1_Settings.Location = new System.Drawing.Point(37, 95);
             this.btn1_Settings.Name = "btn1_Settings";
             this.btn1_Settings.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn1_Settings.OnDisabledState.BorderRadius = 1;
@@ -467,7 +467,7 @@
             this.btn1_Settings.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btn1_Settings.OnPressedState.IconLeftImage = null;
             this.btn1_Settings.OnPressedState.IconRightImage = null;
-            this.btn1_Settings.Size = new System.Drawing.Size(100, 26);
+            this.btn1_Settings.Size = new System.Drawing.Size(119, 26);
             this.btn1_Settings.TabIndex = 2;
             this.btn1_Settings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn1_Settings.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -495,11 +495,11 @@
             this.btn2_About.ColorContrastOnClick = 45;
             this.btn2_About.ColorContrastOnHover = 45;
             this.btn2_About.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btn2_About.CustomizableEdges = borderEdges5;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btn2_About.CustomizableEdges = borderEdges4;
             this.btn2_About.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn2_About.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn2_About.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -523,7 +523,7 @@
             this.btn2_About.IdleIconLeftImage = null;
             this.btn2_About.IdleIconRightImage = null;
             this.btn2_About.IndicateFocus = false;
-            this.btn2_About.Location = new System.Drawing.Point(41, 129);
+            this.btn2_About.Location = new System.Drawing.Point(37, 127);
             this.btn2_About.Name = "btn2_About";
             this.btn2_About.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn2_About.OnDisabledState.BorderRadius = 1;
@@ -557,7 +557,7 @@
             this.btn2_About.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btn2_About.OnPressedState.IconLeftImage = null;
             this.btn2_About.OnPressedState.IconRightImage = null;
-            this.btn2_About.Size = new System.Drawing.Size(89, 26);
+            this.btn2_About.Size = new System.Drawing.Size(119, 26);
             this.btn2_About.TabIndex = 1;
             this.btn2_About.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn2_About.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -585,11 +585,11 @@
             this.btn1_NowPlaying.ColorContrastOnClick = 45;
             this.btn1_NowPlaying.ColorContrastOnHover = 45;
             this.btn1_NowPlaying.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btn1_NowPlaying.CustomizableEdges = borderEdges6;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btn1_NowPlaying.CustomizableEdges = borderEdges5;
             this.btn1_NowPlaying.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn1_NowPlaying.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn1_NowPlaying.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -958,6 +958,7 @@
             // 
             // PlayPic
             // 
+            this.PlayPic.Image = global::WindowsFormsApp1.Properties.Resources.Playbutton_RedWhite1;
             this.PlayPic.Location = new System.Drawing.Point(516, 69);
             this.PlayPic.Name = "PlayPic";
             this.PlayPic.Size = new System.Drawing.Size(53, 41);
@@ -984,9 +985,9 @@
             this.SongListPanel.Controls.Add(this.ScrollBarSongs);
             this.SongListPanel.Controls.Add(this.NoSongs2);
             this.SongListPanel.Controls.Add(this.Player);
-            this.SongListPanel.Controls.Add(this.SongsGrid);
             this.SongListPanel.Controls.Add(this.ImportSongsButton);
             this.SongListPanel.Controls.Add(this.FavouritesGrid);
+            this.SongListPanel.Controls.Add(this.SongsGrid);
             this.SongListPanel.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.SongListPanel.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.SongListPanel.Location = new System.Drawing.Point(470, 109);
@@ -1253,125 +1254,6 @@
             this.Player.TabIndex = 0;
             this.Player.Visible = false;
             // 
-            // SongsGrid
-            // 
-            this.SongsGrid.AllowUserToAddRows = false;
-            this.SongsGrid.AllowUserToDeleteRows = false;
-            this.SongsGrid.AllowUserToResizeColumns = false;
-            this.SongsGrid.AllowUserToResizeRows = false;
-            this.SongsGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SongsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.SongsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.SongsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.SongsGrid.ColumnHeadersHeight = 30;
-            this.SongsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.SongsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID1,
-            this.Icon,
-            this.Song,
-            this.Artist,
-            this.Genre2,
-            this.Duration});
-            this.SongsGrid.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.NullValue = "Unknown";
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SongsGrid.DefaultCellStyle = dataGridViewCellStyle10;
-            this.SongsGrid.EnableHeadersVisualStyles = false;
-            this.SongsGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SongsGrid.Location = new System.Drawing.Point(73, 68);
-            this.SongsGrid.MultiSelect = false;
-            this.SongsGrid.Name = "SongsGrid";
-            this.SongsGrid.ReadOnly = true;
-            this.SongsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SongsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.SongsGrid.RowHeadersVisible = false;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.SongsGrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.SongsGrid.RowTemplate.Height = 35;
-            this.SongsGrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.SongsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SongsGrid.Size = new System.Drawing.Size(806, 410);
-            this.SongsGrid.TabIndex = 1;
-            this.SongsGrid.Visible = false;
-            this.SongsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            this.SongsGrid.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
-            this.SongsGrid.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseLeave);
-            this.SongsGrid.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
-            // 
-            // ID1
-            // 
-            this.ID1.HeaderText = "";
-            this.ID1.Name = "ID1";
-            this.ID1.ReadOnly = true;
-            this.ID1.Visible = false;
-            // 
-            // Icon
-            // 
-            this.Icon.FillWeight = 101.5228F;
-            this.Icon.HeaderText = "";
-            this.Icon.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Icon.Name = "Icon";
-            this.Icon.ReadOnly = true;
-            this.Icon.Width = 35;
-            // 
-            // Song
-            // 
-            this.Song.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Song.FillWeight = 99.61929F;
-            this.Song.HeaderText = "Song";
-            this.Song.Name = "Song";
-            this.Song.ReadOnly = true;
-            this.Song.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Artist
-            // 
-            this.Artist.FillWeight = 99.61929F;
-            this.Artist.HeaderText = "Artist";
-            this.Artist.Name = "Artist";
-            this.Artist.ReadOnly = true;
-            this.Artist.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Genre2
-            // 
-            this.Genre2.FillWeight = 99.61929F;
-            this.Genre2.HeaderText = "Genre";
-            this.Genre2.Name = "Genre2";
-            this.Genre2.ReadOnly = true;
-            this.Genre2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Duration
-            // 
-            this.Duration.FillWeight = 99.61929F;
-            this.Duration.HeaderText = "Duration";
-            this.Duration.Name = "Duration";
-            this.Duration.ReadOnly = true;
-            this.Duration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Duration.Width = 90;
-            // 
             // ImportSongsButton
             // 
             this.ImportSongsButton.AllowAnimations = true;
@@ -1391,11 +1273,11 @@
             this.ImportSongsButton.ColorContrastOnClick = 45;
             this.ImportSongsButton.ColorContrastOnHover = 45;
             this.ImportSongsButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.ImportSongsButton.CustomizableEdges = borderEdges1;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.ImportSongsButton.CustomizableEdges = borderEdges6;
             this.ImportSongsButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ImportSongsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ImportSongsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1472,13 +1354,13 @@
             this.FavouritesGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FavouritesGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.FavouritesGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.FavouritesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.FavouritesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.FavouritesGrid.ColumnHeadersHeight = 30;
             this.FavouritesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.FavouritesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1489,15 +1371,15 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.FavouritesGrid.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.NullValue = "Unknown";
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.FavouritesGrid.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.NullValue = "Unknown";
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.FavouritesGrid.DefaultCellStyle = dataGridViewCellStyle10;
             this.FavouritesGrid.EnableHeadersVisualStyles = false;
             this.FavouritesGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FavouritesGrid.Location = new System.Drawing.Point(73, 68);
@@ -1505,22 +1387,22 @@
             this.FavouritesGrid.Name = "FavouritesGrid";
             this.FavouritesGrid.ReadOnly = true;
             this.FavouritesGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.FavouritesGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FavouritesGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.FavouritesGrid.RowHeadersVisible = false;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.FavouritesGrid.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.FavouritesGrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.FavouritesGrid.RowTemplate.Height = 35;
             this.FavouritesGrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.FavouritesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1581,6 +1463,125 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn4.Width = 90;
+            // 
+            // SongsGrid
+            // 
+            this.SongsGrid.AllowUserToAddRows = false;
+            this.SongsGrid.AllowUserToDeleteRows = false;
+            this.SongsGrid.AllowUserToResizeColumns = false;
+            this.SongsGrid.AllowUserToResizeRows = false;
+            this.SongsGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SongsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.SongsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.SongsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.SongsGrid.ColumnHeadersHeight = 30;
+            this.SongsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.SongsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID1,
+            this.Icon,
+            this.Song,
+            this.Artist,
+            this.Genre2,
+            this.Duration});
+            this.SongsGrid.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.NullValue = "Unknown";
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SongsGrid.DefaultCellStyle = dataGridViewCellStyle14;
+            this.SongsGrid.EnableHeadersVisualStyles = false;
+            this.SongsGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SongsGrid.Location = new System.Drawing.Point(73, 68);
+            this.SongsGrid.MultiSelect = false;
+            this.SongsGrid.Name = "SongsGrid";
+            this.SongsGrid.ReadOnly = true;
+            this.SongsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SongsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.SongsGrid.RowHeadersVisible = false;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.SongsGrid.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.SongsGrid.RowTemplate.Height = 35;
+            this.SongsGrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.SongsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SongsGrid.Size = new System.Drawing.Size(806, 410);
+            this.SongsGrid.TabIndex = 1;
+            this.SongsGrid.Visible = false;
+            this.SongsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.SongsGrid.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
+            this.SongsGrid.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseLeave);
+            this.SongsGrid.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
+            // 
+            // ID1
+            // 
+            this.ID1.HeaderText = "";
+            this.ID1.Name = "ID1";
+            this.ID1.ReadOnly = true;
+            this.ID1.Visible = false;
+            // 
+            // Icon
+            // 
+            this.Icon.FillWeight = 101.5228F;
+            this.Icon.HeaderText = "";
+            this.Icon.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Icon.Name = "Icon";
+            this.Icon.ReadOnly = true;
+            this.Icon.Width = 35;
+            // 
+            // Song
+            // 
+            this.Song.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Song.FillWeight = 99.61929F;
+            this.Song.HeaderText = "Song";
+            this.Song.Name = "Song";
+            this.Song.ReadOnly = true;
+            this.Song.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Artist
+            // 
+            this.Artist.FillWeight = 99.61929F;
+            this.Artist.HeaderText = "Artist";
+            this.Artist.Name = "Artist";
+            this.Artist.ReadOnly = true;
+            this.Artist.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Genre2
+            // 
+            this.Genre2.FillWeight = 99.61929F;
+            this.Genre2.HeaderText = "Genre";
+            this.Genre2.Name = "Genre2";
+            this.Genre2.ReadOnly = true;
+            this.Genre2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Duration
+            // 
+            this.Duration.FillWeight = 99.61929F;
+            this.Duration.HeaderText = "Duration";
+            this.Duration.Name = "Duration";
+            this.Duration.ReadOnly = true;
+            this.Duration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Duration.Width = 90;
             // 
             // timer
             // 
@@ -1686,6 +1687,16 @@
             this.SongCoverPicBox.TabIndex = 8;
             this.SongCoverPicBox.TabStop = false;
             // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(470, 35);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(210, 38);
+            this.Title.TabIndex = 4;
+            this.Title.Text = "Now Playing";
+            // 
             // ExitPicture
             // 
             this.ExitPicture.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1697,16 +1708,6 @@
             this.ExitPicture.TabIndex = 0;
             this.ExitPicture.TabStop = false;
             this.ExitPicture.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(470, 35);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(210, 38);
-            this.Title.TabIndex = 4;
-            this.Title.Text = "Now Playing";
             // 
             // mainFormBindingSource
             // 
@@ -1720,10 +1721,10 @@
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.NowPlayingPanel);
             this.Controls.Add(this.Title);
-            this.Controls.Add(this.SongListPanel);
             this.Controls.Add(this.ExitPicture);
             this.Controls.Add(this.BottomRightPanel);
             this.Controls.Add(this.LeftPanel);
+            this.Controls.Add(this.SongListPanel);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -1748,8 +1749,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.FavGrid2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FavGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SongsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FavouritesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SongsGrid)).EndInit();
             this.NowPlayingPanel.ResumeLayout(false);
             this.NowPlayingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SongCoverPicBox)).EndInit();
@@ -1765,17 +1766,12 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox ExitPicture;
         private Bunifu.UI.WinForms.BunifuPanel LeftPanel;
-        private System.Windows.Forms.Label title2_MusicPlayer;
         private System.Windows.Forms.Label title1_TheMethod;
-        private System.Windows.Forms.Label title3_Library;
         private Bunifu.Framework.UI.BunifuDragControl DragControl_LeftPanel;
         private Bunifu.Framework.UI.BunifuDragControl DragControl_TheMethod;
         private Bunifu.Framework.UI.BunifuDragControl DragControl_MusicPlayer;
         private Bunifu.Framework.UI.BunifuDragControl DragControl_Library;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn1_NowPlaying;
         private Bunifu.UI.WinForms.BunifuPanel BottomLeftPanel;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn2_About;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn1_Settings;
         private System.Windows.Forms.Panel BottomRightPanel;
         private Bunifu.UI.WinForms.BunifuShadowPanel BottomShadowPanel;
         private System.Windows.Forms.PictureBox StopPic;
@@ -1783,26 +1779,18 @@
         private System.Windows.Forms.PictureBox SpeakerPic;
         private Bunifu.UI.WinForms.BunifuHSlider SongSlider;
         private System.Windows.Forms.Label SongTimer;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn4_Favourites;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn2_Songs;
         private System.Windows.Forms.PictureBox BottomPanelPicBox;
         private System.Windows.Forms.OpenFileDialog Songs_openFileDialog;
         private Bunifu.UI.WinForms.BunifuVSlider SoundSlider;
         private Bunifu.UI.WinForms.BunifuShadowPanel SongListPanel;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton ImportSongsButton;
-        private System.Windows.Forms.DataGridView SongsGrid;
         private AxWMPLib.AxWindowsMediaPlayer Player;
-        private System.Windows.Forms.Label Artist2;
-        private System.Windows.Forms.Label SongTitle2;
         private Bunifu.UI.WinForms.BunifuPanel SongArtistPanel;
         private System.Windows.Forms.PictureBox NextSongPic;
         private System.Windows.Forms.PictureBox PrevSongPic;
-        private System.Windows.Forms.Label NoSongs2;
         private System.Windows.Forms.Timer timer;
         private Bunifu.UI.WinForms.BunifuVScrollBar ScrollBarSongs;
         private System.Windows.Forms.DataGridView FavGrid1;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private System.Windows.Forms.DataGridView FavouritesGrid;
         private System.Windows.Forms.DataGridView FavGrid2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private Bunifu.UI.WinForms.BunifuVScrollBar ScrollBarFavourites;
@@ -1819,17 +1807,30 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.PictureBox SongCoverPicBox;
-        private System.Windows.Forms.Panel NowPlayingPanel;
-        private System.Windows.Forms.Label SongTitle1_1;
-        private System.Windows.Forms.Label Genre1_1;
-        private System.Windows.Forms.Label Artist1_1;
-        private System.Windows.Forms.Label SongTitle1_2;
-        private System.Windows.Forms.Label Artist1_2;
-        private System.Windows.Forms.Label Genre1_2;
-        private System.Windows.Forms.Label NoSongs1_1;
-        private System.Windows.Forms.Label Title;
         private System.Windows.Forms.BindingSource mainFormBindingSource;
         private System.Windows.Forms.Label lbl_BETA;
+        public System.Windows.Forms.Label title2_MusicPlayer;
+        public System.Windows.Forms.Label title3_Library;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btn1_NowPlaying;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btn2_Songs;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btn2_About;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btn1_Settings;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btn3_Favourites;
+        public System.Windows.Forms.Label Artist2;
+        public System.Windows.Forms.Label SongTitle2;
+        public System.Windows.Forms.Label SongTitle1_1;
+        public System.Windows.Forms.Label Genre1_1;
+        public System.Windows.Forms.Label Artist1_1;
+        public System.Windows.Forms.Label SongTitle1_2;
+        public System.Windows.Forms.Label Artist1_2;
+        public System.Windows.Forms.Label Genre1_2;
+        public System.Windows.Forms.Label NoSongs1_1;
+        public System.Windows.Forms.Panel NowPlayingPanel;
+        public System.Windows.Forms.DataGridView SongsGrid;
+        public System.Windows.Forms.Label NoSongs2;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton ImportSongsButton;
+        public System.Windows.Forms.DataGridView FavouritesGrid;
+        public System.Windows.Forms.Label Title;
     }
 }
 

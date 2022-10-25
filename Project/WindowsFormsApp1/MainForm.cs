@@ -18,6 +18,8 @@ namespace WindowsFormsApp1
         string Default = (@"..\..\Resources\Default.png");
         string RedPlay = (@"..\..\Resources\Playbutton_RedWhite1.png");
         string RedPlayHover = (@"..\..\Resources\Playbutton_RedWhiteHover.png");
+        string WhiteStop = (@"..\..\Resources\Stopbutton_WhiteBlack1.png");
+        string WhiteStopHover = (@"..\..\Resources\Stopbutton_WhiteBlackHover.png");
         string WhitePause = (@"..\..\Resources\Pausebutton_WhiteBlack1.png");
         string WhitePauseHover = (@"..\..\Resources\Pausebutton_WhiteBlackHover.png");
         string PrevSong = (@"..\..\Resources\previous-song.png");
@@ -26,6 +28,15 @@ namespace WindowsFormsApp1
         string NextSongHover = (@"..\..\Resources\next-song-hover.png");
         readonly PrivateFontCollection BadSignal = new PrivateFontCollection();
 
+        /*public class formList
+        {
+            private static Form1 _form1 = new Form1();
+            public static Form1 form1
+            {
+                get { return _form1; }
+            }
+        }*/
+
         public MainForm()
         {
             InitializeComponent();
@@ -33,6 +44,8 @@ namespace WindowsFormsApp1
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            Settings settings = new Settings(this);
+
             //Import Custom Font
             BadSignal.AddFontFile(@"..\..\Fonts\BadSignal.otf");
             foreach (Control A in this.Controls)
@@ -375,11 +388,11 @@ namespace WindowsFormsApp1
         //Hover Effect on BottomPanel StopButton
         private void StopPic_MouseEnter(object sender, EventArgs e)
         {
-            StopPic.Image = Image.FromFile(WhitePauseHover); 
+            StopPic.Image = Image.FromFile(WhiteStopHover); 
         }
         private void StopPic_MouseLeave(object sender, EventArgs e)
         {
-            StopPic.Image = Image.FromFile(WhitePause);
+            StopPic.Image = Image.FromFile(WhiteStop);
         }
 
         //Hover Effect on BottomPanel PrevButton
@@ -660,7 +673,14 @@ namespace WindowsFormsApp1
         private void btn1_NowPlaying_Click(object sender, EventArgs e)
         {
             //Title
-            Title.Text = "Now Playing";
+            if(Settings.isEnglish == true)
+            {
+                Title.Text = "Now Playing";
+            }
+            else
+            {
+                Title.Text = "Şimdi Oynuyor";
+            }
 
             //Visibility Control
             NowPlayingPanel.Visible = true;
@@ -671,7 +691,14 @@ namespace WindowsFormsApp1
         private void btn2_Songs_Click(object sender, EventArgs e)
         {
             //Title
-            Title.Text = "Songs";
+            if (Settings.isEnglish == true)
+            {
+                Title.Text = "Songs";
+            }
+            else
+            {
+                Title.Text = "Şarkılar";
+            }
 
             //Visibiliy Control
             SongListPanel.Visible = true;
@@ -705,22 +732,18 @@ namespace WindowsFormsApp1
             }
         }
 
-        //Playlists Button
-        private void btn3_Playlists_Click(object sender, EventArgs e)
-        {
-            //Title
-            Title.Text = "Albums";
-
-            //Visibility Control
-            SongListPanel.Visible = false;
-            NowPlayingPanel.Visible = false;
-        }
-
         // Favourites Button
         private void btn4_Favourites_Click(object sender, EventArgs e)
         {
             //Title
-            Title.Text = "Favourites";
+            if (Settings.isEnglish == true)
+            {
+                Title.Text = "Favourites";
+            }
+            else
+            {
+                Title.Text = "Favoriler";
+            }
 
             //Visibility Control 
             FavouritesGrid.Visible = true;
@@ -777,8 +800,10 @@ namespace WindowsFormsApp1
         {
             btn1_NowPlaying.PerformClick();
             btn1_NowPlaying.Focus();
+            Settings settings = new Settings(this);
+            settings.ShowDialog();
         }
-        private void bunifuButton2_Click(object sender, EventArgs e)
+        public void bunifuButton2_Click(object sender, EventArgs e)
         {
             btn1_NowPlaying.PerformClick();
             btn1_NowPlaying.Focus();

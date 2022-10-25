@@ -117,47 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Robot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Robot.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toggle_Theme.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEQAAAAXCAYAAACyCenrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFFSURBVFhH7ZitbgJBFEZXIiuRPMI+RlVTicQ0qewj1OMQ
+        eHSTOiwWicSR1LYktCm0TZvd5XwzVywD6QPsnZN82flbknsy7GanuETTNP26rodkTFb0O4FqIVOaIzKw
+        cv+HG+7IlnyEX+kg1PZJdjQfrexzmLxi0ZLru27yQFVVe2pe0zzfLSbDJdT+wqVnKuLfhAE3OyOFnfKN
+        g0mQQV8P0G2c8gtS5KDU7rgnhzjsGzyMJWRmfffgYikhG+u7BxdfeoZkWmQhCVlIQhaSkIUk6C3zZm33
+        4OJPQubWdw8u1hLyQH5szDV4mOoZUhK3H3Yt5OA2fOBhZqIvvjjuExwsggxBv8eAzgRcQu06HeybjggD
+        JROv7JTfsMoJkkFuTMMpzOsY8ZnovLHTmAidEp7ujEuw8JrMiM4bOwU1bcgTGVq5LYriCO2DcqLyX16Z
+        AAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="arrow-right_navigation_red1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-right_navigation_red1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_Turkish.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMYAAAArCAYAAAAjQfcBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALzSURBVHhe7d2/S1VhHMdxR0dHx0bH/gT/BEfHlsAlaGgJ
+        GhoKGoKgwcGtqUFwC5ouNEk0NDRIDUJDFIiklT9S1N6fcx4TrjfzV6bneb/gy/l5n+Pw/fqc59xzzxk6
+        i729vWFigri/u7s7TbxNsCxdmP28I56xmFycZDpS0vRicMAUww0O3iM2mF8hpEuDvFwlNol5YopV/7ZI
+        OMgtYpn43v4J0uVGrq4RX5l9RAyXVD4fNDhO45+IbzmYdNWQuxtE/qnfLGl9NjR0l0jFSV2wQj4/L+l9
+        cjQwTAMvidW2PakbdnZ21snrXCQ62diDD6Qo3tPAVtOS1EHk+AKT4xdHegqLQjUg198w+fugnB0fUhRe
+        glUVymnV0WMO9svVJwfaqk0G5IOvVrEx44rP7X5SXUruj5ZyOMCGO8SPdjepLpxSbZP/M6UcWqxPb7Hc
+        7iLViRrIVxMHvQYrbhOb7WapTqXXeFLKoikM74iVQC0sNUXB/AgLji0kUAs5nRpLbzFZFqTqUQu52fBe
+        CmO6rJMEaqKXwnhRliWBmlhw4C31oSaWUhhLZVlSkatSkvqkx/CKlNQnhZEfa0gq0lmkMHplWRKoicUU
+        Rh5SJamgJuZTGFPEWlknVe33jYTMX2PGB6hJoBbyC9bx5kZCFhbb1VLdqIX1piiChQfEdtkmVYs6mC1l
+        0dx6ntMpH4Kg2uXpONdLWbQojJkMPNrtUn2ogV4phwOsH2WD34KrVod7i30UxlN6jbzzQqoGOb9F7s+V
+        MhiMHV4TP8tnpM4j398xOfoxneyQ34B7+VZVINc/Mjn8oLVB2DFXqb40n5Q6ihzP0wcHjyv+hA+MpefI
+        +VfTitQhpyqKfXwwp1WvCG8ZUSeUgfYHZo93+nQUGnpM+AWgrro81XyO6fm9pJLGMu7IE0V8d4aulPxT
+        J/LQj9OdOh1HGucgs0ReuGEvossqvUNuIc8/8/Zu2YuSA3LgaSJv5fcSr/4rcjCv3E4u5sd3EyVNT2Fo
+        6Bc8xSdGjzKaBQAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="Backwardbutton_WhiteBlack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Backwardbutton_WhiteBlack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_English.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMYAAAArCAYAAAAjQfcBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALzSURBVHhe7d2/S1VhHMdxR0dHx0bH/gT/BEfHlsAlaGgJ
+        GhoKGoKgwcGtqUFwC5ouNEk0NDRIDUJDFIiklT9S1N6fcx4TrjfzV6bneb/gy/l5n+Pw/fqc59xzzxk6
+        i729vWFigri/u7s7TbxNsCxdmP28I56xmFycZDpS0vRicMAUww0O3iM2mF8hpEuDvFwlNol5YopV/7ZI
+        OMgtYpn43v4J0uVGrq4RX5l9RAyXVD4fNDhO45+IbzmYdNWQuxtE/qnfLGl9NjR0l0jFSV2wQj4/L+l9
+        cjQwTAMvidW2PakbdnZ21snrXCQ62diDD6Qo3tPAVtOS1EHk+AKT4xdHegqLQjUg198w+fugnB0fUhRe
+        glUVymnV0WMO9svVJwfaqk0G5IOvVrEx44rP7X5SXUruj5ZyOMCGO8SPdjepLpxSbZP/M6UcWqxPb7Hc
+        7iLViRrIVxMHvQYrbhOb7WapTqXXeFLKoikM74iVQC0sNUXB/AgLji0kUAs5nRpLbzFZFqTqUQu52fBe
+        CmO6rJMEaqKXwnhRliWBmlhw4C31oSaWUhhLZVlSkatSkvqkx/CKlNQnhZEfa0gq0lmkMHplWRKoicUU
+        Rh5SJamgJuZTGFPEWlknVe33jYTMX2PGB6hJoBbyC9bx5kZCFhbb1VLdqIX1piiChQfEdtkmVYs6mC1l
+        0dx6ntMpH4Kg2uXpONdLWbQojJkMPNrtUn2ogV4phwOsH2WD34KrVod7i30UxlN6jbzzQqoGOb9F7s+V
+        MhiMHV4TP8tnpM4j398xOfoxneyQ34B7+VZVINc/Mjn8oLVB2DFXqb40n5Q6ihzP0wcHjyv+hA+MpefI
+        +VfTitQhpyqKfXwwp1WvCG8ZUSeUgfYHZo93+nQUGnpM+AWgrro81XyO6fm9pJLGMu7IE0V8d4aulPxT
+        J/LQj9OdOh1HGucgs0ReuGEvossqvUNuIc8/8/Zu2YuSA3LgaSJv5fcSr/4rcjCv3E4u5sd3EyVNT2Fo
+        6Bc8xSdGjzKaBQAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="Black X" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Black X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pausebutton_WhiteBlack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pausebutton_WhiteBlack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="next-song" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\next-song.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Forwardbutton_WhiteBlack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Forwardbutton_WhiteBlack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="speaker-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\speaker-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow-right_navigation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-right_navigation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow-right_navigation_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-right_navigation_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="White X" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\White X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="previous-song" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\previous-song.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Stopbutton_WhiteBlack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stopbutton_WhiteBlack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Playbutton_RedWhite1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Playbutton_RedWhite1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>161, 17</value>
+  </metadata>
 </root>

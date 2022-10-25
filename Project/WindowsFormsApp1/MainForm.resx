@@ -124,96 +124,6 @@
     <value>180</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ScrollBarFavourites.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABEAAAFtCAYAAADh+oH0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC6SURBVHhe7cyhDcMAAAPB7L9ixgh3q0phxxoS8IdM/Me2
-        8/PA73/c+5EiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIi
-        KqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIi
-        KqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIXRbZd9/7LtusL/sKYQbzDoU0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="dataGridViewImageColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ScrollBarSongs.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABEAAAFtCAYAAADh+oH0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC6SURBVHhe7cyhDcMAAAPB7L9ixgh3q0phxxoS8IdM/Me2
-        8/PA73/c+5EiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIi
-        KqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIi
-        KqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIXRbZd9/7LtusL/sKYQbzDoU0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="Player.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAuQAAAAIB
-        AAAAAQAAAAAAAAAAAAAAAKQAAAAAAwAACAACAAAAAAAFAAAAAAAAAPA/AwAAAAAABQAAAAAAAAAAAAgA
-        AgAAAAAAAwABAAAACwD//wMAAAAAAAsA//8IAAIAAAAAAAMAMgAAAAsAAAAIAAoAAABuAG8AbgBlAAAA
-        CwAAAAsAAAALAP//CwD//wsAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAAIAAIAAAAAAAsAAAA0BgAA
-        5wEAAAs=
-</value>
-  </data>
-  <metadata name="ID1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Icon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Song.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Artist.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Genre2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Duration.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ImportSongsButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAALAAAAArCAYAAADYFgLeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALrSURBVHhe7d29a1NRHMbxjBk7dnTs6J/QP6FjRxehi+Dg
-        Ijg4KDgIgkOHbk4OhW6CU8CpiIODQ9Gh4CAKodiqfbElid/nnl/MkBjz0tycA88HftzXnNvh6eHcm3tv
-        GvPo9XpNaoN62O12t6n3KpbNhvTzQb1gUZnZZLoScaoHB1Rob3HwFnXO/DFlNjXyc0JdUPvUFqsWG2YO
-        coc6on6mP8HsepCpU+o7s0+oZkTuetDgOo1/oX7oYGaLQsbOKXWStyN+86Gh+5T+M8zqdEzuXkYMp0cD
-        TRp4TZ2k9szq1el0zsifLgpMNzbmAwrvRxq4rFoyWyKyeMBk8hCr53V4LSdk8h2T/5/cseNjwutLY5aV
-        GE6MHxOzn642+ITNcqUTu9FXJ9ioce/XtJ9ZniKjqxHbATbco36l3czyxFDiipzuRGwT1qv3PUq7mOWN
-        rOrS7qAXZsVd6iJtNstb9MLPIr5VgH0HmRWFzLar8DK/woLHvlYUMqthxJp6381YMCsGmdVNPw8U4O1Y
-        Z1YUsttSgF/FsllRyO6BT+CsWGS3rQC3Y9msOLoKYVYs9cC+AmHFUoB1s7BZcdT5KsCtWDYrCtk9VID1
-        kgmz4pDdfQV4izqNdWZF+HtDD/M3mPGLSqwoZFZPDq1XN/SwcJhWm5WBzJ5V4RUWHlFXsc0se+R1N+Jb
-        3VKpYYQf5rRS6Kn5mxHfhADvaGCctpvli6y2IrYDrF9lg7+Vs9wN9759BPg5vbDe+WuWHbJ5SUb3Iq6j
-        scNb6nd8xiwb5PIDk/Gvl2IHPSPny2qWFTL5mcnwC01GYUddlfhWfdJsycii3sYzetz7L3xgTT2xxh1V
-        K2ZLMFN4+/ighhNvKH/VbLWKE7ZPzE42bBiHhp5S/qLD6qK3UO4xvb4fe6ExjYv1BLPfHWwLoU6S0kPG
-        sw0ZJqHGOcgupRcOu1e2eam31a2R6hzT3WV10QE5cP8XOn3pzSZCVvSTbf1f7NyIOM2g0fgDgGBtLakx
-        qaMAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewImageColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="SoundSlider.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB8AAABPCAYAAAATIB7OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -299,7 +209,7 @@
         NQs2Fl8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn4_Favourites.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn3_Favourites.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAARwAAAA5CAYAAADk4pTRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAP/SURBVHhe7d0tbFRZGIfxyspKJLISiRxZWbMJhgRDQkgQ
@@ -366,28 +276,28 @@
   </data>
   <data name="btn1_Settings.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAaCAYAAABByvnlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGxSURBVGhD7Zq7TgJBGIW3pKS0pKTkESgteQRKSwsKH8DC
-        wpqX8AWoaCnpLUxMJDFQIF7QSFj8zuxPomGJKLCzxf8lJzszO7Mk52T2MkzyG6vVqpam6TkaoCGa0Obs
-        gLwyz4ZUL1DdbP07DG5wIYXwgj70A87/wcMFmqE7qk2zeTcYdM2gp3Al5+Dg7xT1KFbM8nzoUKVjmBVh
-        pHM0lsvlJz7fUqya/ZvQQfc6p0AslM2Zwokues66OUVhM6VnMWTQ3kD+zIiHvG9ZHH6rKgNkcM+hotlR
-        pzILrU40yEBvXqeaHZdoYe1ORMjhRoEMrO5EhixGCkRfjk4JIIu5Aplb3SkBCsSfHyVCgYys7ERGk0OB
-        +DdISSCLiQLpWt2JDFn09WHYpDDNmpxYkIFW2NvrpRP/Uo8MGbxyyJbiKbSQLy5GQmGgTghjDQ3+cI8E
-        3mcLi9+hQf8WPoQeTmHg+ZhDzWL4CSe0sUEdnALA60cODbM/Hzpopmjrih4yzhHA23ekNcTdtwUxoIPG
-        yDc8HAi8fEN6o71C2zc3bEODUJuL9JGvee0B/mk3zxnFE7M3hyT5AuNotrkdKwFuAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAHcAAAAaCAYAAACNU8MOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGuSURBVGhD7Zq9TgJBFEa3pKS0pKTcR6C05BEoLS0ofAAL
+        C2tewhegoqWktzAxkcRAgfiDRrKs59u9JBogYmN2b+5JvuzMMLMknAwLM5P8Rp7nrc1mc07GZELmtAX/
+        jD53+/wnVC9I2xT9HQan3EhCX8iH3iCoBvhYkyW5o9oxZcfBoGsGPRV3CioNrhZkSLFh+vZDhyYdi9la
+        jAxqQZZlnzi7pdg0lbvQQd/nQU0xwbszmBcG5LnsFtQRm8FDU1pCe0riGesDeeya2vg69gY+77k0NGvb
+        VJZFa+ACfOoX9Klm7SVZW3vgBJzeSO7Y6oEj8DqVXK1yBM7A60pyV1YPnCG58bx1iuROrRw4QpNWcuM/
+        rkPwOpfcgdUDR+B1pEWMDoVF2RR4AJ/a1ettlx9jhcoR+HzlUm7/UeiS2DhwgMSSfiF2Cw3xw8oBeCw3
+        Db5Dg05hPBQ9glqCvxmXlin9CS/oUJw6BDUDb49cUlO5HzpoBusIpR7KQcXB0zvR/sDxR10Z0CczEofl
+        Kghe3oj+5VyRwwfjDqFBpMdNRiTWoCsCLnRC9YziianaQ5J8AQunZ3mZjMOgAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btn2_About.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFkAAAAaCAYAAADcx/BtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGoSURBVGhD7Zq9TgJBFEYpKSktKSn3ESgteQRKSwsKH8DC
-        wpqX8AWoaCnpLUxMJDFQIP6gkeyu59u9JCKLLrBTeU/yZWeGmSWcTMbdGWt/kaZpM0mSczIiYzKj7d+i
-        328exlQvSMtU7Q+DI24ksS/kQ1/gbIKXFVmQO6ptU1cOBl0z6Cm7k1MKnM3JgGLdNBZDhwYds9mbjXT2
-        Io7jT9zdUmyY0m3ooHXGORITvT2j+aBPnvNuzjHYjB6Y2hzaI+JrcLXIZ8cU+zIRCrzec6lrFreoLLJW
-        p1LwqieOU83iS7KydqdicHsjySOrOwHA70SS9bbiBAK/S0leWt0JhCT7ehwYSZ5Y2QmAJrEk+zNyQPA7
-        k+S+1Z0A4Heol5E2hXne5FQJXrWb2V2/VvsbXwDw+sol3/ak0CG+QVQhEkx6meA1NPgfwArBZ7459B0a
-        dCrykPVwjgKPUy5NU7sJH+jwVB2cA8HfI5fIlBZDB81oHXlr0XZKgq93on2g8v8iwIAemRI/VP0F/LwR
-        PZ1dkd0HqLvQINLlJkPiexw/wIlO9s8onpiyAmq1L/wPQvVyeH8PAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAHcAAAAaCAYAAACNU8MOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGuSURBVGhD7Zq9TgJBFEa3pKS0pKTcR6C05BEoLS0ofAAL
+        C2tewhegoqWktzAxkcRAgfiDRrKs59u9JBogYmN2b+5JvuzMMLMknAwLM5P8Rp7nrc1mc07GZELmtAX/
+        jD53+/wnVC9I2xT9HQan3EhCX8iH3iCoBvhYkyW5o9oxZcfBoGsGPRV3CioNrhZkSLFh+vZDhyYdi9la
+        jAxqQZZlnzi7pdg0lbvQQd/nQU0xwbszmBcG5LnsFtQRm8FDU1pCe0riGesDeeya2vg69gY+77k0NGvb
+        VJZFa+ACfOoX9Klm7SVZW3vgBJzeSO7Y6oEj8DqVXK1yBM7A60pyV1YPnCG58bx1iuROrRw4QpNWcuM/
+        rkPwOpfcgdUDR+B1pEWMDoVF2RR4AJ/a1ettlx9jhcoR+HzlUm7/UeiS2DhwgMSSfiF2Cw3xw8oBeCw3
+        Db5Dg05hPBQ9glqCvxmXlin9CS/oUJw6BDUDb49cUlO5HzpoBusIpR7KQcXB0zvR/sDxR10Z0CczEofl
+        Kghe3oj+5VyRwwfjDqFBpMdNRiTWoCsCLnRC9YziianaQ5J8AQunZ3mZjMOgAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btn1_NowPlaying.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -413,6 +323,96 @@
         yGed2qB8uZd0jHGMxnXZOFY3aMYp02Iezh2amfkCyl4bf5JzzM0AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="ScrollBarFavourites.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAFtCAYAAADh+oH0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC6SURBVHhe7cyhDcMAAAPB7L9ixgh3q0phxxoS8IdM/Me2
+        8/PA73/c+5EiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIi
+        KqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIi
+        KqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIXRbZd9/7LtusL/sKYQbzDoU0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="dataGridViewImageColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ScrollBarSongs.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAFtCAYAAADh+oH0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC6SURBVHhe7cyhDcMAAAPB7L9ixgh3q0phxxoS8IdM/Me2
+        8/PA73/c+5EiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIi
+        KqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIi
+        KqIiKqIiKqIiKqIiKqIiKqIiKqIiKqIXRbZd9/7LtusL/sKYQbzDoU0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Player.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAuQAAAAIB
+        AAAAAQAAAAAAAAAAAAAAAKQAAAAAAwAACAACAAAAAAAFAAAAAAAAAPA/AwAAAAAABQAAAAAAAAAAAAgA
+        AgAAAAAAAwABAAAACwD//wMAAAAAAAsA//8IAAIAAAAAAAMAMgAAAAsAAAAIAAoAAABuAG8AbgBlAAAA
+        CwAAAAsAAAALAP//CwD//wsAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAAIAAIAAAAAAAsAAAA0BgAA
+        5wEAAAs=
+</value>
+  </data>
+  <data name="ImportSongsButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALAAAAArCAYAAADYFgLeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALrSURBVHhe7d29a1NRHMbxjBk7dnTs6J/QP6FjRxehi+Dg
+        Ijg4KDgIgkOHbk4OhW6CU8CpiIODQ9Gh4CAKodiqfbElid/nnl/MkBjz0tycA88HftzXnNvh6eHcm3tv
+        GvPo9XpNaoN62O12t6n3KpbNhvTzQb1gUZnZZLoScaoHB1Rob3HwFnXO/DFlNjXyc0JdUPvUFqsWG2YO
+        coc6on6mP8HsepCpU+o7s0+oZkTuetDgOo1/oX7oYGaLQsbOKXWStyN+86Gh+5T+M8zqdEzuXkYMp0cD
+        TRp4TZ2k9szq1el0zsifLgpMNzbmAwrvRxq4rFoyWyKyeMBk8hCr53V4LSdk8h2T/5/cseNjwutLY5aV
+        GE6MHxOzn642+ITNcqUTu9FXJ9ioce/XtJ9ZniKjqxHbATbco36l3czyxFDiipzuRGwT1qv3PUq7mOWN
+        rOrS7qAXZsVd6iJtNstb9MLPIr5VgH0HmRWFzLar8DK/woLHvlYUMqthxJp6381YMCsGmdVNPw8U4O1Y
+        Z1YUsttSgF/FsllRyO6BT+CsWGS3rQC3Y9msOLoKYVYs9cC+AmHFUoB1s7BZcdT5KsCtWDYrCtk9VID1
+        kgmz4pDdfQV4izqNdWZF+HtDD/M3mPGLSqwoZFZPDq1XN/SwcJhWm5WBzJ5V4RUWHlFXsc0se+R1N+Jb
+        3VKpYYQf5rRS6Kn5mxHfhADvaGCctpvli6y2IrYDrF9lg7+Vs9wN9759BPg5vbDe+WuWHbJ5SUb3Iq6j
+        scNb6nd8xiwb5PIDk/Gvl2IHPSPny2qWFTL5mcnwC01GYUddlfhWfdJsycii3sYzetz7L3xgTT2xxh1V
+        K2ZLMFN4+/ighhNvKH/VbLWKE7ZPzE42bBiHhp5S/qLD6qK3UO4xvb4fe6ExjYv1BLPfHWwLoU6S0kPG
+        sw0ZJqHGOcgupRcOu1e2eam31a2R6hzT3WV10QE5cP8XOn3pzSZCVvSTbf1f7NyIOM2g0fgDgGBtLakx
+        qaMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewImageColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ID1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Icon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Song.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Artist.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Genre2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Duration.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="DragControl_LeftPanel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
   </metadata>
