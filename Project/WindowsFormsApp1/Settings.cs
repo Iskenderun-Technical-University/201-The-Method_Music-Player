@@ -33,7 +33,6 @@ namespace WindowsFormsApp1
             // <---- Settings ---->
             Title.Text = "Settings";
             lbl_Language.Text = "Language";
-            lbl_Theme.Text = "Theme";
 
             // <---- About ---->
             Program.about.Title.Text = "About";
@@ -49,12 +48,8 @@ namespace WindowsFormsApp1
             Program.mainform.btn1_NowPlaying.Text = "  Now Playing";
             Program.mainform.btn2_Songs.Text = "  Songs";
             Program.mainform.btn3_Favourites.Text = "  Favourites";
-            Program.mainform.btn1_Settings.Text = "Settings";
-            Program.mainform.btn2_About.Text = "About";
-
-            // Bottom Panel
-            Program.mainform.SongTitle2.Text = "Song Title";
-            Program.mainform.Artist2.Text = "Artist";
+            Program.mainform.btn1_Settings.Text = "  Settings  ";
+            Program.mainform.btn2_About.Text = "  About  ";
 
             // Now Playing Page
             Program.mainform.Title.Text = "Now Playing";
@@ -63,12 +58,17 @@ namespace WindowsFormsApp1
             Program.mainform.Artist1_1.Text = "Artist";
             Program.mainform.Genre1_1.Text = "Genre";
 
-            // Now Playing Page Grey Labels
+            // Now Playing Page Grey Labels and Bottom Panel Song Name and Artist
             if (Program.mainform.SongsGrid == null || Program.mainform.SongsGrid.Rows.Count == 0)
             {
+                // Grey Labels
                 Program.mainform.SongTitle1_2.Text = "Song Name";
                 Program.mainform.Artist1_2.Text = "Artist";
                 Program.mainform.Genre1_2.Text = "Genre";
+
+                // Bottom Panel
+                Program.mainform.SongTitle2.Text = "Song Title";
+                Program.mainform.Artist2.Text = "Artist";
             }
 
             // Songs Page
@@ -98,13 +98,12 @@ namespace WindowsFormsApp1
             // <---- Settings ---->
             Title.Text = "Ayarlar";
             lbl_Language.Text = "Dil";
-            lbl_Theme.Text = "Tema";
 
             // <---- About ---->
             Program.about.Title.Text = "Hakkında";
             Program.about.lbl_MusicPlayer.Text = "Müzik Çalar";
             Program.about.lbl_Version.Text = "Versiyon 1.0";
-            Program.about.lbl_Copyrights.Text = "© The Method. Tüm hakları Saklıdır.";
+            Program.about.lbl_Copyrights.Text = "© The Method. Tüm hakları saklıdır.";
 
             // <---- Main Form ---->
 
@@ -114,12 +113,8 @@ namespace WindowsFormsApp1
             Program.mainform.btn1_NowPlaying.Text = "  Şimdi Oynuyor";
             Program.mainform.btn2_Songs.Text = "  Şarkılar";
             Program.mainform.btn3_Favourites.Text = "  Favoriler";
-            Program.mainform.btn1_Settings.Text = "Ayarlar";
-            Program.mainform.btn2_About.Text = "Hakkında";
-
-            // Bottom Panel
-            Program.mainform.SongTitle2.Text = "Şarkı Adı";
-            Program.mainform.Artist2.Text = "Sanatçı";
+            Program.mainform.btn1_Settings.Text = "  Ayarlar  ";
+            Program.mainform.btn2_About.Text = "  Hakkında  ";
 
             // Now Playing Page
             Program.mainform.Title.Text = "Şimdi Oynuyor";
@@ -128,12 +123,17 @@ namespace WindowsFormsApp1
             Program.mainform.Artist1_1.Text = "Sanatçı";
             Program.mainform.Genre1_1.Text = "Tür";
 
-            // Now Playing Page Grey Labels
+            // Now Playing Page Grey Labels and Bottom Panel Song Name and Artist
             if (Program.mainform.SongsGrid == null || Program.mainform.SongsGrid.Rows.Count == 0)
             {
+                // Grey Labels
                 Program.mainform.SongTitle1_2.Text = "Şarkı Adı";
                 Program.mainform.Artist1_2.Text = "Sanatçı";
                 Program.mainform.Genre1_2.Text = "Tür";
+
+                // Bottom panel
+                Program.mainform.SongTitle2.Text = "Şarkı Adı";
+                Program.mainform.Artist2.Text = "Sanatçı";
             }
 
             // Songs Page

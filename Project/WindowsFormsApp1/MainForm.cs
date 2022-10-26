@@ -26,6 +26,8 @@ namespace WindowsFormsApp1
         string PrevSongHover = (@"..\..\Resources\previous-song-hover.png");
         string NextSong = (@"..\..\Resources\next-song.png");
         string NextSongHover = (@"..\..\Resources\next-song-hover.png");
+
+        // Custom Font
         readonly PrivateFontCollection BadSignal = new PrivateFontCollection();
 
         public MainForm()
@@ -135,7 +137,7 @@ namespace WindowsFormsApp1
         private void ImportSongsButton_Click(object sender, EventArgs e)
         {
             //Import Songs
-            if (Songs_openFileDialog.ShowDialog()==System.Windows.Forms.DialogResult.OK)
+            if (Songs_openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 NoSongs2.Visible = false;
                 files = Songs_openFileDialog.FileNames;
@@ -175,10 +177,10 @@ namespace WindowsFormsApp1
                 Player.Ctlcontrols.stop();
 
                 //Add Song and Artist to Bottom Panel
-                SongAndArtist(SongTitle2, Artist2 ,SongsGrid.SelectedRows[0].Index);
+                SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
 
                 //Add Song Cover to Bottom Panel
-                AddSongPic(BottomPanelPicBox ,SongsGrid.SelectedRows[0].Index);
+                AddSongPic(BottomPanelPicBox, SongsGrid.SelectedRows[0].Index);
 
                 // Add Song, Artist and Genre Names to Now Playing
                 SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
@@ -238,9 +240,9 @@ namespace WindowsFormsApp1
                 {
                     if (FavouritesGrid.Rows[x].Cells[0].Value == SongsGrid.Rows[e.RowIndex].Cells[0].Value)
                     {
-                        for(int y=0; y < FavouritesGrid.RowCount; y++)
+                        for (int y = 0; y < FavouritesGrid.RowCount; y++)
                         {
-                            FavouritesGrid[1, y].Value =PlayIcon; // Reset All to PlayIcon
+                            FavouritesGrid[1, y].Value = PlayIcon; // Reset All to PlayIcon
                         }
                         FavouritesGrid[1, x].Value = PauseIcon;
                         FavouritesGrid[1, x].Selected = true;
@@ -278,7 +280,7 @@ namespace WindowsFormsApp1
             {
                 FavGrid1.Rows[e.RowIndex].Cells[0].Value = FavStar;
             }
-            
+
             //Add Song Path to Favourites Variable
             string favourite = path[FavGrid1.SelectedRows[0].Index];
 
@@ -326,7 +328,7 @@ namespace WindowsFormsApp1
             if (e.RowIndex > -1)
             {
                 SongsGrid.Rows[e.RowIndex].DefaultCellStyle = style2;
-                
+
             }
         }
 
@@ -377,7 +379,7 @@ namespace WindowsFormsApp1
         //Hover Effect on BottomPanel StopButton
         private void StopPic_MouseEnter(object sender, EventArgs e)
         {
-            StopPic.Image = Image.FromFile(WhiteStopHover); 
+            StopPic.Image = Image.FromFile(WhiteStopHover);
         }
         private void StopPic_MouseLeave(object sender, EventArgs e)
         {
@@ -407,114 +409,126 @@ namespace WindowsFormsApp1
         //BottomPanel StopButton Functionality
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Player.Ctlcontrols.stop();
-            SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
-            if(FavouritesGrid.RowCount > 0)
+            if(SongsGrid.RowCount > 0)
             {
-                FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
-            }
-            // Connect it with BottomPanel PlayButton
-            if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
-            {
-                PlayPic.Image = Image.FromFile(WhitePause);
-            }
-            else
-            {
-                PlayPic.Image = Image.FromFile(RedPlay);
+                Player.Ctlcontrols.stop();
+                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
+                if (FavouritesGrid.RowCount > 0)
+                {
+                    FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
+                }
+                // Connect it with BottomPanel PlayButton
+                if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
+                {
+                    PlayPic.Image = Image.FromFile(WhitePause);
+                }
+                else
+                {
+                    PlayPic.Image = Image.FromFile(RedPlay);
+                }
             }
         }
 
         //BottomPanel PlayButton Functionality
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            if(SongsGrid.RowCount > 0)
             {
-                Player.Ctlcontrols.pause();
-                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
-                if (FavouritesGrid.RowCount > 0)
+                if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
                 {
-                    FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
+                    Player.Ctlcontrols.pause();
+                    SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
+                    if (FavouritesGrid.RowCount > 0)
+                    {
+                        FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
+                    }
+                    PlayPic.Image = Image.FromFile(RedPlay);
                 }
-                PlayPic.Image = Image.FromFile(RedPlay);
-            }
-            else
-            {
-                Player.Ctlcontrols.play();
-                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PauseIcon;
-                if (FavouritesGrid.RowCount > 0)
+                else
                 {
-                    FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PauseIcon;
+                    Player.Ctlcontrols.play();
+                    SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PauseIcon;
+                    if (FavouritesGrid.RowCount > 0)
+                    {
+                        FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PauseIcon;
+                    }
+                    PlayPic.Image = Image.FromFile(WhitePause);
                 }
-                PlayPic.Image = Image.FromFile(WhitePause);
             }
         }
 
         //BottomPanel PrevButton Functionality
         private void PrevSongPic_Click(object sender, EventArgs e)
         {
-            int x = SongsGrid.SelectedRows[0].Index;
-            if (x==0)
+            if(SongsGrid.RowCount > 0)
             {
-                Player.URL = path[x];
-                Player.Ctlcontrols.play();
+                int x = SongsGrid.SelectedRows[0].Index;
+                if (x == 0)
+                {
+                    Player.URL = path[x];
+                    Player.Ctlcontrols.play();
+                }
+                else
+                {
+                    SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
+                    --x;
+                    SongsGrid.Rows[x].Selected = true;
+                    SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PauseIcon;
+                    Player.URL = path[x];
+                    Player.Ctlcontrols.play();
+                }
+                PlayPic.Image = Image.FromFile(WhitePause);
+
+                //Add Song and Artist to Bottom Panel
+                SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
+
+                // Add Song Cover to Bottom Panel
+                AddSongPic(BottomPanelPicBox, SongsGrid.SelectedRows[0].Index);
+
+                // Add Song, Artist and Genre Names to Now Playing
+                SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
+
+                // Add Song Cover to Now Playing
+                AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
             }
-            else
-            {
-                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
-                --x;
-                SongsGrid.Rows[x].Selected = true;
-                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PauseIcon;
-                Player.URL = path[x];
-                Player.Ctlcontrols.play();
-            }
-            PlayPic.Image = Image.FromFile(WhitePause);
-
-            //Add Song and Artist to Bottom Panel
-            SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
-
-            // Add Song Cover to Bottom Panel
-            AddSongPic(BottomPanelPicBox, SongsGrid.SelectedRows[0].Index);
-
-            // Add Song, Artist and Genre Names to Now Playing
-            SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
-
-            // Add Song Cover to Now Playing
-            AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
         }
 
         //BottomPanel NextButton Functionality
         private void NextSongPic_Click(object sender, EventArgs e)
         {
-            string [] FileNum = Songs_openFileDialog.FileNames;
-            int x = SongsGrid.SelectedRows[0].Index;
-            if (x == FileNum.Length-1)
+            if(SongsGrid.RowCount > 0)
             {
-                Player.URL = path[x];
-                Player.Ctlcontrols.play();
+                string[] FileNum = Songs_openFileDialog.FileNames;
+                int x = SongsGrid.SelectedRows[0].Index;
+                if (x == FileNum.Length - 1)
+                {
+                    Player.URL = path[x];
+                    Player.Ctlcontrols.play();
+                }
+                else
+                {
+                    SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
+                    ++x;
+                    SongsGrid.Rows[x].Selected = true;
+                    SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PauseIcon;
+                    Player.URL = path[x];
+                    Player.Ctlcontrols.play();
+                }
+
+                PlayPic.Image = Image.FromFile(WhitePause);
+
+                // Add Song and Artist to Bottom Panel
+                SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
+
+                // Add Song Cover to Bottom Panel
+                AddSongPic(BottomPanelPicBox, SongsGrid.SelectedRows[0].Index);
+
+                // Add Song, Artist and Genre Names to Now Playing
+                SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
+
+                // Add Song Cover to Now Playing
+                AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
             }
-            else
-            {
-                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon; 
-                ++x;
-                SongsGrid.Rows[x].Selected = true;
-                SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PauseIcon;
-                Player.URL = path[x];
-                Player.Ctlcontrols.play();
-            }
-
-            PlayPic.Image = Image.FromFile(WhitePause);
-
-            // Add Song and Artist to Bottom Panel
-            SongAndArtist(SongTitle2, Artist2, SongsGrid.SelectedRows[0].Index);
-
-            // Add Song Cover to Bottom Panel
-            AddSongPic(BottomPanelPicBox, SongsGrid.SelectedRows[0].Index);
-
-            // Add Song, Artist and Genre Names to Now Playing
-            SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
-             
-            // Add Song Cover to Now Playing
-            AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
         }
 
         //BottomPanel Song Timer Label
@@ -526,6 +540,12 @@ namespace WindowsFormsApp1
                 SongSlider.Value = (int)Player.Ctlcontrols.currentPosition;
                 SongTimer.Text = Player.Ctlcontrols.currentPositionString;
             }
+        }
+
+        // Bottom Panel Song Slider
+        private void SongSlider_Scroll(object sender, Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs e)
+        {
+            Player.Ctlcontrols.currentPosition = SongSlider.Value;
         }
 
         //Bottom Panel SoundBar Functionality
@@ -550,12 +570,12 @@ namespace WindowsFormsApp1
                 FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value = PlayIcon;
                 SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value = PlayIcon;
                 PlayPic.Image = Image.FromFile(RedPlay);
-            }  
+            }
             else
             {
                 Player.URL = path[(int)FavouritesGrid.Rows[e.RowIndex].Cells[0].Value];
                 Player.Ctlcontrols.play();
-                current1 = SongsGrid.SelectedRows[0].Index; 
+                current1 = SongsGrid.SelectedRows[0].Index;
                 current2 = FavouritesGrid.SelectedRows[0].Index;
                 //Reset first column pictures to PlayIcon
                 for (int x = 0; x < FavouritesGrid.RowCount; x++)
@@ -612,7 +632,7 @@ namespace WindowsFormsApp1
         {
             DataGridViewCellStyle style2 = new DataGridViewCellStyle();
             style2.BackColor = Color.Black;
-            if (e.RowIndex > -1) 
+            if (e.RowIndex > -1)
             {
                 FavouritesGrid.Rows[e.RowIndex].DefaultCellStyle = style2;
 
@@ -662,7 +682,7 @@ namespace WindowsFormsApp1
         private void btn1_NowPlaying_Click(object sender, EventArgs e)
         {
             //Title
-            if(Settings.isEnglish == true)
+            if (Settings.isEnglish == true)
             {
                 Title.Text = "Now Playing";
             }
@@ -766,7 +786,7 @@ namespace WindowsFormsApp1
             }
 
             //Link WindowMediaPlayer To first song In Favourites
-            if (FavouritesGrid.RowCount>0 && Player.playState == WMPLib.WMPPlayState.wmppsStopped)
+            if (FavouritesGrid.RowCount > 0 && Player.playState == WMPLib.WMPPlayState.wmppsStopped)
             {
                 Player.URL = path[(int)FavouritesGrid.Rows[FavouritesGrid.SelectedRows[0].Index].Cells[0].Value];
                 Player.Ctlcontrols.stop();
@@ -776,7 +796,7 @@ namespace WindowsFormsApp1
             FavGrid2.ClearSelection();
 
             //Scroll Bar Settings
-            if(FavouritesGrid.RowCount > 0)
+            if (FavouritesGrid.RowCount > 0)
             {
                 ScrollBarFavourites.Maximum = FavouritesGrid.RowCount;
                 ScrollBarFavourites.LargeChange = FavouritesGrid.DisplayedRowCount(true);
@@ -799,5 +819,3 @@ namespace WindowsFormsApp1
         }
     }
 }
-
-

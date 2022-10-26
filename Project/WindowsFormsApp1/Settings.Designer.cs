@@ -30,29 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState1 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState2 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState3 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ExitPicture = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btn_English = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_Turkish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.toggle_Theme = new Bunifu.UI.WinForms.BunifuToggleSwitch();
-            this.lbl_Light = new System.Windows.Forms.Label();
-            this.lbl_Dark = new System.Windows.Forms.Label();
             this.lbl_Language = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
-            this.lbl_Theme = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -126,7 +115,7 @@
             this.btn_English.IdleIconLeftImage = null;
             this.btn_English.IdleIconRightImage = null;
             this.btn_English.IndicateFocus = true;
-            this.btn_English.Location = new System.Drawing.Point(15, 150);
+            this.btn_English.Location = new System.Drawing.Point(87, 126);
             this.btn_English.Name = "btn_English";
             this.btn_English.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_English.OnDisabledState.BorderRadius = 1;
@@ -160,7 +149,7 @@
             this.btn_English.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_English.OnPressedState.IconLeftImage = null;
             this.btn_English.OnPressedState.IconRightImage = null;
-            this.btn_English.Size = new System.Drawing.Size(198, 43);
+            this.btn_English.Size = new System.Drawing.Size(264, 43);
             this.btn_English.TabIndex = 8;
             this.btn_English.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_English.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -216,7 +205,7 @@
             this.btn_Turkish.IdleIconLeftImage = null;
             this.btn_Turkish.IdleIconRightImage = null;
             this.btn_Turkish.IndicateFocus = true;
-            this.btn_Turkish.Location = new System.Drawing.Point(237, 150);
+            this.btn_Turkish.Location = new System.Drawing.Point(87, 203);
             this.btn_Turkish.Name = "btn_Turkish";
             this.btn_Turkish.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_Turkish.OnDisabledState.BorderRadius = 1;
@@ -250,7 +239,7 @@
             this.btn_Turkish.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_Turkish.OnPressedState.IconLeftImage = null;
             this.btn_Turkish.OnPressedState.IconRightImage = null;
-            this.btn_Turkish.Size = new System.Drawing.Size(198, 43);
+            this.btn_Turkish.Size = new System.Drawing.Size(264, 43);
             this.btn_Turkish.TabIndex = 9;
             this.btn_Turkish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Turkish.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -259,90 +248,16 @@
             this.btn_Turkish.UseDefaultRadiusAndThickness = true;
             this.btn_Turkish.Click += new System.EventHandler(this.btn_Turkish_Click);
             // 
-            // toggle_Theme
-            // 
-            this.toggle_Theme.Animation = 5;
-            this.toggle_Theme.BackColor = System.Drawing.Color.Transparent;
-            this.toggle_Theme.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toggle_Theme.BackgroundImage")));
-            this.toggle_Theme.Checked = false;
-            this.toggle_Theme.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.toggle_Theme.InnerCirclePadding = 3;
-            this.toggle_Theme.Location = new System.Drawing.Point(186, 266);
-            this.toggle_Theme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.toggle_Theme.Name = "toggle_Theme";
-            this.toggle_Theme.Size = new System.Drawing.Size(68, 23);
-            this.toggle_Theme.TabIndex = 11;
-            this.toggle_Theme.ThumbMargin = 3;
-            toggleState1.BackColor = System.Drawing.Color.DarkGray;
-            toggleState1.BackColorInner = System.Drawing.Color.White;
-            toggleState1.BorderColor = System.Drawing.Color.DarkGray;
-            toggleState1.BorderColorInner = System.Drawing.Color.White;
-            toggleState1.BorderRadius = 17;
-            toggleState1.BorderRadiusInner = 11;
-            toggleState1.BorderThickness = 1;
-            toggleState1.BorderThicknessInner = 1;
-            this.toggle_Theme.ToggleStateDisabled = toggleState1;
-            toggleState2.BackColor = System.Drawing.Color.White;
-            toggleState2.BackColorInner = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            toggleState2.BorderColor = System.Drawing.Color.White;
-            toggleState2.BorderColorInner = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            toggleState2.BorderRadius = 17;
-            toggleState2.BorderRadiusInner = 11;
-            toggleState2.BorderThickness = 1;
-            toggleState2.BorderThicknessInner = 1;
-            this.toggle_Theme.ToggleStateOff = toggleState2;
-            toggleState3.BackColor = System.Drawing.Color.Black;
-            toggleState3.BackColorInner = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            toggleState3.BorderColor = System.Drawing.Color.Black;
-            toggleState3.BorderColorInner = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            toggleState3.BorderRadius = 17;
-            toggleState3.BorderRadiusInner = 11;
-            toggleState3.BorderThickness = 1;
-            toggleState3.BorderThicknessInner = 1;
-            this.toggle_Theme.ToggleStateOn = toggleState3;
-            this.toggle_Theme.Value = false;
-            // 
-            // lbl_Light
-            // 
-            this.lbl_Light.AutoSize = true;
-            this.lbl_Light.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Light.ForeColor = System.Drawing.Color.White;
-            this.lbl_Light.Location = new System.Drawing.Point(122, 266);
-            this.lbl_Light.Name = "lbl_Light";
-            this.lbl_Light.Size = new System.Drawing.Size(57, 22);
-            this.lbl_Light.TabIndex = 12;
-            this.lbl_Light.Text = "Light";
-            // 
-            // lbl_Dark
-            // 
-            this.lbl_Dark.AutoSize = true;
-            this.lbl_Dark.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Dark.ForeColor = System.Drawing.Color.White;
-            this.lbl_Dark.Location = new System.Drawing.Point(262, 266);
-            this.lbl_Dark.Name = "lbl_Dark";
-            this.lbl_Dark.Size = new System.Drawing.Size(54, 22);
-            this.lbl_Dark.TabIndex = 13;
-            this.lbl_Dark.Text = "Dark";
-            // 
             // lbl_Language
             // 
-            this.lbl_Language.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Language.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Language.ForeColor = System.Drawing.Color.White;
-            this.lbl_Language.Location = new System.Drawing.Point(0, 0);
+            this.lbl_Language.Location = new System.Drawing.Point(12, 59);
             this.lbl_Language.Name = "lbl_Language";
-            this.lbl_Language.Size = new System.Drawing.Size(163, 43);
+            this.lbl_Language.Size = new System.Drawing.Size(173, 49);
             this.lbl_Language.TabIndex = 17;
             this.lbl_Language.Text = "Language";
             this.lbl_Language.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lbl_Language);
-            this.panel1.Location = new System.Drawing.Point(139, 101);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(163, 43);
-            this.panel1.TabIndex = 18;
             // 
             // panel2
             // 
@@ -364,51 +279,24 @@
             this.Title.Text = "Settings";
             this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_Theme
-            // 
-            this.lbl_Theme.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Theme.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Theme.ForeColor = System.Drawing.Color.White;
-            this.lbl_Theme.Location = new System.Drawing.Point(0, 0);
-            this.lbl_Theme.Name = "lbl_Theme";
-            this.lbl_Theme.Size = new System.Drawing.Size(160, 40);
-            this.lbl_Theme.TabIndex = 20;
-            this.lbl_Theme.Text = "Theme";
-            this.lbl_Theme.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lbl_Theme);
-            this.panel3.Location = new System.Drawing.Point(142, 219);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(160, 40);
-            this.panel3.TabIndex = 21;
-            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(450, 400);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.lbl_Dark);
-            this.Controls.Add(this.lbl_Light);
-            this.Controls.Add(this.toggle_Theme);
+            this.Controls.Add(this.lbl_Language);
             this.Controls.Add(this.btn_Turkish);
             this.Controls.Add(this.btn_English);
             this.Controls.Add(this.ExitPicture);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -419,14 +307,8 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_English;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_Turkish;
-        private Bunifu.UI.WinForms.BunifuToggleSwitch toggle_Theme;
-        private System.Windows.Forms.Label lbl_Dark;
-        private System.Windows.Forms.Label lbl_Light;
         private System.Windows.Forms.Label lbl_Language;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbl_Theme;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.Panel panel3;
     }
 }

@@ -38,7 +38,9 @@
             this.lbl_BETA = new System.Windows.Forms.Label();
             this.lbl_Version = new System.Windows.Forms.Label();
             this.lbl_Copyrights = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -67,14 +69,15 @@
             // 
             // Title
             // 
-            this.Title.AutoSize = true;
+            this.Title.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Title.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(171, 12);
+            this.Title.Location = new System.Drawing.Point(0, 0);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(100, 35);
+            this.Title.Size = new System.Drawing.Size(171, 44);
             this.Title.TabIndex = 5;
             this.Title.Text = "About";
+            this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_TheMethod
             // 
@@ -131,6 +134,14 @@
             this.lbl_Copyrights.TabIndex = 10;
             this.lbl_Copyrights.Text = "© The Method. All rights reserved.";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.Title);
+            this.panel1.Location = new System.Drawing.Point(132, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(171, 44);
+            this.panel1.TabIndex = 11;
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,13 +153,14 @@
             this.Controls.Add(this.lbl_BETA);
             this.Controls.Add(this.lbl_MusicPlayer);
             this.Controls.Add(this.lbl_TheMethod);
-            this.Controls.Add(this.Title);
             this.Controls.Add(this.ExitPicture);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +177,6 @@
         public System.Windows.Forms.Label lbl_MusicPlayer;
         public System.Windows.Forms.Label lbl_Version;
         public System.Windows.Forms.Label lbl_Copyrights;
+        private System.Windows.Forms.Panel panel1;
     }
 }
