@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
         // Add Song Picture Function
         public void AddSongPic(PictureBox x, int y)
         {
-            var file = TagLib.File.Create(files[y]);
+            var file = TagLib.File.Create(path[y]);
             var mStream = new MemoryStream();
             var firstPicture = file.Tag.Pictures.FirstOrDefault();
             if (firstPicture != null)
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
         // Add Song and Artist Names Function
         public void SongAndArtist(Label SongTitle, Label Artist, int x)
         {
-            var file = TagLib.File.Create(files[x]);
+            var file = TagLib.File.Create(path[x]);
             if (file.Tag.Title == null)
             {
                 SongTitle.Text = "Unknown";
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
         // Add Song, Artist and Genre Names Function
         public void SongArtistAndGenre(Label SongTitle, Label Artist, Label Genre, int x)
         {
-            var file = TagLib.File.Create(files[x]);
+            var file = TagLib.File.Create(path[x]);
             if (file.Tag.Title == null)
             {
                 SongTitle.Text = "Unknown";
@@ -131,7 +131,7 @@ namespace WindowsFormsApp1
         // <-------------------   Songs Page   ------------------->
 
         // Arrays to import songs
-        string[] path, files;
+        string[] path;
 
         //Import Songs Button
         private void ImportSongsButton_Click(object sender, EventArgs e)
@@ -140,19 +140,29 @@ namespace WindowsFormsApp1
             if (Songs_openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 NoSongs2.Visible = false;
-                files = Songs_openFileDialog.FileNames;
                 path = Songs_openFileDialog.FileNames;
-                for (int x = 0; x < files.Length; x++)
+                for (int x = 0; x < path.Length; x++)
                 {
-                    var file = TagLib.File.Create(files[x]);
+                    int z = 0;
+                    var file = TagLib.File.Create(path[x]);
                     string title = file.Tag.Title;
                     string artist = file.Tag.FirstPerformer;
                     string genre = file.Tag.FirstGenre;
                     double secs = file.Properties.Duration.TotalSeconds;
                     TimeSpan conv = TimeSpan.FromSeconds(secs);
                     string duration = string.Format("{0:D2}:{1:D2}", conv.Minutes, conv.Seconds);
-                    SongsGrid.Rows.Add(x, PlayIcon, title, artist, genre, duration);
-                    FavGrid1.Rows.Add(FavStar);
+                    for(int y=0; y<SongsGrid.RowCount; y++) // Prevent Adding Same Song Twice
+                    {
+                        if (SongsGrid.Rows[y].Cells[2].Value.ToString().Equals(file.Tag.Title))
+                        {
+                            z++;
+                        }
+                    }
+                    if(z==0)
+                    {
+                        SongsGrid.Rows.Add(x, PlayIcon, title, artist, genre, duration);
+                        FavGrid1.Rows.Add(FavStar);
+                    } 
                 }
 
                 //Hide No Songs Label
@@ -231,7 +241,7 @@ namespace WindowsFormsApp1
                 Player.URL = path[SongsGrid.SelectedRows[0].Index];
                 Player.Ctlcontrols.play();
                 current1 = SongsGrid.SelectedRows[0].Index;
-                for (int x = 0; x < files.Length; x++) //Reset icons on the left of the songs to PlayIcon
+                for (int x = 0; x < path.Length; x++) //Reset icons on the left of the songs to PlayIcon
                 {
                     SongsGrid[1, x].Value = PlayIcon;
                 }

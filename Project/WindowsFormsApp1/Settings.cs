@@ -152,5 +152,79 @@ namespace WindowsFormsApp1
             Program.mainform.FavouritesGrid.Columns[4].HeaderText = "Tür";
             Program.mainform.FavouritesGrid.Columns[5].HeaderText = "Süre";
         }
+
+        //Style Toggle
+        private void toggle_Style_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
+        {
+            if(toggle_Style.Checked == true)
+            {
+                lbl_StyleStatus.Text = "Rounded";
+                bunifuElipse1.ElipseRadius = 50;
+                Program.mainform.bunifuElipse1.ElipseRadius = 30;
+                Program.about.bunifuElipse1.ElipseRadius = 50;
+            }
+            else
+            {
+                lbl_StyleStatus.Text = "Box";
+                bunifuElipse1.ElipseRadius = 0;
+                Program.mainform.bunifuElipse1.ElipseRadius = 0;
+                Program.about.bunifuElipse1.ElipseRadius = 0;
+            }
+        }
+
+        private void toggle_DragControl_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
+        {
+            if (toggle_DragControl.Checked == true)
+            {
+                lbl_DragControlStatus.Text = "Unlocked";
+
+                Program.mainform.DragControl_LeftPanel.Vertical = true;
+                Program.mainform.DragControl_LeftPanel.Horizontal = true;
+
+                Program.mainform.DragControl_Library.Vertical = true;
+                Program.mainform.DragControl_Library.Horizontal = true;
+
+                Program.mainform.DragControl_MainForm.Vertical = true;
+                Program.mainform.DragControl_MainForm.Horizontal = true;
+
+                Program.mainform.DragControl_MusicPlayer.Vertical = true;
+                Program.mainform.DragControl_MusicPlayer.Horizontal = true;
+
+                Program.mainform.DragControl_NowPlayingPanel.Vertical = true;
+                Program.mainform.DragControl_NowPlayingPanel.Horizontal = true;
+
+                Program.mainform.DragControl_TheMethod.Vertical = true;
+                Program.mainform.DragControl_TheMethod.Horizontal = true;
+
+                Program.mainform.DragControl_SongCover.Vertical = true;
+                Program.mainform.DragControl_SongCover.Horizontal = true;
+            }
+            else
+            {
+                lbl_DragControlStatus.Text = "Locked";
+
+                Program.mainform.DragControl_LeftPanel.Vertical = false;
+                Program.mainform.DragControl_LeftPanel.Horizontal = false;
+
+                Program.mainform.DragControl_Library.Vertical = false;
+                Program.mainform.DragControl_Library.Horizontal = false;
+
+                Program.mainform.DragControl_MainForm.Vertical = false;
+                Program.mainform.DragControl_MainForm.Horizontal = false;
+
+                Program.mainform.DragControl_MusicPlayer.Vertical = false;
+                Program.mainform.DragControl_MusicPlayer.Horizontal = false;
+
+                Program.mainform.DragControl_NowPlayingPanel.Vertical = false;
+                Program.mainform.DragControl_NowPlayingPanel.Horizontal = false;
+
+                Program.mainform.DragControl_TheMethod.Vertical = false;
+                Program.mainform.DragControl_TheMethod.Horizontal = false;
+
+                Program.mainform.DragControl_SongCover.Vertical = false;
+                Program.mainform.DragControl_SongCover.Horizontal = false;
+            }
+            
+        }
     }
 }

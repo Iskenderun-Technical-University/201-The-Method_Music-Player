@@ -30,16 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState4 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState5 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState6 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState1 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState2 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState3 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ExitPicture = new System.Windows.Forms.PictureBox();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btn_English = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_Turkish = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lbl_Language = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
+            this.lbl_Style = new System.Windows.Forms.Label();
+            this.toggle_Style = new Bunifu.UI.WinForms.BunifuToggleSwitch();
+            this.lbl_DragControl = new System.Windows.Forms.Label();
+            this.lbl_StyleStatus = new System.Windows.Forms.Label();
+            this.lbl_DragControlStatus = new System.Windows.Forms.Label();
+            this.toggle_DragControl = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,12 +73,12 @@
             this.ExitPicture.TabStop = false;
             this.ExitPicture.Click += new System.EventHandler(this.ExitPicture_Click);
             // 
-            // bunifuDragControl1
+            // DragControl
             // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this;
-            this.bunifuDragControl1.Vertical = true;
+            this.DragControl.Fixed = true;
+            this.DragControl.Horizontal = true;
+            this.DragControl.TargetControl = this;
+            this.DragControl.Vertical = true;
             // 
             // btn_English
             // 
@@ -115,7 +127,7 @@
             this.btn_English.IdleIconLeftImage = null;
             this.btn_English.IdleIconRightImage = null;
             this.btn_English.IndicateFocus = true;
-            this.btn_English.Location = new System.Drawing.Point(87, 126);
+            this.btn_English.Location = new System.Drawing.Point(87, 136);
             this.btn_English.Name = "btn_English";
             this.btn_English.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_English.OnDisabledState.BorderRadius = 1;
@@ -205,7 +217,7 @@
             this.btn_Turkish.IdleIconLeftImage = null;
             this.btn_Turkish.IdleIconRightImage = null;
             this.btn_Turkish.IndicateFocus = true;
-            this.btn_Turkish.Location = new System.Drawing.Point(87, 203);
+            this.btn_Turkish.Location = new System.Drawing.Point(87, 213);
             this.btn_Turkish.Name = "btn_Turkish";
             this.btn_Turkish.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_Turkish.OnDisabledState.BorderRadius = 1;
@@ -252,7 +264,7 @@
             // 
             this.lbl_Language.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Language.ForeColor = System.Drawing.Color.White;
-            this.lbl_Language.Location = new System.Drawing.Point(12, 59);
+            this.lbl_Language.Location = new System.Drawing.Point(12, 69);
             this.lbl_Language.Name = "lbl_Language";
             this.lbl_Language.Size = new System.Drawing.Size(173, 49);
             this.lbl_Language.TabIndex = 17;
@@ -279,12 +291,154 @@
             this.Title.Text = "Settings";
             this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_Style
+            // 
+            this.lbl_Style.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Style.ForeColor = System.Drawing.Color.White;
+            this.lbl_Style.Location = new System.Drawing.Point(12, 282);
+            this.lbl_Style.Name = "lbl_Style";
+            this.lbl_Style.Size = new System.Drawing.Size(98, 49);
+            this.lbl_Style.TabIndex = 20;
+            this.lbl_Style.Text = "Style";
+            this.lbl_Style.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // toggle_Style
+            // 
+            this.toggle_Style.Animation = 5;
+            this.toggle_Style.BackColor = System.Drawing.Color.Transparent;
+            this.toggle_Style.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toggle_Style.BackgroundImage")));
+            this.toggle_Style.Checked = true;
+            this.toggle_Style.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.toggle_Style.InnerCirclePadding = 3;
+            this.toggle_Style.Location = new System.Drawing.Point(27, 335);
+            this.toggle_Style.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toggle_Style.Name = "toggle_Style";
+            this.toggle_Style.Size = new System.Drawing.Size(42, 21);
+            this.toggle_Style.TabIndex = 21;
+            this.toggle_Style.ThumbMargin = 3;
+            toggleState4.BackColor = System.Drawing.Color.DarkGray;
+            toggleState4.BackColorInner = System.Drawing.Color.White;
+            toggleState4.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState4.BorderColorInner = System.Drawing.Color.White;
+            toggleState4.BorderRadius = 17;
+            toggleState4.BorderRadiusInner = 11;
+            toggleState4.BorderThickness = 1;
+            toggleState4.BorderThicknessInner = 1;
+            this.toggle_Style.ToggleStateDisabled = toggleState4;
+            toggleState5.BackColor = System.Drawing.Color.White;
+            toggleState5.BackColorInner = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            toggleState5.BorderColor = System.Drawing.Color.White;
+            toggleState5.BorderColorInner = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            toggleState5.BorderRadius = 17;
+            toggleState5.BorderRadiusInner = 11;
+            toggleState5.BorderThickness = 1;
+            toggleState5.BorderThicknessInner = 1;
+            this.toggle_Style.ToggleStateOff = toggleState5;
+            toggleState6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            toggleState6.BackColorInner = System.Drawing.Color.White;
+            toggleState6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            toggleState6.BorderColorInner = System.Drawing.Color.White;
+            toggleState6.BorderRadius = 17;
+            toggleState6.BorderRadiusInner = 11;
+            toggleState6.BorderThickness = 1;
+            toggleState6.BorderThicknessInner = 1;
+            this.toggle_Style.ToggleStateOn = toggleState6;
+            this.toggle_Style.Value = true;
+            this.toggle_Style.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.toggle_Style_CheckedChanged);
+            // 
+            // lbl_DragControl
+            // 
+            this.lbl_DragControl.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DragControl.ForeColor = System.Drawing.Color.White;
+            this.lbl_DragControl.Location = new System.Drawing.Point(246, 282);
+            this.lbl_DragControl.Name = "lbl_DragControl";
+            this.lbl_DragControl.Size = new System.Drawing.Size(192, 49);
+            this.lbl_DragControl.TabIndex = 22;
+            this.lbl_DragControl.Text = "Drag Control";
+            this.lbl_DragControl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_StyleStatus
+            // 
+            this.lbl_StyleStatus.AutoSize = true;
+            this.lbl_StyleStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_StyleStatus.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_StyleStatus.ForeColor = System.Drawing.Color.White;
+            this.lbl_StyleStatus.Location = new System.Drawing.Point(76, 337);
+            this.lbl_StyleStatus.Name = "lbl_StyleStatus";
+            this.lbl_StyleStatus.Size = new System.Drawing.Size(80, 19);
+            this.lbl_StyleStatus.TabIndex = 24;
+            this.lbl_StyleStatus.Text = "Rounded";
+            this.lbl_StyleStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_DragControlStatus
+            // 
+            this.lbl_DragControlStatus.AutoSize = true;
+            this.lbl_DragControlStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DragControlStatus.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DragControlStatus.ForeColor = System.Drawing.Color.White;
+            this.lbl_DragControlStatus.Location = new System.Drawing.Point(306, 337);
+            this.lbl_DragControlStatus.Name = "lbl_DragControlStatus";
+            this.lbl_DragControlStatus.Size = new System.Drawing.Size(82, 19);
+            this.lbl_DragControlStatus.TabIndex = 27;
+            this.lbl_DragControlStatus.Text = "Unlocked";
+            this.lbl_DragControlStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // toggle_DragControl
+            // 
+            this.toggle_DragControl.Animation = 5;
+            this.toggle_DragControl.BackColor = System.Drawing.Color.Transparent;
+            this.toggle_DragControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toggle_DragControl.BackgroundImage")));
+            this.toggle_DragControl.Checked = true;
+            this.toggle_DragControl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.toggle_DragControl.InnerCirclePadding = 3;
+            this.toggle_DragControl.Location = new System.Drawing.Point(257, 335);
+            this.toggle_DragControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.toggle_DragControl.Name = "toggle_DragControl";
+            this.toggle_DragControl.Size = new System.Drawing.Size(42, 21);
+            this.toggle_DragControl.TabIndex = 28;
+            this.toggle_DragControl.ThumbMargin = 3;
+            toggleState1.BackColor = System.Drawing.Color.DarkGray;
+            toggleState1.BackColorInner = System.Drawing.Color.White;
+            toggleState1.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState1.BorderColorInner = System.Drawing.Color.White;
+            toggleState1.BorderRadius = 17;
+            toggleState1.BorderRadiusInner = 11;
+            toggleState1.BorderThickness = 1;
+            toggleState1.BorderThicknessInner = 1;
+            this.toggle_DragControl.ToggleStateDisabled = toggleState1;
+            toggleState2.BackColor = System.Drawing.Color.White;
+            toggleState2.BackColorInner = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            toggleState2.BorderColor = System.Drawing.Color.White;
+            toggleState2.BorderColorInner = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            toggleState2.BorderRadius = 17;
+            toggleState2.BorderRadiusInner = 11;
+            toggleState2.BorderThickness = 1;
+            toggleState2.BorderThicknessInner = 1;
+            this.toggle_DragControl.ToggleStateOff = toggleState2;
+            toggleState3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            toggleState3.BackColorInner = System.Drawing.Color.White;
+            toggleState3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            toggleState3.BorderColorInner = System.Drawing.Color.White;
+            toggleState3.BorderRadius = 17;
+            toggleState3.BorderRadiusInner = 11;
+            toggleState3.BorderThickness = 1;
+            toggleState3.BorderThicknessInner = 1;
+            this.toggle_DragControl.ToggleStateOn = toggleState3;
+            this.toggle_DragControl.Value = true;
+            this.toggle_DragControl.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.toggle_DragControl_CheckedChanged);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(450, 400);
+            this.Controls.Add(this.toggle_DragControl);
+            this.Controls.Add(this.lbl_DragControlStatus);
+            this.Controls.Add(this.lbl_StyleStatus);
+            this.Controls.Add(this.lbl_DragControl);
+            this.Controls.Add(this.toggle_Style);
+            this.Controls.Add(this.lbl_Style);
             this.Controls.Add(this.lbl_Language);
             this.Controls.Add(this.btn_Turkish);
             this.Controls.Add(this.btn_English);
@@ -297,6 +451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -304,11 +459,17 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox ExitPicture;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.Framework.UI.BunifuDragControl DragControl;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_English;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_Turkish;
         private System.Windows.Forms.Label lbl_Language;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.Label lbl_DragControlStatus;
+        private System.Windows.Forms.Label lbl_StyleStatus;
+        private System.Windows.Forms.Label lbl_DragControl;
+        private Bunifu.UI.WinForms.BunifuToggleSwitch toggle_Style;
+        private System.Windows.Forms.Label lbl_Style;
+        private Bunifu.UI.WinForms.BunifuToggleSwitch toggle_DragControl;
     }
 }

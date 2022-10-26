@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ExitPicture = new System.Windows.Forms.PictureBox();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Title = new System.Windows.Forms.Label();
             this.lbl_TheMethod = new System.Windows.Forms.Label();
             this.lbl_MusicPlayer = new System.Windows.Forms.Label();
@@ -60,12 +60,12 @@
             this.ExitPicture.TabStop = false;
             this.ExitPicture.Click += new System.EventHandler(this.ExitPicture_Click);
             // 
-            // bunifuDragControl1
+            // DragControl
             // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this;
-            this.bunifuDragControl1.Vertical = true;
+            this.DragControl.Fixed = true;
+            this.DragControl.Horizontal = true;
+            this.DragControl.TargetControl = this;
+            this.DragControl.Vertical = true;
             // 
             // Title
             // 
@@ -167,10 +167,7 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox ExitPicture;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Label lbl_BETA;
         private System.Windows.Forms.Label lbl_TheMethod;
         public System.Windows.Forms.Label Title;
@@ -178,5 +175,7 @@
         public System.Windows.Forms.Label lbl_Version;
         public System.Windows.Forms.Label lbl_Copyrights;
         private System.Windows.Forms.Panel panel1;
+        public Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        public Bunifu.Framework.UI.BunifuDragControl DragControl;
     }
 }

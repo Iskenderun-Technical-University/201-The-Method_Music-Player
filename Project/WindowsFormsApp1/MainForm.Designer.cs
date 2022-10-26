@@ -119,7 +119,10 @@
             this.SongCoverPicBox = new System.Windows.Forms.PictureBox();
             this.Title = new System.Windows.Forms.Label();
             this.ExitPicture = new System.Windows.Forms.PictureBox();
+            this.DragControl_NowPlayingPanel = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.DragControl_MainForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DragControl_SongCover = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.LeftPanel.SuspendLayout();
             this.BottomLeftPanel.SuspendLayout();
             this.BottomRightPanel.SuspendLayout();
@@ -1715,9 +1718,30 @@
             this.ExitPicture.TabStop = false;
             this.ExitPicture.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // DragControl_NowPlayingPanel
+            // 
+            this.DragControl_NowPlayingPanel.Fixed = true;
+            this.DragControl_NowPlayingPanel.Horizontal = true;
+            this.DragControl_NowPlayingPanel.TargetControl = this.NowPlayingPanel;
+            this.DragControl_NowPlayingPanel.Vertical = true;
+            // 
+            // DragControl_MainForm
+            // 
+            this.DragControl_MainForm.Fixed = true;
+            this.DragControl_MainForm.Horizontal = true;
+            this.DragControl_MainForm.TargetControl = this;
+            this.DragControl_MainForm.Vertical = true;
+            // 
             // mainFormBindingSource
             // 
             this.mainFormBindingSource.DataSource = typeof(WindowsFormsApp1.MainForm);
+            // 
+            // DragControl_SongCover
+            // 
+            this.DragControl_SongCover.Fixed = true;
+            this.DragControl_SongCover.Horizontal = true;
+            this.DragControl_SongCover.TargetControl = this.SongCoverPicBox;
+            this.DragControl_SongCover.Vertical = true;
             // 
             // MainForm
             // 
@@ -1729,8 +1753,8 @@
             this.Controls.Add(this.ExitPicture);
             this.Controls.Add(this.BottomRightPanel);
             this.Controls.Add(this.LeftPanel);
-            this.Controls.Add(this.SongListPanel);
             this.Controls.Add(this.NowPlayingPanel);
+            this.Controls.Add(this.SongListPanel);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -1768,15 +1792,9 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox ExitPicture;
         private Bunifu.UI.WinForms.BunifuPanel LeftPanel;
         private System.Windows.Forms.Label title1_TheMethod;
-        private Bunifu.Framework.UI.BunifuDragControl DragControl_LeftPanel;
-        private Bunifu.Framework.UI.BunifuDragControl DragControl_TheMethod;
-        private Bunifu.Framework.UI.BunifuDragControl DragControl_MusicPlayer;
-        private Bunifu.Framework.UI.BunifuDragControl DragControl_Library;
         private Bunifu.UI.WinForms.BunifuPanel BottomLeftPanel;
         private System.Windows.Forms.Panel BottomRightPanel;
         private Bunifu.UI.WinForms.BunifuShadowPanel BottomShadowPanel;
@@ -1837,6 +1855,14 @@
         public System.Windows.Forms.DataGridView FavouritesGrid;
         public System.Windows.Forms.Label Title;
         public System.Windows.Forms.Label title2_MusicPlayer;
+        public Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        public Bunifu.Framework.UI.BunifuDragControl DragControl_NowPlayingPanel;
+        public Bunifu.Framework.UI.BunifuDragControl DragControl_LeftPanel;
+        public Bunifu.Framework.UI.BunifuDragControl DragControl_TheMethod;
+        public Bunifu.Framework.UI.BunifuDragControl DragControl_MusicPlayer;
+        public Bunifu.Framework.UI.BunifuDragControl DragControl_Library;
+        public Bunifu.Framework.UI.BunifuDragControl DragControl_MainForm;
+        public Bunifu.Framework.UI.BunifuDragControl DragControl_SongCover;
     }
 }
 

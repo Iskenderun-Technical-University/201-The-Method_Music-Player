@@ -121,6 +121,30 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toggle_DragControl.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACoAAAAVCAYAAAAw73wjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFSSURBVEhL7Ze/TsNADMZvZGRk5BH6GEwU1T61W1mQGHkE
+        djYGdmYkNlbWjozZkLq2kS5Xyh/BUD5fLVQSi6lpbsDST4lk+/rJiWPXWbb0/qBiHi2YryqiJ9yvWgW/
+        EYlugvenYTg8VBl/G4LPkFxG5ogD7IPbgugF1wDRlyqnaaHf30fgpPK+ahywa4iWuBZmdZNIK6lLiKar
+        8XhPJerjzqGSNQLR+8L76yRSG6esB2VEiUL25JGfo3FejYA8QEPL10eE3poBOYH+EaHPpjMniN6c6ciQ
+        f6HbxgXmueXICqIvaaYH05kXhVT0AjcfNUdWyGYl47OHqmY3Pn+AtjAYnKQxKvNU5qoZ2D2PSaSYbChQ
+        PjWCuibKLqIy16avwAyV/TQSuiBiBzlWeb8tLc/M9wgItaSdof8sJo1KWoaEIwTLslJsHtIq653jDoxU
+        xoY59w0eME5sIk8y2AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toggle_Style.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACoAAAAVCAYAAAAw73wjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFSSURBVEhL7Ze/TsNADMZvZGRk5BH6GEwU1T61W1mQGHkE
+        djYGdmYkNlbWjozZkLq2kS5Xyh/BUD5fLVQSi6lpbsDST4lk+/rJiWPXWbb0/qBiHi2YryqiJ9yvWgW/
+        EYlugvenYTg8VBl/G4LPkFxG5ogD7IPbgugF1wDRlyqnaaHf30fgpPK+ahywa4iWuBZmdZNIK6lLiKar
+        8XhPJerjzqGSNQLR+8L76yRSG6esB2VEiUL25JGfo3FejYA8QEPL10eE3poBOYH+EaHPpjMniN6c6ciQ
+        f6HbxgXmueXICqIvaaYH05kXhVT0AjcfNUdWyGYl47OHqmY3Pn+AtjAYnKQxKvNU5qoZ2D2PSaSYbChQ
+        PjWCuibKLqIy16avwAyV/TQSuiBiBzlWeb8tLc/M9wgItaSdof8sJo1KWoaEIwTLslJsHtIq653jDoxU
+        xoY59w0eME5sIk8y2AAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btn_Turkish.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQgAAAArCAYAAACEuRbTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -159,7 +183,7 @@
         lyU7ZMcz1CLlpVHpCqAvrpQ+mYdBTZXueg4jI78Bj75Vgo/gtY4AAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="DragControl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
   </metadata>
 </root>
