@@ -1749,11 +1749,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.NowPlayingPanel);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.ExitPicture);
             this.Controls.Add(this.BottomRightPanel);
             this.Controls.Add(this.LeftPanel);
-            this.Controls.Add(this.NowPlayingPanel);
             this.Controls.Add(this.SongListPanel);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

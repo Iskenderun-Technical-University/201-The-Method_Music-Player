@@ -52,8 +52,14 @@
             this.lbl_StyleStatus = new System.Windows.Forms.Label();
             this.lbl_DragControlStatus = new System.Windows.Forms.Label();
             this.toggle_DragControl = new Bunifu.UI.WinForms.BunifuToggleSwitch();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -262,14 +268,15 @@
             // 
             // lbl_Language
             // 
+            this.lbl_Language.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Language.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Language.ForeColor = System.Drawing.Color.White;
-            this.lbl_Language.Location = new System.Drawing.Point(12, 69);
+            this.lbl_Language.Location = new System.Drawing.Point(0, 0);
             this.lbl_Language.Name = "lbl_Language";
-            this.lbl_Language.Size = new System.Drawing.Size(173, 49);
+            this.lbl_Language.Size = new System.Drawing.Size(162, 50);
             this.lbl_Language.TabIndex = 17;
             this.lbl_Language.Text = "Language";
-            this.lbl_Language.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Language.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
@@ -293,14 +300,15 @@
             // 
             // lbl_Style
             // 
+            this.lbl_Style.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Style.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Style.ForeColor = System.Drawing.Color.White;
-            this.lbl_Style.Location = new System.Drawing.Point(12, 282);
+            this.lbl_Style.Location = new System.Drawing.Point(0, 0);
             this.lbl_Style.Name = "lbl_Style";
-            this.lbl_Style.Size = new System.Drawing.Size(98, 49);
+            this.lbl_Style.Size = new System.Drawing.Size(90, 48);
             this.lbl_Style.TabIndex = 20;
             this.lbl_Style.Text = "Style";
-            this.lbl_Style.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Style.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toggle_Style
             // 
@@ -310,7 +318,7 @@
             this.toggle_Style.Checked = true;
             this.toggle_Style.Cursor = System.Windows.Forms.Cursors.Hand;
             this.toggle_Style.InnerCirclePadding = 3;
-            this.toggle_Style.Location = new System.Drawing.Point(27, 335);
+            this.toggle_Style.Location = new System.Drawing.Point(35, 335);
             this.toggle_Style.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.toggle_Style.Name = "toggle_Style";
             this.toggle_Style.Size = new System.Drawing.Size(42, 21);
@@ -348,14 +356,15 @@
             // 
             // lbl_DragControl
             // 
+            this.lbl_DragControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_DragControl.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DragControl.ForeColor = System.Drawing.Color.White;
-            this.lbl_DragControl.Location = new System.Drawing.Point(246, 282);
+            this.lbl_DragControl.Location = new System.Drawing.Point(0, 0);
             this.lbl_DragControl.Name = "lbl_DragControl";
-            this.lbl_DragControl.Size = new System.Drawing.Size(192, 49);
+            this.lbl_DragControl.Size = new System.Drawing.Size(200, 48);
             this.lbl_DragControl.TabIndex = 22;
             this.lbl_DragControl.Text = "Drag Control";
-            this.lbl_DragControl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_DragControl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_StyleStatus
             // 
@@ -363,7 +372,7 @@
             this.lbl_StyleStatus.BackColor = System.Drawing.Color.Transparent;
             this.lbl_StyleStatus.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_StyleStatus.ForeColor = System.Drawing.Color.White;
-            this.lbl_StyleStatus.Location = new System.Drawing.Point(76, 337);
+            this.lbl_StyleStatus.Location = new System.Drawing.Point(84, 337);
             this.lbl_StyleStatus.Name = "lbl_StyleStatus";
             this.lbl_StyleStatus.Size = new System.Drawing.Size(80, 19);
             this.lbl_StyleStatus.TabIndex = 24;
@@ -376,11 +385,11 @@
             this.lbl_DragControlStatus.BackColor = System.Drawing.Color.Transparent;
             this.lbl_DragControlStatus.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DragControlStatus.ForeColor = System.Drawing.Color.White;
-            this.lbl_DragControlStatus.Location = new System.Drawing.Point(306, 337);
+            this.lbl_DragControlStatus.Location = new System.Drawing.Point(293, 337);
             this.lbl_DragControlStatus.Name = "lbl_DragControlStatus";
-            this.lbl_DragControlStatus.Size = new System.Drawing.Size(82, 19);
+            this.lbl_DragControlStatus.Size = new System.Drawing.Size(72, 19);
             this.lbl_DragControlStatus.TabIndex = 27;
-            this.lbl_DragControlStatus.Text = "Unlocked";
+            this.lbl_DragControlStatus.Text = "Enabled";
             this.lbl_DragControlStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toggle_DragControl
@@ -391,7 +400,7 @@
             this.toggle_DragControl.Checked = true;
             this.toggle_DragControl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.toggle_DragControl.InnerCirclePadding = 3;
-            this.toggle_DragControl.Location = new System.Drawing.Point(257, 335);
+            this.toggle_DragControl.Location = new System.Drawing.Point(244, 335);
             this.toggle_DragControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.toggle_DragControl.Name = "toggle_DragControl";
             this.toggle_DragControl.Size = new System.Drawing.Size(42, 21);
@@ -427,6 +436,30 @@
             this.toggle_DragControl.Value = true;
             this.toggle_DragControl.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.toggle_DragControl_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbl_Language);
+            this.panel1.Location = new System.Drawing.Point(27, 68);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(162, 50);
+            this.panel1.TabIndex = 29;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lbl_Style);
+            this.panel3.Location = new System.Drawing.Point(27, 280);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(90, 48);
+            this.panel3.TabIndex = 30;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lbl_DragControl);
+            this.panel4.Location = new System.Drawing.Point(238, 280);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 48);
+            this.panel4.TabIndex = 31;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -436,20 +469,23 @@
             this.Controls.Add(this.toggle_DragControl);
             this.Controls.Add(this.lbl_DragControlStatus);
             this.Controls.Add(this.lbl_StyleStatus);
-            this.Controls.Add(this.lbl_DragControl);
             this.Controls.Add(this.toggle_Style);
-            this.Controls.Add(this.lbl_Style);
-            this.Controls.Add(this.lbl_Language);
             this.Controls.Add(this.btn_Turkish);
             this.Controls.Add(this.btn_English);
             this.Controls.Add(this.ExitPicture);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,5 +507,8 @@
         private Bunifu.UI.WinForms.BunifuToggleSwitch toggle_Style;
         private System.Windows.Forms.Label lbl_Style;
         private Bunifu.UI.WinForms.BunifuToggleSwitch toggle_DragControl;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
