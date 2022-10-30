@@ -159,6 +159,7 @@
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.About_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

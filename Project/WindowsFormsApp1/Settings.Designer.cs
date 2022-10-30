@@ -323,6 +323,7 @@
             this.toggle_Style.Name = "toggle_Style";
             this.toggle_Style.Size = new System.Drawing.Size(42, 21);
             this.toggle_Style.TabIndex = 21;
+            this.toggle_Style.TabStop = false;
             this.toggle_Style.ThumbMargin = 3;
             toggleState4.BackColor = System.Drawing.Color.DarkGray;
             toggleState4.BackColorInner = System.Drawing.Color.White;
@@ -405,6 +406,7 @@
             this.toggle_DragControl.Name = "toggle_DragControl";
             this.toggle_DragControl.Size = new System.Drawing.Size(42, 21);
             this.toggle_DragControl.TabIndex = 28;
+            this.toggle_DragControl.TabStop = false;
             this.toggle_DragControl.ThumbMargin = 3;
             toggleState1.BackColor = System.Drawing.Color.DarkGray;
             toggleState1.BackColorInner = System.Drawing.Color.White;

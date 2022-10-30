@@ -36,22 +36,14 @@ namespace WindowsFormsApp1
             lbl_Style.Text = "Style";
             lbl_DragControl.Text = "Drag Control";
             if(toggle_Style.Checked == true)
-            {
                 lbl_StyleStatus.Text = "Rounded";
-            }
             else
-            {
                 lbl_StyleStatus.Text = "Box";
-            }
 
             if (toggle_DragControl.Checked == true)
-            {
                 lbl_DragControlStatus.Text = "Enabled";
-            }
             else
-            {
                 lbl_DragControlStatus.Text = "Disabled";
-            }
 
             // <---- About ---->
             Program.about.Title.Text = "About";
@@ -120,22 +112,14 @@ namespace WindowsFormsApp1
             lbl_Style.Text = "Stil";
             lbl_DragControl.Text = "Sürükleme Kontrolü";
             if (toggle_Style.Checked == true)
-            {
                 lbl_StyleStatus.Text = "Yuvarlak";
-            }
             else
-            {
                 lbl_StyleStatus.Text = "Kutu";
-            }
 
             if (toggle_DragControl.Checked == true)
-            {
                 lbl_DragControlStatus.Text = "Açık";
-            }
             else
-            {
                 lbl_DragControlStatus.Text = "Kapalı";
-            }
 
             // <---- About ---->
             Program.about.Title.Text = "Hakkında";
@@ -197,13 +181,10 @@ namespace WindowsFormsApp1
             if(toggle_Style.Checked == true)
             {
                 if(isEnglish == true)
-                {
                     lbl_StyleStatus.Text = "Rounded";
-                }
                 else
-                {
                     lbl_StyleStatus.Text = "Yuvarlak";
-                }
+
                 bunifuElipse1.ElipseRadius = 50;
                 Program.mainform.bunifuElipse1.ElipseRadius = 30;
                 Program.about.bunifuElipse1.ElipseRadius = 50;
@@ -211,13 +192,10 @@ namespace WindowsFormsApp1
             else
             {
                 if (isEnglish == true)
-                {
                     lbl_StyleStatus.Text = "Box";
-                }
                 else
-                {
                     lbl_StyleStatus.Text = "Kutu";
-                }
+
                 bunifuElipse1.ElipseRadius = 0;
                 Program.mainform.bunifuElipse1.ElipseRadius = 0;
                 Program.about.bunifuElipse1.ElipseRadius = 0;
@@ -229,13 +207,9 @@ namespace WindowsFormsApp1
             if (toggle_DragControl.Checked == true)
             {
                 if(isEnglish == true)
-                {
                     lbl_DragControlStatus.Text = "Enabled";
-                }
                 else
-                {
                     lbl_DragControlStatus.Text = "Açık";
-                }
 
                 Program.mainform.DragControl_LeftPanel.Vertical = true;
                 Program.mainform.DragControl_LeftPanel.Horizontal = true;
@@ -261,13 +235,9 @@ namespace WindowsFormsApp1
             else
             {
                 if (isEnglish == true)
-                {
                     lbl_DragControlStatus.Text = "Disabled";
-                }
                 else
-                {
                     lbl_DragControlStatus.Text = "Kapalı";
-                }
                     
                 Program.mainform.DragControl_LeftPanel.Vertical = false;
                 Program.mainform.DragControl_LeftPanel.Horizontal = false;

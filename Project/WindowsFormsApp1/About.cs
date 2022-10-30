@@ -17,6 +17,12 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        private void About_Load(object sender, EventArgs e)
+        {
+            foreach (Control A in this.Controls)
+                lbl_TheMethod.Font = new Font(Program.mainform.BadSignal.Families[0], 54, FontStyle.Regular);
+        }
+
         private void ExitPicture_Click(object sender, EventArgs e)
         {
             this.Close();
