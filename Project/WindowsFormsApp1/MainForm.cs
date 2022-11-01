@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Drawing.Text;
 using System.IO;
 using System.Drawing.Drawing2D;
+using System.Collections.Generic;
 
 namespace WindowsFormsApp1
 {
@@ -123,9 +124,9 @@ namespace WindowsFormsApp1
         }
 
         // <-------------------   Songs Page   ------------------->
-
-        // Arrays to import songs
-        string[] path;
+        
+        // List to import songs
+        List<string> path = new List<string>();
 
         //Import Songs Button
         private void ImportSongsButton_Click(object sender, EventArgs e)
@@ -133,9 +134,33 @@ namespace WindowsFormsApp1
             //Import Songs
             if (Songs_openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                int z;
                 NoSongs2.Visible = false;
-                path = Songs_openFileDialog.FileNames;
-                for (int x = 0; x < path.Length; x++)
+                if(path.Count == 0) // First Import
+                    path.AddRange(Songs_openFileDialog.FileNames);
+                else // Other Imports
+                {
+                    for (int i = 0; i < Songs_openFileDialog.FileNames.Length; i++)
+                    {
+                        z = 0;
+                        for (int j = 0; j < path.Count; j++)
+                        {
+                            if (path[j] == Songs_openFileDialog.FileNames[i])
+                            {
+                                z = 1;
+                                break;
+                            }
+                        } 
+                        if(z == 0)
+                            path.Add(Songs_openFileDialog.FileNames[i]);  
+                    }
+                }
+                while(SongsGrid.Rows.Count > 0)
+                {
+                    SongsGrid.Rows.Remove(SongsGrid.Rows[0]);
+                    FavGrid1.Rows.Remove(FavGrid1.Rows[0]);
+                }
+                for (int x = 0; x < path.Count; x++)
                 {
                     var file = TagLib.File.Create(path[x]);
                     string title = file.Tag.Title;
@@ -173,8 +198,6 @@ namespace WindowsFormsApp1
                 // Add Song Cover, Song Name, Artist and Genre to Now Playing
                 SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
                 AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
-
-                ImportSongsButton.Enabled = false;
             }
         }
 
@@ -261,7 +284,7 @@ namespace WindowsFormsApp1
         //Songs DataGridView Functionality
         private void SongsGrid_SelectionChanged(object sender, EventArgs e)
         {
-            if(Title.Text != "Favourites")
+            if(Title.Text != "Favourites" && SongsGrid.Rows.Count > 0)
             {
                 Player.URL = Convert.ToString(SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value);
                 Player.Ctlcontrols.play();
