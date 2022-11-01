@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D2ABFDFE-F4F8-4370-8DBF-DC7043CF9D5D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp1</RootNamespace>
-    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <RootNamespace>TheMethod_MusicPlayer</RootNamespace>
+    <AssemblyName>TheMethod_MusicPlayer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Program.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
@@ -204,34 +207,10 @@
     <None Include="Resources\arrow-right_navigation_black.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\arrow-right_navigation_red.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Red X.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\White X.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimize.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minimize1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Backwardbutton_WhiteBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Forwardbutton_WhiteBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Pausebutton_WhiteBlack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Playbutton_RedWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Stopbutton_WhiteBlack.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\speaker-32.png" />
@@ -253,12 +232,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow-right_navigation_red1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngtree-black-network-on-white-perspective-background-image_310199.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BadSignalFont.bmp" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">
@@ -287,6 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Robot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Program.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

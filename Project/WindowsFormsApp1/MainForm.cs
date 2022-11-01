@@ -27,8 +27,8 @@ namespace WindowsFormsApp1
         string NextSong = (@"..\..\Resources\next-song.png");
         string NextSongHover = (@"..\..\Resources\next-song-hover.png");
 
-        // Custom Font
         public readonly PrivateFontCollection BadSignal = new PrivateFontCollection();
+        public bool isMinimized = false;
 
         public MainForm()
         {
@@ -106,6 +106,21 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+        //Minimize Form
+        private void PicBox_Minimize_Click(object sender, EventArgs e)
+        {
+            LeftPanel.Visible = false; // Bugs after minimizing
+            this.WindowState = FormWindowState.Minimized;
+            isMinimized = true;
+        }
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if (isMinimized == true)
+            {
+                LeftPanel.Visible = true;
+                isMinimized = false;
+            }
+        }
 
         // <-------------------   Songs Page   ------------------->
 
@@ -122,7 +137,6 @@ namespace WindowsFormsApp1
                 path = Songs_openFileDialog.FileNames;
                 for (int x = 0; x < path.Length; x++)
                 {
-                    int z = 0;
                     var file = TagLib.File.Create(path[x]);
                     string title = file.Tag.Title;
                     string artist = file.Tag.FirstPerformer;
@@ -130,16 +144,8 @@ namespace WindowsFormsApp1
                     double secs = file.Properties.Duration.TotalSeconds;
                     TimeSpan conv = TimeSpan.FromSeconds(secs);
                     string duration = string.Format("{0:D2}:{1:D2}", conv.Minutes, conv.Seconds);
-                    for (int y = 0; y < SongsGrid.RowCount; y++) // Prevent Adding Same Song Twice
-                    {
-                        if (SongsGrid.Rows[y].Cells[2].Value.ToString().Equals(file.Tag.Title))
-                            z++;
-                    }
-                    if (z == 0)
-                    {
-                        SongsGrid.Rows.Add(x, path[x], title, artist, genre, duration);
-                        FavGrid1.Rows.Add(FavStar, PlayIcon);
-                    }
+                    SongsGrid.Rows.Add(x, path[x], title, artist, genre, duration);
+                    FavGrid1.Rows.Add(FavStar, PlayIcon);
                 }
 
                 //Hide No Songs Label
@@ -167,6 +173,8 @@ namespace WindowsFormsApp1
                 // Add Song Cover, Song Name, Artist and Genre to Now Playing
                 SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
                 AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
+
+                ImportSongsButton.Enabled = false;
             }
         }
 

@@ -70,7 +70,7 @@
             // ExitPicture
             // 
             this.ExitPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ExitPicture.Image = global::WindowsFormsApp1.Properties.Resources.White_X;
+            this.ExitPicture.Image = global::TheMethod_MusicPlayer.Properties.Resources.White_X;
             this.ExitPicture.Location = new System.Drawing.Point(421, 12);
             this.ExitPicture.Name = "ExitPicture";
             this.ExitPicture.Size = new System.Drawing.Size(17, 25);
@@ -480,6 +480,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ExitPicture = new System.Windows.Forms.PictureBox();
             this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -51,7 +52,7 @@
             // ExitPicture
             // 
             this.ExitPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ExitPicture.Image = global::WindowsFormsApp1.Properties.Resources.White_X;
+            this.ExitPicture.Image = global::TheMethod_MusicPlayer.Properties.Resources.White_X;
             this.ExitPicture.Location = new System.Drawing.Point(421, 12);
             this.ExitPicture.Name = "ExitPicture";
             this.ExitPicture.Size = new System.Drawing.Size(17, 25);
@@ -106,7 +107,7 @@
             this.lbl_BETA.AutoSize = true;
             this.lbl_BETA.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BETA.ForeColor = System.Drawing.Color.White;
-            this.lbl_BETA.Location = new System.Drawing.Point(370, 202);
+            this.lbl_BETA.Location = new System.Drawing.Point(370, 203);
             this.lbl_BETA.Name = "lbl_BETA";
             this.lbl_BETA.Size = new System.Drawing.Size(52, 19);
             this.lbl_BETA.TabIndex = 8;
@@ -119,9 +120,9 @@
             this.lbl_Version.ForeColor = System.Drawing.Color.White;
             this.lbl_Version.Location = new System.Drawing.Point(15, 324);
             this.lbl_Version.Name = "lbl_Version";
-            this.lbl_Version.Size = new System.Drawing.Size(105, 24);
+            this.lbl_Version.Size = new System.Drawing.Size(162, 24);
             this.lbl_Version.TabIndex = 9;
-            this.lbl_Version.Text = "Version 1.0";
+            this.lbl_Version.Text = "Version 1.0.0-beta";
             // 
             // lbl_Copyrights
             // 
@@ -156,6 +157,7 @@
             this.Controls.Add(this.ExitPicture);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";

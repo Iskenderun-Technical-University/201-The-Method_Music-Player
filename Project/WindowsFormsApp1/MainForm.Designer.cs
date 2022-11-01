@@ -120,10 +120,11 @@
             this.NoSongs1_1 = new System.Windows.Forms.Label();
             this.SongCoverPicBox = new System.Windows.Forms.PictureBox();
             this.Title = new System.Windows.Forms.Label();
-            this.ExitPicture = new System.Windows.Forms.PictureBox();
             this.DragControl_NowPlayingPanel = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.DragControl_MainForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.DragControl_SongCover = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.PicBox_Minimize = new System.Windows.Forms.PictureBox();
+            this.ExitPicture = new System.Windows.Forms.PictureBox();
             this.mainFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LeftPanel.SuspendLayout();
             this.BottomLeftPanel.SuspendLayout();
@@ -144,6 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.FavGrid2)).BeginInit();
             this.NowPlayingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SongCoverPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_Minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -239,7 +241,7 @@
             this.btn3_Favourites.IdleBorderThickness = 1;
             this.btn3_Favourites.IdleFillColor = System.Drawing.Color.White;
             this.btn3_Favourites.IdleIconLeftImage = null;
-            this.btn3_Favourites.IdleIconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn3_Favourites.IdleIconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation;
             this.btn3_Favourites.IndicateFocus = true;
             this.btn3_Favourites.Location = new System.Drawing.Point(32, 416);
             this.btn3_Favourites.Name = "btn3_Favourites";
@@ -258,7 +260,7 @@
             this.btn3_Favourites.onHoverState.FillColor = System.Drawing.Color.White;
             this.btn3_Favourites.onHoverState.ForeColor = System.Drawing.Color.Black;
             this.btn3_Favourites.onHoverState.IconLeftImage = null;
-            this.btn3_Favourites.onHoverState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation_red1;
+            this.btn3_Favourites.onHoverState.IconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation_red1;
             this.btn3_Favourites.OnIdleState.BorderColor = System.Drawing.Color.White;
             this.btn3_Favourites.OnIdleState.BorderRadius = 1;
             this.btn3_Favourites.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -266,7 +268,7 @@
             this.btn3_Favourites.OnIdleState.FillColor = System.Drawing.Color.White;
             this.btn3_Favourites.OnIdleState.ForeColor = System.Drawing.Color.Black;
             this.btn3_Favourites.OnIdleState.IconLeftImage = null;
-            this.btn3_Favourites.OnIdleState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn3_Favourites.OnIdleState.IconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation;
             this.btn3_Favourites.OnPressedState.BorderColor = System.Drawing.Color.Black;
             this.btn3_Favourites.OnPressedState.BorderRadius = 1;
             this.btn3_Favourites.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -274,7 +276,7 @@
             this.btn3_Favourites.OnPressedState.FillColor = System.Drawing.Color.Black;
             this.btn3_Favourites.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn3_Favourites.OnPressedState.IconLeftImage = null;
-            this.btn3_Favourites.OnPressedState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn3_Favourites.OnPressedState.IconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation;
             this.btn3_Favourites.Size = new System.Drawing.Size(284, 57);
             this.btn3_Favourites.TabIndex = 7;
             this.btn3_Favourites.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -329,7 +331,7 @@
             this.btn2_Songs.IdleBorderThickness = 1;
             this.btn2_Songs.IdleFillColor = System.Drawing.Color.White;
             this.btn2_Songs.IdleIconLeftImage = null;
-            this.btn2_Songs.IdleIconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn2_Songs.IdleIconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation;
             this.btn2_Songs.IndicateFocus = true;
             this.btn2_Songs.Location = new System.Drawing.Point(32, 353);
             this.btn2_Songs.Name = "btn2_Songs";
@@ -348,7 +350,7 @@
             this.btn2_Songs.onHoverState.FillColor = System.Drawing.Color.White;
             this.btn2_Songs.onHoverState.ForeColor = System.Drawing.Color.Black;
             this.btn2_Songs.onHoverState.IconLeftImage = null;
-            this.btn2_Songs.onHoverState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation_red1;
+            this.btn2_Songs.onHoverState.IconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation_red1;
             this.btn2_Songs.OnIdleState.BorderColor = System.Drawing.Color.White;
             this.btn2_Songs.OnIdleState.BorderRadius = 1;
             this.btn2_Songs.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -356,7 +358,7 @@
             this.btn2_Songs.OnIdleState.FillColor = System.Drawing.Color.White;
             this.btn2_Songs.OnIdleState.ForeColor = System.Drawing.Color.Black;
             this.btn2_Songs.OnIdleState.IconLeftImage = null;
-            this.btn2_Songs.OnIdleState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn2_Songs.OnIdleState.IconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation;
             this.btn2_Songs.OnPressedState.BorderColor = System.Drawing.Color.Black;
             this.btn2_Songs.OnPressedState.BorderRadius = 1;
             this.btn2_Songs.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -364,7 +366,7 @@
             this.btn2_Songs.OnPressedState.FillColor = System.Drawing.Color.Black;
             this.btn2_Songs.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn2_Songs.OnPressedState.IconLeftImage = null;
-            this.btn2_Songs.OnPressedState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn2_Songs.OnPressedState.IconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation;
             this.btn2_Songs.Size = new System.Drawing.Size(284, 57);
             this.btn2_Songs.TabIndex = 5;
             this.btn2_Songs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -618,7 +620,7 @@
             this.btn1_NowPlaying.IdleBorderThickness = 1;
             this.btn1_NowPlaying.IdleFillColor = System.Drawing.Color.White;
             this.btn1_NowPlaying.IdleIconLeftImage = null;
-            this.btn1_NowPlaying.IdleIconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn1_NowPlaying.IdleIconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation;
             this.btn1_NowPlaying.IndicateFocus = true;
             this.btn1_NowPlaying.Location = new System.Drawing.Point(32, 290);
             this.btn1_NowPlaying.Name = "btn1_NowPlaying";
@@ -637,7 +639,7 @@
             this.btn1_NowPlaying.onHoverState.FillColor = System.Drawing.Color.White;
             this.btn1_NowPlaying.onHoverState.ForeColor = System.Drawing.Color.Black;
             this.btn1_NowPlaying.onHoverState.IconLeftImage = null;
-            this.btn1_NowPlaying.onHoverState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation_red1;
+            this.btn1_NowPlaying.onHoverState.IconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation_red1;
             this.btn1_NowPlaying.OnIdleState.BorderColor = System.Drawing.Color.White;
             this.btn1_NowPlaying.OnIdleState.BorderRadius = 1;
             this.btn1_NowPlaying.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -645,7 +647,7 @@
             this.btn1_NowPlaying.OnIdleState.FillColor = System.Drawing.Color.White;
             this.btn1_NowPlaying.OnIdleState.ForeColor = System.Drawing.Color.Black;
             this.btn1_NowPlaying.OnIdleState.IconLeftImage = null;
-            this.btn1_NowPlaying.OnIdleState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn1_NowPlaying.OnIdleState.IconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation;
             this.btn1_NowPlaying.OnPressedState.BorderColor = System.Drawing.Color.Black;
             this.btn1_NowPlaying.OnPressedState.BorderRadius = 1;
             this.btn1_NowPlaying.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -653,7 +655,7 @@
             this.btn1_NowPlaying.OnPressedState.FillColor = System.Drawing.Color.Black;
             this.btn1_NowPlaying.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn1_NowPlaying.OnPressedState.IconLeftImage = null;
-            this.btn1_NowPlaying.OnPressedState.IconRightImage = global::WindowsFormsApp1.Properties.Resources.arrow_right_navigation;
+            this.btn1_NowPlaying.OnPressedState.IconRightImage = global::TheMethod_MusicPlayer.Properties.Resources.arrow_right_navigation;
             this.btn1_NowPlaying.Size = new System.Drawing.Size(284, 57);
             this.btn1_NowPlaying.TabIndex = 0;
             this.btn1_NowPlaying.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -770,7 +772,7 @@
             // 
             // NextSongPic
             // 
-            this.NextSongPic.Image = global::WindowsFormsApp1.Properties.Resources.next_song;
+            this.NextSongPic.Image = global::TheMethod_MusicPlayer.Properties.Resources.next_song;
             this.NextSongPic.Location = new System.Drawing.Point(633, 69);
             this.NextSongPic.Name = "NextSongPic";
             this.NextSongPic.Size = new System.Drawing.Size(57, 41);
@@ -783,7 +785,7 @@
             // 
             // PrevSongPic
             // 
-            this.PrevSongPic.Image = global::WindowsFormsApp1.Properties.Resources.previous_song;
+            this.PrevSongPic.Image = global::TheMethod_MusicPlayer.Properties.Resources.previous_song;
             this.PrevSongPic.Location = new System.Drawing.Point(453, 68);
             this.PrevSongPic.Name = "PrevSongPic";
             this.PrevSongPic.Size = new System.Drawing.Size(57, 41);
@@ -893,7 +895,7 @@
             // 
             // SpeakerPic
             // 
-            this.SpeakerPic.Image = global::WindowsFormsApp1.Properties.Resources.speaker_32;
+            this.SpeakerPic.Image = global::TheMethod_MusicPlayer.Properties.Resources.speaker_32;
             this.SpeakerPic.Location = new System.Drawing.Point(863, 95);
             this.SpeakerPic.Name = "SpeakerPic";
             this.SpeakerPic.Size = new System.Drawing.Size(55, 41);
@@ -952,7 +954,7 @@
             // 
             // StopPic
             // 
-            this.StopPic.Image = global::WindowsFormsApp1.Properties.Resources.Stopbutton_WhiteBlack1;
+            this.StopPic.Image = global::TheMethod_MusicPlayer.Properties.Resources.Stopbutton_WhiteBlack1;
             this.StopPic.Location = new System.Drawing.Point(574, 69);
             this.StopPic.Name = "StopPic";
             this.StopPic.Size = new System.Drawing.Size(53, 41);
@@ -965,7 +967,7 @@
             // 
             // PlayPic
             // 
-            this.PlayPic.Image = global::WindowsFormsApp1.Properties.Resources.Playbutton_RedWhite1;
+            this.PlayPic.Image = global::TheMethod_MusicPlayer.Properties.Resources.Playbutton_RedWhite1;
             this.PlayPic.Location = new System.Drawing.Point(516, 69);
             this.PlayPic.Name = "PlayPic";
             this.PlayPic.Size = new System.Drawing.Size(53, 41);
@@ -1250,7 +1252,7 @@
             this.SongsGrid.Enabled = false;
             this.SongsGrid.EnableHeadersVisualStyles = false;
             this.SongsGrid.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SongsGrid.Location = new System.Drawing.Point(116, 68);
+            this.SongsGrid.Location = new System.Drawing.Point(112, 68);
             this.SongsGrid.MultiSelect = false;
             this.SongsGrid.Name = "SongsGrid";
             this.SongsGrid.ReadOnly = true;
@@ -1274,7 +1276,7 @@
             this.SongsGrid.RowTemplate.Height = 35;
             this.SongsGrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.SongsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SongsGrid.Size = new System.Drawing.Size(763, 410);
+            this.SongsGrid.Size = new System.Drawing.Size(767, 410);
             this.SongsGrid.TabIndex = 1;
             this.SongsGrid.Visible = false;
             this.SongsGrid.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
@@ -1700,7 +1702,7 @@
             // 
             // SongCoverPicBox
             // 
-            this.SongCoverPicBox.Image = global::WindowsFormsApp1.Properties.Resources.Robot;
+            this.SongCoverPicBox.Image = global::TheMethod_MusicPlayer.Properties.Resources.Robot;
             this.SongCoverPicBox.Location = new System.Drawing.Point(3, 54);
             this.SongCoverPicBox.Name = "SongCoverPicBox";
             this.SongCoverPicBox.Size = new System.Drawing.Size(400, 400);
@@ -1717,18 +1719,6 @@
             this.Title.Size = new System.Drawing.Size(210, 38);
             this.Title.TabIndex = 4;
             this.Title.Text = "Now Playing";
-            // 
-            // ExitPicture
-            // 
-            this.ExitPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ExitPicture.Image = global::WindowsFormsApp1.Properties.Resources.Black_X;
-            this.ExitPicture.Location = new System.Drawing.Point(1370, 9);
-            this.ExitPicture.Name = "ExitPicture";
-            this.ExitPicture.Size = new System.Drawing.Size(17, 25);
-            this.ExitPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ExitPicture.TabIndex = 0;
-            this.ExitPicture.TabStop = false;
-            this.ExitPicture.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // DragControl_NowPlayingPanel
             // 
@@ -1751,9 +1741,33 @@
             this.DragControl_SongCover.TargetControl = this.SongCoverPicBox;
             this.DragControl_SongCover.Vertical = true;
             // 
+            // PicBox_Minimize
+            // 
+            this.PicBox_Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PicBox_Minimize.Image = global::TheMethod_MusicPlayer.Properties.Resources.Minimize;
+            this.PicBox_Minimize.Location = new System.Drawing.Point(1332, -11);
+            this.PicBox_Minimize.Name = "PicBox_Minimize";
+            this.PicBox_Minimize.Size = new System.Drawing.Size(33, 60);
+            this.PicBox_Minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicBox_Minimize.TabIndex = 6;
+            this.PicBox_Minimize.TabStop = false;
+            this.PicBox_Minimize.Click += new System.EventHandler(this.PicBox_Minimize_Click);
+            // 
+            // ExitPicture
+            // 
+            this.ExitPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitPicture.Image = global::TheMethod_MusicPlayer.Properties.Resources.Black_X;
+            this.ExitPicture.Location = new System.Drawing.Point(1370, 9);
+            this.ExitPicture.Name = "ExitPicture";
+            this.ExitPicture.Size = new System.Drawing.Size(17, 25);
+            this.ExitPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ExitPicture.TabIndex = 0;
+            this.ExitPicture.TabStop = false;
+            this.ExitPicture.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // mainFormBindingSource
             // 
-            this.mainFormBindingSource.DataSource = typeof(WindowsFormsApp1.MainForm);
+            this.mainFormBindingSource.DataSource = typeof(TheMethod_MusicPlayer.Properties.Resources);
             // 
             // MainForm
             // 
@@ -1761,6 +1775,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.PicBox_Minimize);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.ExitPicture);
             this.Controls.Add(this.BottomRightPanel);
@@ -1769,9 +1784,12 @@
             this.Controls.Add(this.NowPlayingPanel);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "The Method Music Player";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.LeftPanel.ResumeLayout(false);
             this.LeftPanel.PerformLayout();
             this.BottomLeftPanel.ResumeLayout(false);
@@ -1796,6 +1814,7 @@
             this.NowPlayingPanel.ResumeLayout(false);
             this.NowPlayingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SongCoverPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBox_Minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainFormBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -1877,6 +1896,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.PictureBox PicBox_Minimize;
     }
 }
 
