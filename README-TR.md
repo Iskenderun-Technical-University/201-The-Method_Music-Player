@@ -1,5 +1,5 @@
 # The Method Müzik Çalar
-Tüm ihtiyaçların için açık kaynak bir müzik çalar uygulaması!
+Tüm ihtiyaçların için çevrimdışı bir müzik çalar uygulaması!
 
 [![Release](https://img.shields.io/github/v/release/Iskenderun-Technical-University/201-The-Method_Music-Player?color=rgb%28240%2C84%2C84%29)](https://github.com/Iskenderun-Technical-University/201-The-Method_Music-Player/releases/) [![EN](https://img.shields.io/badge/lang-EN-blue.svg)](https://github.com/Iskenderun-Technical-University/201-The-Method_Music-Player)
 
@@ -11,7 +11,7 @@ Bu Uygulama Windows Forms C# kullanarak yapıldı. Kullanıcının bilgisayardan
 UI tasarımı için ve eklenen mp3 dosyalarından metadata çıkarmak için bazı araçlar kullanıldı.
 
 ## Yayın
-v1.0.0 BETA
+v1.0.1 BETA
 
 ## Kullanılan Araçlar
 * [Bunifu Framework UI Tools](https://bunifuframework.com/)

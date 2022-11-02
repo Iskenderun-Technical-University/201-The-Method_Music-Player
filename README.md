@@ -1,5 +1,5 @@
 # The Method Music Player
-An Open-Source Music Player Application for all your needs!
+An offline music player application for all your needs!
 
 [![Release](https://img.shields.io/github/v/release/Iskenderun-Technical-University/201-The-Method_Music-Player?color=rgb%28240%2C84%2C84%29)](https://github.com/Iskenderun-Technical-University/201-The-Method_Music-Player/releases) [![TR](https://img.shields.io/badge/lang-TR-green.svg)](https://github.com/Iskenderun-Technical-University/201-The-Method_Music-Player/blob/main/README-TR.md)
 
@@ -11,7 +11,7 @@ This Application was made using Windows Forms C#. It allows the user to import m
 Some tools were used for the UI design and also to extract the metadata from the imported mp3 files. 
 
 ## Release
-v1.0.0 BETA
+v1.0.1 BETA
 
 ## Tools Used
 * [Bunifu Framework UI Tools](https://bunifuframework.com/)
