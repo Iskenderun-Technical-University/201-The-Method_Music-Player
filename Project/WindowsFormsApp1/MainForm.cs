@@ -4,7 +4,6 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using System.IO;
-using System.Drawing.Drawing2D;
 using System.Collections.Generic;
 
 namespace WindowsFormsApp1
@@ -16,6 +15,7 @@ namespace WindowsFormsApp1
         Icon PauseIcon = new Icon(@"..\..\Resources\Pausebutton_WhiteBlack1.ico");
         Icon FavStar = new Icon(@"..\..\Resources\FavStar1.ico");
         Icon FavStarFilled = new Icon(@"..\..\Resources\FavStarFilled1.ico");
+        Icon TrashCan = new Icon(@"..\..\Resources\Trashcan.ico");
         string Default = (@"..\..\Resources\Default.png");
         string RedPlay = (@"..\..\Resources\Playbutton_RedWhite1.png");
         string RedPlayHover = (@"..\..\Resources\Playbutton_RedWhiteHover.png");
@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
         string PrevSongHover = (@"..\..\Resources\previous-song-hover.png");
         string NextSong = (@"..\..\Resources\next-song.png");
         string NextSongHover = (@"..\..\Resources\next-song-hover.png");
+        string Robot = (@"..\..\Resources\Robot.jpg");
 
         public readonly PrivateFontCollection BadSignal = new PrivateFontCollection();
         public bool isMinimized = false;
@@ -159,6 +160,7 @@ namespace WindowsFormsApp1
                 {
                     SongsGrid.Rows.Remove(SongsGrid.Rows[0]);
                     FavGrid1.Rows.Remove(FavGrid1.Rows[0]);
+                    DeleteGrid.Rows.Remove(DeleteGrid.Rows[0]);
                 }
                 for (int x = 0; x < path.Count; x++)
                 {
@@ -171,13 +173,15 @@ namespace WindowsFormsApp1
                     string duration = string.Format("{0:D2}:{1:D2}", conv.Minutes, conv.Seconds);
                     SongsGrid.Rows.Add(x, path[x], title, artist, genre, duration);
                     FavGrid1.Rows.Add(FavStar, PlayIcon);
+                    DeleteGrid.Rows.Add(TrashCan);
                 }
 
                 //Hide No Songs Label
                 NoSongs1_1.Visible = false;
 
                 FavGrid1.ClearSelection(); // Clear Selection on FavGrid1
-                
+                DeleteGrid.ClearSelection(); // Clear Selection on DeleteGrid
+
                 //Show ScrollBar
                 if (SongsGrid.RowCount >= 9)
                     ScrollBarSongs.Visible = true;
@@ -213,6 +217,7 @@ namespace WindowsFormsApp1
             {
                 SongsGrid.FirstDisplayedScrollingRowIndex = e.Value;
                 FavGrid1.FirstDisplayedScrollingRowIndex = e.Value;
+                DeleteGrid.FirstDisplayedScrollingRowIndex = e.Value;
             }
         }
 
@@ -284,7 +289,7 @@ namespace WindowsFormsApp1
         //Songs DataGridView Functionality
         private void SongsGrid_SelectionChanged(object sender, EventArgs e)
         {
-            if(Title.Text != "Favourites" && SongsGrid.Rows.Count > 0)
+            if(SongsGrid.Rows.Count > 0 || (Title.Text == "Favourites" && FavouritesGrid.Rows.Count == 0))
             {
                 Player.URL = Convert.ToString(SongsGrid[1, SongsGrid.SelectedRows[0].Index].Value);
                 Player.Ctlcontrols.play();
@@ -315,6 +320,11 @@ namespace WindowsFormsApp1
                     FavGrid2.Rows.Add(FavStarFilled, PlayIcon);
                     for (int i = 0; i < 6; i++)
                         FavouritesGrid[i, FavouritesGrid.RowCount - 1].Value = SongsGrid[i, e.RowIndex].Value;
+                    if (FavGrid1[1, e.RowIndex].Value == PauseIcon)
+                    {
+                        FavouritesGrid.Rows[FavouritesGrid.RowCount - 1].Selected = true;
+                        FavGrid2[1, FavouritesGrid.RowCount - 1].Value = PauseIcon;
+                    }
                 }
                 else //Delete Song From Favourites DataViewGrid
                 {
@@ -339,6 +349,49 @@ namespace WindowsFormsApp1
             FavGrid1.ClearSelection();
         }
 
+        // DeleteGrid Functionality
+        private void DeleteGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (FavouritesGrid.RowCount > 0)
+            {
+                for (int i = 0; i < FavouritesGrid.RowCount; i++)
+                {
+                    if (SongsGrid[0, e.RowIndex].Value == FavouritesGrid[0, i].Value)
+                    {
+                        FavouritesGrid.Rows.RemoveAt(i);
+                        FavGrid2.Rows.RemoveAt(i);
+                    }
+                }
+            }
+
+            // Deleting first song in list while it is playing
+            if (e.RowIndex == SongsGrid.SelectedRows[0].Index && SongsGrid.SelectedRows[0].Index > 0)
+                SongsGrid.Rows[SongsGrid.SelectedRows[0].Index - 1].Selected = true;
+            else if (e.RowIndex == SongsGrid.SelectedRows[0].Index && SongsGrid.RowCount > 1)
+                SongsGrid.Rows[SongsGrid.SelectedRows[0].Index + 1].Selected = true;
+
+            SongsGrid.Rows.RemoveAt(e.RowIndex);
+            FavGrid1.Rows.RemoveAt(e.RowIndex);
+            DeleteGrid.Rows.RemoveAt(e.RowIndex);
+            path.RemoveAt(e.RowIndex);
+
+            DeleteGrid.ClearSelection();
+            FavGrid1.ClearSelection();
+
+            if (SongsGrid.RowCount == 0)
+            {
+                Player.Ctlcontrols.stop();
+                NoSongs2.Visible = true;
+                SongCoverPicBox.Image = Image.FromFile(Robot);
+                BottomPanelPicBox.Image = null;
+                SongTitle1_2.Text = "Song Title";
+                SongTitle2.Text = "Song Title";
+                Artist1_2.Text = "Artist";
+                Artist2.Text = "Artist";
+                Genre1_2.Text = "Genre";
+            }      
+        }
+
         //FavGrid1 DataGridView Row Hover Effect
         private void FavAndDelButtons_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
@@ -353,6 +406,23 @@ namespace WindowsFormsApp1
             style2.BackColor = Color.Black;
             if (e.RowIndex > -1)
                 FavGrid1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style2;
+        }
+
+        //DeleteGrid DataGridView Row Hover Effect
+        private void DeleteGrid_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCellStyle style1 = new DataGridViewCellStyle();
+            style1.BackColor = Color.FromArgb(240, 84, 84);
+            if (e.RowIndex > -1)
+                DeleteGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style1;
+        }
+
+        private void DeleteGrid_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCellStyle style2 = new DataGridViewCellStyle();
+            style2.BackColor = Color.Black;
+            if (e.RowIndex > -1)
+                DeleteGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style2;
         }
 
         //Hover Effect on BottomPanel PlayButton
@@ -493,7 +563,6 @@ namespace WindowsFormsApp1
 
         // <-------------------   Favourites Page   ------------------->
 
-
         // Favourites DataGridView Functionality
         private void FavouritesGrid_SelectionChanged(object sender, EventArgs e)
         {
@@ -600,6 +669,7 @@ namespace WindowsFormsApp1
             ImportSongsButton.Visible = true;
             SongsGrid.Visible = true;
             FavGrid1.Visible = true;
+            DeleteGrid.Visible = true;
 
             NowPlayingPanel.Visible = false;
             FavouritesGrid.Visible = false;
@@ -637,6 +707,7 @@ namespace WindowsFormsApp1
             ImportSongsButton.Visible = false;
             SongsGrid.Visible = false;
             FavGrid1.Visible = false;
+            DeleteGrid.Visible = false;
             ScrollBarSongs.Visible = false;
 
             //No Songs Label Visibility
@@ -654,8 +725,7 @@ namespace WindowsFormsApp1
             //Link WindowMediaPlayer To first song In Favourites
             if (FavouritesGrid.RowCount > 0 && Player.playState == WMPLib.WMPPlayState.wmppsStopped)
             {
-                Player.URL = path[(int)FavouritesGrid.Rows[FavouritesGrid.SelectedRows[0].Index].Cells[0].Value];
-                Player.Ctlcontrols.stop();
+                Player.URL = Convert.ToString(FavouritesGrid[1, FavouritesGrid.SelectedRows[0].Index].Value);
             }
 
             //Clear Selection on FavGrid2 Grid
