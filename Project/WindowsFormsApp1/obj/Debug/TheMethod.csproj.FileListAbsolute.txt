@@ -300,3 +300,27 @@ C:\Users\musta\Desktop\The Method - C# Project\Project\WindowsFormsApp1\bin\Debu
 C:\Users\musta\Desktop\The Method - C# Project\Project\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.Primitives.dll
 C:\Users\musta\Desktop\The Method - C# Project\Project\WindowsFormsApp1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 C:\Users\musta\Desktop\The Method - C# Project\Project\WindowsFormsApp1\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\TheMethod_MusicPlayer.exe.config
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\TheMethod_MusicPlayer.exe
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\TheMethod_MusicPlayer.pdb
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\System.IO.Compression.dll
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\taglib-sharp.dll
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\Interop.WMPLib.dll
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\TheMethod.csprojAssemblyReference.cache
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\Interop.WMPLib.dll
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\TheMethod.csproj.ResolveComReference.cache
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.About.resources
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\TheMethod_MusicPlayer.Properties.Resources.resources
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Settings.resources
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\TheMethod.csproj.GenerateResource.cache
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\TheMethod_MusicPlayer.exe.licenses
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\TheMethod.csproj.CoreCompileInputs.cache
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\TheMethod.csproj.CopyComplete
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\TheMethod_MusicPlayer.exe
+C:\Users\musta\Desktop\Final Commit\WindowsFormsApp1\obj\Debug\TheMethod_MusicPlayer.pdb

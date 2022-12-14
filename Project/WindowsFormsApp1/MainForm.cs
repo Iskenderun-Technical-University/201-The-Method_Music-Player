@@ -306,15 +306,6 @@ namespace WindowsFormsApp1
 
                 FavGrid1.ClearSelection(); // Clear Selection on FavGrid1
                 DeleteGrid.ClearSelection(); // Clear Selection on DeleteGrid
-
-                //Show ScrollBar
-                if (SongsGrid.RowCount >= 9)
-                    ScrollBarSongs.Visible = true;
-
-                //Scroll Bar Settings
-                ScrollBarSongs.Maximum = SongsGrid.RowCount;
-                ScrollBarSongs.LargeChange = SongsGrid.DisplayedRowCount(true);
-                ScrollBarSongs.SmallChange = 1;
                 
                 // Stop Player
                 Player.Ctlcontrols.stop();
@@ -326,22 +317,6 @@ namespace WindowsFormsApp1
                 // Add Song Cover, Song Name, Artist and Genre to Now Playing
                 SongArtistAndGenre(SongTitle1_2, Artist1_2, Genre1_2, SongsGrid.SelectedRows[0].Index);
                 AddSongPic(SongCoverPicBox, SongsGrid.SelectedRows[0].Index);
-            }
-        }
-
-        //Syncing Scroll Bar with Songs DataGridView
-        private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
-        {
-            if (e.ScrollOrientation == ScrollOrientation.VerticalScroll)
-                ScrollBarSongs.Value = e.NewValue;
-        }
-        private void ScrollBar_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
-        {
-            if (e.Value < SongsGrid.RowCount)
-            {
-                SongsGrid.FirstDisplayedScrollingRowIndex = e.Value;
-                FavGrid1.FirstDisplayedScrollingRowIndex = e.Value;
-                DeleteGrid.FirstDisplayedScrollingRowIndex = e.Value;
             }
         }
 
@@ -656,7 +631,7 @@ namespace WindowsFormsApp1
             }
             else if (SongsGrid.RowCount > 0)
             {
-                if (SongsGrid.SelectedRows[0].Index < SongsGrid.RowCount-1)
+                if (SongsGrid.SelectedRows[0].Index < SongsGrid.RowCount)
                     SongsGrid.Rows[SongsGrid.SelectedRows[0].Index + 1].Selected = true;
                 else
                 {
@@ -688,7 +663,6 @@ namespace WindowsFormsApp1
         {
             Player.settings.volume = SoundSlider.Value;
         }
-
 
         // <-------------------   Favourites Page   ------------------->
 
@@ -753,21 +727,6 @@ namespace WindowsFormsApp1
                 FavGrid2.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = style2;
         }
 
-        //Syncing Scroll Bar with Favourites DataGridView
-        private void FavouritesGrid_Scroll(object sender, ScrollEventArgs e)
-        {
-            if (e.ScrollOrientation == ScrollOrientation.VerticalScroll)
-                ScrollBarFavourites.Value = e.NewValue;
-        }
-        private void ScrollBarFavourites_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
-        {
-            if (e.Value < FavouritesGrid.RowCount)
-            {
-                FavouritesGrid.FirstDisplayedScrollingRowIndex = e.Value;
-                FavGrid2.FirstDisplayedScrollingRowIndex = e.Value;
-            }
-        }
-
         // <-------------------   LeftPanel Page Navigation Buttons   ------------------->
 
         //Now Playing Button
@@ -805,17 +764,17 @@ namespace WindowsFormsApp1
             FavGrid2.Visible = false;
             ScrollBarFavourites.Visible = false;
 
+            // Scroll Bar Visibility
+            if (SongsGrid.RowCount >= 9)
+                ScrollBarSongs.Visible = true;
+            else
+                ScrollBarSongs.Visible = false;
+
             //No Songs Label Visibilty
             if (SongsGrid.RowCount > 0 && SongsGrid.Visible == true)
                 NoSongs2.Visible = false;
             else
                 NoSongs2.Visible = true;
-
-            //Scroll Bar Visibility
-            if (SongsGrid.RowCount >= 9)
-                ScrollBarSongs.Visible = true;
-            else
-                ScrollBarSongs.Visible = false;
         }
 
         // Favourites Button
@@ -839,17 +798,17 @@ namespace WindowsFormsApp1
             DeleteGrid.Visible = false;
             ScrollBarSongs.Visible = false;
 
-            //No Songs Label Visibility
-            if (FavouritesGrid.RowCount > 0 && FavouritesGrid.Visible == true)
-                NoSongs2.Visible = false;
-            else
-                NoSongs2.Visible = true;
-
-            //Scroll Bar Visibility
+            // Scroll Bar Visibilty
             if (FavouritesGrid.RowCount >= 9)
                 ScrollBarFavourites.Visible = true;
             else
                 ScrollBarFavourites.Visible = false;
+            
+            //No Songs Label Visibility
+            if (FavouritesGrid.RowCount > 0 && FavouritesGrid.Visible == true)
+            NoSongs2.Visible = false;
+            else
+                NoSongs2.Visible = true;
 
             //Link WindowMediaPlayer To first song In Favourites
             if (FavouritesGrid.RowCount > 0 && Player.playState == WMPLib.WMPPlayState.wmppsStopped)
@@ -859,14 +818,6 @@ namespace WindowsFormsApp1
 
             //Clear Selection on FavGrid2 Grid
             FavGrid2.ClearSelection();
-
-            //Scroll Bar Settings
-            if (FavouritesGrid.RowCount > 0)
-            {
-                ScrollBarFavourites.Maximum = FavouritesGrid.RowCount;
-                ScrollBarFavourites.LargeChange = FavouritesGrid.DisplayedRowCount(true);
-                ScrollBarFavourites.SmallChange = 1;
-            }
         }
 
         // Settings and About Buttons
@@ -881,6 +832,95 @@ namespace WindowsFormsApp1
             btn1_NowPlaying.PerformClick();
             btn1_NowPlaying.Focus();
             Program.about.ShowDialog();
+        }
+
+        // Scroll Bar Settings for both Songs Grid And Favourites Grid
+
+        //Syncing Scroll Bar with Songs DataGridView
+        private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.ScrollOrientation == ScrollOrientation.VerticalScroll)
+                ScrollBarSongs.Value = e.NewValue;
+        }
+        private void ScrollBar_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
+        {
+            if (e.Value < SongsGrid.RowCount-1)
+            {
+                SongsGrid.FirstDisplayedScrollingRowIndex = e.Value;
+                FavGrid1.FirstDisplayedScrollingRowIndex = e.Value;
+                DeleteGrid.FirstDisplayedScrollingRowIndex = e.Value;
+            }
+        }
+
+        //Syncing Scroll Bar with Favourites DataGridView
+        private void FavouritesGrid_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.ScrollOrientation == ScrollOrientation.VerticalScroll)
+                ScrollBarFavourites.Value = e.NewValue;
+        }
+        private void ScrollBarFavourites_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
+        {
+            if (e.Value < FavouritesGrid.RowCount)
+            {
+                FavouritesGrid.FirstDisplayedScrollingRowIndex = e.Value;
+                FavGrid2.FirstDisplayedScrollingRowIndex = e.Value;
+            }
+        }
+
+        private void SongsGrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //Show ScrollBar
+            if (SongsGrid.RowCount >= 9)
+            {
+                ScrollBarSongs.Visible = true;
+
+                //Scroll Bar Settings
+                ScrollBarSongs.Maximum = SongsGrid.RowCount;
+                ScrollBarSongs.LargeChange = SongsGrid.DisplayedRowCount(true);
+                ScrollBarSongs.SmallChange = 1;
+            }
+        }
+
+        private void SongsGrid_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            //Hide ScrollBar
+            if (SongsGrid.RowCount < 9)
+                ScrollBarSongs.Visible = false;
+            else
+            {
+                //Scroll Bar Settings
+                ScrollBarSongs.Maximum = SongsGrid.RowCount;
+                ScrollBarSongs.LargeChange = SongsGrid.DisplayedRowCount(true);
+                ScrollBarSongs.SmallChange = 1;
+            }
+        }
+
+        private void FavouritesGrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //Show ScrollBar
+            if (FavouritesGrid.RowCount >= 9)
+            {
+                ScrollBarSongs.Visible = true;
+
+                //Scroll Bar Settings
+                ScrollBarFavourites.Maximum = FavouritesGrid.RowCount;
+                ScrollBarFavourites.LargeChange = FavouritesGrid.DisplayedRowCount(true);
+                ScrollBarFavourites.SmallChange = 1;
+            }
+        }
+
+        private void FavouritesGrid_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            //Hide ScrollBar
+            if (FavouritesGrid.RowCount < 9)
+                ScrollBarFavourites.Visible = false;
+            else
+            {
+                //Scroll Bar Settings
+                ScrollBarFavourites.Maximum = FavouritesGrid.RowCount;
+                ScrollBarFavourites.LargeChange = FavouritesGrid.DisplayedRowCount(true);
+                ScrollBarFavourites.SmallChange = 1;
+            }
         }
     }
 }
