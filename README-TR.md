@@ -10,9 +10,6 @@ Bu Uygulama Windows Forms C# kullanarak yapıldı. Kullanıcının bilgisayardan
 
 UI tasarımı için ve eklenen mp3 dosyalarından metadata çıkarmak için bazı araçlar kullanıldı.
 
-## Yayın
-v1.0.1 BETA
-
 ## Kullanılan Araçlar
 * [Bunifu Framework UI Tools](https://bunifuframework.com/)
 * [TagLibSharp](https://github.com/mono/taglib-sharp)

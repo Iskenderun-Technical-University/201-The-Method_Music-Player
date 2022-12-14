@@ -10,9 +10,6 @@ This Application was made using Windows Forms C#. It allows the user to import m
 
 Some tools were used for the UI design and also to extract the metadata from the imported mp3 files. 
 
-## Release
-v1.0.1 BETA
-
 ## Tools Used
 * [Bunifu Framework UI Tools](https://bunifuframework.com/)
 * [TagLibSharp](https://github.com/mono/taglib-sharp)
