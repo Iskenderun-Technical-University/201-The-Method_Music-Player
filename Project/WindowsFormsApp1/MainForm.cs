@@ -631,7 +631,7 @@ namespace WindowsFormsApp1
             }
             else if (SongsGrid.RowCount > 0)
             {
-                if (SongsGrid.SelectedRows[0].Index < SongsGrid.RowCount)
+                if (SongsGrid.SelectedRows[0].Index < SongsGrid.RowCount-1)
                     SongsGrid.Rows[SongsGrid.SelectedRows[0].Index + 1].Selected = true;
                 else
                 {
